@@ -1,0 +1,15 @@
+name: Deploy to EasyPanel
+
+on:
+  push:
+    branches: [ "main" ]   # cambia si usas otra rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger EasyPanel deploy
+        env:
+          EP_DEPLOY_URL: ${{ secrets.EASYPANEL_DEPLOY_URL }}
+        run: |
+          curl -fsSL -X GET "$EP_DEPLOY_URL"
