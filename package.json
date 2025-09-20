@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "node tools/generate-llms.js || true && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist -l 80"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
