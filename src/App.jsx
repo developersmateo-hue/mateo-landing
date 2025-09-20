@@ -6,7 +6,7 @@ import Header3 from '@/components/header/Header3';
 import Hero1 from '@/components/hero/Hero1';
 import Services1 from '@/components/services/Services1';
 import PromotionalVideo1 from '@/components/promotional-video/PromotionalVideo1';
-import About1 from '@/components/about/About1';
+import About3 from '@/components/about/About3';
 import AISolutions1 from '@/components/ai-solutions/AISolutions1';
 import Testimonials1 from '@/components/testimonials/Testimonials1';
 import Pricing1 from '@/components/pricing/Pricing1';
@@ -117,7 +117,7 @@ function App() {
         <main>
           <AISolutions1 t={t} />
           <Services1 t={t} />
-          <About1 t={t} />
+          <About3 t={t} />
           
           <Testimonials1 t={t} />
           <Pricing1 t={t} />
