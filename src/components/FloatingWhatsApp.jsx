@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const WEBHOOK_URL =
   import.meta.env?.VITE_N8N_WEBHOOK_URL ||
-  'https://n8n-n8n.mwsycw.easypanel.host/webhook/e0c5f767-d7d5-4356-96-test-audio-rlp2';
+  'https://n8n-n8n.mwsycw.easypanel.host/webhook/e0c5f767-d7d5-4356-96-mateo-landing-page';
 
 const FloatingWhatsApp = ({ t }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,44 +80,92 @@ const FloatingWhatsApp = ({ t }) => {
     }
   };
 
-  const sendMessageToWebhook = async (userText, typingId, extra = {}) => {
+const sendMessageToWebhook = async (userText, typingId, extra = {}) => {
+  const MIN_TYPING_DELAY_MS = 400; // mínimo 1s
+  const TYPING_TIME_PER_CHAR_MS = 30; // 50ms por caracter
+
+  try {
+    setIsSending(true);
+    const payload = {
+      message: userText,
+      lang,
+      source: 'floating-whatsapp',
+      sessionId: sessionIdRef.current,
+      timestamp: Date.now(),
+      ...extra,
+    };
+
+    const reply = await callWebhook(payload);
+
+    let parsedParts = [];
+
     try {
-      setIsSending(true);
-      const payload = {
-        message: userText,
-        lang,
-        source: 'floating-whatsapp',
-        sessionId: sessionIdRef.current,
-        timestamp: Date.now(),
-        ...extra, // ej: { image: { name, dataUrl } }
-      };
-
-      const reply = await callWebhook(payload);
-
-      // Reemplaza el placeholder "typing" con la respuesta del bot
-      setMessages((prev) =>
-        prev.map((m) => (m.id === typingId ? { ...m, typing: false, text: reply || t.chat.autoResponse } : m))
-      );
+      const parsed = JSON.parse(reply);
+      if (parsed.response && typeof parsed.response === 'object') {
+        parsedParts = Object.values(parsed.response).filter((part) => typeof part === 'string' && part.trim() !== '');
+      }
     } catch (err) {
-      // Muestra error amigable
-      setMessages((prev) =>
-        prev.map((m) =>
-          m.id === typingId
-            ? {
-                ...m,
-                typing: false,
-                text:
-                  t.chat.imageError ||
-                  'Oops, hubo un problema al conectar con nuestro asistente. Intenta de nuevo en unos segundos.',
-              }
-            : m
-        )
-      );
-      // Opcional: console.error(err);
-    } finally {
-      setIsSending(false);
+      parsedParts = [reply];
     }
-  };
+
+    // Eliminar el placeholder de typing original
+    setMessages((prev) => prev.filter((m) => m.id !== typingId));
+
+    for (let i = 0; i < parsedParts.length; i++) {
+      const part = parsedParts[i];
+      const id = Date.now() + i;
+
+      if (i === 0) {
+        // Primer mensaje: mostrar inmediatamente
+        setMessages((prev) => [
+          ...prev,
+          { id, text: part, sender: 'bot' },
+        ]);
+      } else {
+        // Mensajes posteriores: simular typing + delay
+        setMessages((prev) => [
+          ...prev,
+          { id, sender: 'bot', typing: true },
+        ]);
+
+        const delayMs = Math.max(
+          MIN_TYPING_DELAY_MS,
+          part.length * TYPING_TIME_PER_CHAR_MS
+        );
+
+        await new Promise((res) => setTimeout(res, delayMs));
+
+        setMessages((prev) =>
+          prev.map((msg) =>
+            msg.id === id
+              ? { ...msg, typing: false, text: part }
+              : msg
+          )
+        );
+      }
+    }
+  } catch (err) {
+    setMessages((prev) =>
+      prev.map((m) =>
+        m.id === typingId
+          ? {
+              ...m,
+              typing: false,
+              text:
+                t.chat.imageError ||
+                'Oops, hubo un problema al conectar con nuestro asistente. Intenta de nuevo en unos segundos.',
+            }
+          : m
+      )
+    );
+  } finally {
+    setIsSending(false);
+  }
+};
+
+
+
+
 
   const handleSendMessage = async () => {
     const text = inputValue.trim();
@@ -225,7 +273,7 @@ const FloatingWhatsApp = ({ t }) => {
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">T</span>
+                  <span className="text-white font-bold text-xl">M</span>
                 </div>
               </div>
             </header>
