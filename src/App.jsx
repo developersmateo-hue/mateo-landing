@@ -12,7 +12,7 @@ import Testimonials1 from '@/components/testimonials/Testimonials1';
 import Pricing1 from '@/components/pricing/Pricing1';
 import Gallery1 from '@/components/gallery/Gallery1';
 import Contact1 from '@/components/contact/Contact1';
-import Footer1 from '@/components/footer/Footer1';
+import Footer2 from '@/components/footer/Footer2';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import { translations } from '@/lib/translations';
 
@@ -26,20 +26,7 @@ function App() {
   }, [theme, language]);
 
   const t = translations[language];
-  const promotionalVideoTranslations = {
-    es: {
-      headline: "Innovación que Impulsa el Futuro",
-      subheadline: "Descubre cómo nuestra IA puede transformar tu negocio."
-    },
-    en: {
-      headline: "Innovation That Drives the Future",
-      subheadline: "Discover how our AI can transform your business."
-    },
-    pt: {
-      headline: "Inovação que Impulsiona o Futuro",
-      subheadline: "Descubra como nossa IA pode transformar seu negócio."
-    }
-  }
+
 
   const floatingWhatsAppTranslations = {
     es: {
@@ -115,16 +102,15 @@ function App() {
         /> 
         
         <main>
-          <AISolutions1 t={t} />
+          {/* <AISolutions1 t={t} /> */}
           <Services1 t={t} />
           <About3 t={t} />
           
-          <Testimonials1 t={t} />
-          <Pricing1 t={t} />
+          {/* <Pricing1 t={t} /> */}
           <Contact1 t={t} />
         </main>
         
-        <Footer1 t={t} />
+        <Footer2 t={t} />
         <FloatingWhatsApp t={floatingWhatsAppTranslations[language]} />
         <Toaster />
       </div>

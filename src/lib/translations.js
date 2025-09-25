@@ -1,7 +1,7 @@
 export const translations = {
   es: {
     meta: {
-      title: "TechAI Solutions - Desarrollo de Software e Inteligencia Artificial",
+      title: "Mateo - Desarrollo de Software e Inteligencia Artificial",
       description: "Empresa líder en desarrollo de software, agentes de IA y soluciones digitales personalizadas. Automatiza tu negocio con nuestras innovadoras tecnologías."
     },
     nav: {
@@ -194,12 +194,12 @@ export const translations = {
         services: "Servicios",
         support: "Soporte"
       },
-      copyright: "© 2024 TechAI Solutions. Todos los derechos reservados."
+      copyright: "© 2025 Mateo. Todos los derechos reservados."
     }
   },
   en: {
     meta: {
-      title: "TechAI Solutions - Software Development & Artificial Intelligence",
+      title: "Mateo - Software Development & Artificial Intelligence",
       description: "Leading company in software development, AI agents and custom digital solutions. Automate your business with our innovative technologies."
     },
     nav: {
@@ -392,12 +392,12 @@ export const translations = {
         services: "Services",
         support: "Support"
       },
-      copyright: "© 2024 TechAI Solutions. All rights reserved."
+      copyright: "© 2024 Mateo. All rights reserved."
     }
   },
   pt: {
     meta: {
-      title: "TechAI Solutions - Desenvolvimento de Software e Inteligência Artificial",
+      title: "Mateo - Desenvolvimento de Software e Inteligência Artificial",
       description: "Empresa líder em desenvolvimento de software, agentes de IA e soluções digitais personalizadas. Automatize seu negócio com nossas tecnologias inovadoras."
     },
     nav: {
@@ -590,7 +590,7 @@ export const translations = {
         services: "Serviços",
         support: "Suporte"
       },
-      copyright: "© 2024 TechAI Solutions. Todos os direitos reservados."
+      copyright: "© 2024 Mateo. Todos os direitos reservados."
     }
   }
 };

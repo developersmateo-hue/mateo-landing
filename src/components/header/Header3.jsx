@@ -16,8 +16,8 @@ const Header3 = ({ t }) => {
     {
       key: 'ai',
       image: 'https://cndl.org.br/varejosa/wp-content/uploads/2024/04/Oportunidade-para-startups-programa-do-Sebrae-capacita-empresas-para-captarem-investimentos.jpg',
-      title: t?.hero?.title ?? 'Inteligencia Artificial',
-      highlight: t?.hero?.highlight ?? 'Avanzada',
+      title:  'Inteligencia Artificial',
+      highlight: 'Avanzada',
       subtitle: 'Modelos que aprenden, predicen y optimizan decisiones críticas.',
       points: [
         { icon: 'cpu', text: 'Análisis predictivo en tiempo real' },
@@ -54,10 +54,11 @@ const Header3 = ({ t }) => {
   const icons = { check: CheckCircle2, sparkles: Sparkles, cpu: Cpu, bot: Bot, zap: Zap };
 
   // Auto-advance slider
+  // slider automático para que esté sincronizado con la duración: 12 segundos
   useEffect(() => {
     const timer = setInterval(() => {
       if (!isPaused) setIndex((prev) => (prev + 1) % slides.length);
-    }, 8000);
+    }, 9000);
     return () => clearInterval(timer);
   }, [isPaused, slides.length]);
 
@@ -75,32 +76,33 @@ const Header3 = ({ t }) => {
   };
 
   const navItems = useMemo(() => ([
-    { href: '#home',         label: t?.nav?.home ?? 'Inicio' },
-    { href: '#services',     label: t?.nav?.services ?? 'Servicios' },
-    { href: '#solutions',    label: t?.nav?.solutions ?? 'Soluciones' },
-    { href: '#pricing',      label: t?.nav?.pricing ?? 'Precios' },
-    { href: '#contact',      label: t?.nav?.contact ?? 'Contacto' },
+    { href: '#home', label: t?.nav?.home ?? 'Inicio' },
+    { href: '#services', label: t?.nav?.services ?? 'Servicios' },
+    { href: '#solutions', label: t?.nav?.solutions ?? 'Soluciones' },
+    { href: '#pricing', label: t?.nav?.pricing ?? 'Precios' },
+    { href: '#contact', label: t?.nav?.contact ?? 'Contacto' },
   ]), [t]);
 
   const goPrev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
   const goNext = () => setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <header className="relative h-[80vh] min-h-[560px] overflow-hidden text-white">
+    <header className="relative h-[90vh] min-h-[800px] sm:h-[80vh] sm:min-h-[560px] overflow-hidden text-white">
+
       {/* App bar compacto, llamativo */}
       <div className={`fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'backdrop-blur-md bg-slate-900/70 border-b border-white/10' : 'bg-transparent'}`}>
         <nav className="container mx-auto px-3 sm:px-4">
           <div className="h-14 flex items-center justify-between">
-         
 
-          <button onClick={() => scrollTo('#home')} className="flex items-center gap-2" aria-label="Inicio">
-  <img
-    src={logo}
-    alt="Logo"
-    className="shrink-0 w-auto h-8 sm:h-9 md:h-10 lg:h-12 object-contain"
-    loading="lazy"
-  />
-</button>
+
+            <button onClick={() => scrollTo('#home')} className="flex items-center gap-2" aria-label="Inicio">
+              <img
+                src={logo}
+                alt="Logo"
+                className="shrink-0 w-auto h-8 sm:h-9 md:h-10 lg:h-12 object-contain"
+                loading="lazy"
+              />
+            </button>
 
 
             {/* Menú desktop: píldora central */}
@@ -146,7 +148,7 @@ const Header3 = ({ t }) => {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                className="md:hidden overflow-hidden"
+                className="md:hidden overflow-hidden bg-black/43 backdrop-blur-md"
               >
                 <div className="py-2 border-t border-white/10">
                   {navItems.map((item) => (
@@ -185,7 +187,8 @@ const Header3 = ({ t }) => {
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: 'easeInOut' }}
+            // Transición de imágenes (fade + scale)
+            transition={{ duration: 3.5, ease: 'easeInOut' }}
             className="absolute inset-0"
           >
             <img
@@ -202,19 +205,10 @@ const Header3 = ({ t }) => {
 
       {/* Contenido del hero (gancho de valor) */}
       <div className="relative z-10 h-full">
-        <div className="container mx-auto px-4 h-full pt-16">
+        <div className="container mx-auto px-4 h-full pt-2">
           <div className="h-full grid lg:grid-cols-12 items-center">
             <div className="lg:col-span-7 max-w-3xl">
-              <motion.div
-                key={`${slides[index].key}-badge`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-sm"
-              >
-                <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                {t?.hero?.badge ?? 'AI • Automation • Growth'}
-              </motion.div>
+
 
               <motion.h1
                 key={`${slides[index].key}-h1`}
@@ -280,11 +274,10 @@ const Header3 = ({ t }) => {
                   {t?.hero?.secondaryCta ?? 'Ver servicios'}
                 </Button>
               </motion.div>
-            </div>
 
-            {/* Panel derecho: controles y “pagers” descriptivos */}
-            <div className="lg:col-span-5 mt-10 lg:mt-0">
-              <div className="flex items-center justify-end gap-2">
+              {/* Panel derecho: controles y “pagers” descriptivos */}
+              {/* flechas anterior y siguiente */}
+              <div className="flex items-center justify-end gap-2 pt-6">
                 <button
                   onClick={goPrev}
                   aria-label="Anterior"
@@ -302,16 +295,15 @@ const Header3 = ({ t }) => {
               </div>
 
               {/* Pagers con títulos (clicables) */}
-              <div className="mt-4 grid sm:grid-cols-3 gap-2">
+              <div className="mt-0 grid sm:grid-cols-3 gap-2 pt-6">
                 {slides.map((s, i) => (
                   <button
                     key={`pager-${s.key}`}
                     onClick={() => setIndex(i)}
-                    className={`text-left rounded-xl p-3 border transition ${
-                      i === index
+                    className={`text-left rounded-xl p-3 border transition ${i === index
                         ? 'bg-white/15 border-white/20'
                         : 'bg-white/5 hover:bg-white/10 border-white/10'
-                    }`}
+                      }`}
                   >
                     <div className="text-xs uppercase tracking-wide text-white/70">{s.title}</div>
                     <div className="text-sm font-semibold text-white">{s.highlight}</div>
@@ -325,11 +317,19 @@ const Header3 = ({ t }) => {
                   key={`progress-${slides[index].key}-${isPaused ? 'paused' : 'run'}`}
                   initial={{ width: 0 }}
                   animate={{ width: '100%' }}
-                  transition={{ duration: isPaused ? 0 : 6, ease: 'linear' }}
+                  // Barra de progreso del slide actual
+                  transition={{ duration: isPaused ? 0 : 9, ease: 'linear' }}
                   className="h-full bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400"
                 />
               </div>
+
+
+
+
+              
             </div>
+
+
           </div>
         </div>
       </div>

@@ -19,16 +19,16 @@ const Footer2 = ({ t }) => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
+                <span className="text-white font-bold text-xl">M</span>
               </div>
-              <span className="text-xl font-bold text-white">TechAI</span>
+              <span className="text-xl font-bold text-white">Mateo</span>
             </div>
             <p className="text-sm">{t.footer.description}</p>
           </div>
           <div>
             <span className="font-semibold text-white block mb-4">Contacto</span>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center"><Mail className="w-4 h-4 mr-2" /><span>contact@techai.com</span></li>
+              <li className="flex items-center"><Mail className="w-4 h-4 mr-2" /><span>contact@mateomi.com</span></li>
               <li className="flex items-center"><Phone className="w-4 h-4 mr-2" /><span>+1 (555) 123-4567</span></li>
               <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" /><span>Silicon Valley, CA</span></li>
             </ul>
