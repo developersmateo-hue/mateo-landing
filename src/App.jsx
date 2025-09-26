@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Toaster } from '@/components/ui/toaster';
 import Header3 from '@/components/header/Header3';
 import Hero1 from '@/components/hero/Hero1';
@@ -14,6 +14,7 @@ import Gallery1 from '@/components/gallery/Gallery1';
 import Contact1 from '@/components/contact/Contact1';
 import Footer2 from '@/components/footer/Footer2';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import {StripeInlinePay} from '@/components/stripe/StripeInlinePay';
 import { translations } from '@/lib/translations';
 
 function App() {
@@ -27,13 +28,12 @@ function App() {
 
   const t = translations[language];
 
-
   const floatingWhatsAppTranslations = {
     es: {
       messages: [
-        "¿Tienes alguna duda? ¡Escríbeme ya!",
-        "🚀 ¡Contrata nuestros servicios hoy mismo!",
-        "📞 Atención 24h – ¡Pregunta ya!"
+        "¿Tienes alguna duda?",
+        "💡 Convierte tus ideas en resultados",
+        "📞 Atención 24h "
       ],
       chat: {
         title: "Asistente Virtual",
@@ -47,7 +47,7 @@ function App() {
     },
     en: {
       messages: [
-        "Have any questions? Write to me now!",
+        "Have any questions?",
         "🚀 Hire our services today!",
         "📞 24h support – Ask now!"
       ],
@@ -63,9 +63,9 @@ function App() {
     },
     pt: {
       messages: [
-        "Tem alguma dúvida? Escreva para mim agora!",
+        "Tem alguma dúvida?",
         "🚀 Contrate nossos serviços hoje mesmo!",
-        "📞 Atendimento 24h – Pergunte já!"
+        "📞 Atendimento 24h"
       ],
       chat: {
         title: "Assistente Virtual",
@@ -106,7 +106,8 @@ function App() {
           <Services1 t={t} />
           <About3 t={t} />
           
-          {/* <Pricing1 t={t} /> */}
+           <Pricing1 t={t} /> 
+
           <Contact1 t={t} />
         </main>
         

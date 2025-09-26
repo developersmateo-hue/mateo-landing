@@ -28,7 +28,7 @@ const About3 = ({ t }) => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <img class="w-full h-full object-cover" alt="Team brainstorming session" src="https://images.unsplash.com/photo-1585913161203-695a3ac93b33" />
+            <img className="w-full h-full object-cover" alt="Team brainstorming session" src="https://images.unsplash.com/photo-1585913161203-695a3ac93b33" />
             <div className="absolute inset-0 bg-black/30"></div>
           </motion.div>
           <motion.div 
@@ -38,7 +38,7 @@ const About3 = ({ t }) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <img class="w-full h-full object-cover" alt="Developer coding on a laptop" src="https://images.unsplash.com/photo-1618335829737-2228915674e0" />
+            <img className="w-full h-full object-cover" alt="Developer coding on a laptop" src="https://images.unsplash.com/photo-1618335829737-2228915674e0" />
             <div className="absolute inset-0 bg-black/30"></div>
           </motion.div>
         </div>

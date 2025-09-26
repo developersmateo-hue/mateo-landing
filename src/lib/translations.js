@@ -179,7 +179,7 @@ export const translations = {
       },
       info: {
         phone: "+1 (555) 123-4567",
-        email: "info@techaisolutions.com",
+        email: "contact@mateomi.com",
         address: "123 Tech Street, Silicon Valley, CA 94000, USA"
       },
       social: {
@@ -377,7 +377,7 @@ export const translations = {
       },
       info: {
         phone: "+1 (555) 123-4567",
-        email: "info@techaisolutions.com",
+        email: "contact@mateomi.com",
         address: "123 Tech Street, Silicon Valley, CA 94000, USA"
       },
       social: {
@@ -575,7 +575,7 @@ export const translations = {
       },
       info: {
         phone: "+1 (555) 123-4567",
-        email: "info@techaisolutions.com",
+        email: "contact@mateomi.com",
         address: "123 Tech Street, Silicon Valley, CA 94000, USA"
       },
       social: {
