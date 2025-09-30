@@ -35,48 +35,32 @@ function HeaderBrand({ ui, planTitle, priceHuman }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
       {ui?.brand?.logoUrl && (
-        <img
-          src={ui.brand.logoUrl}
-          alt="logo"
-          width={40}
-          height={40}
-        />
+        <img src={ui.brand.logoUrl} alt="logo" width={40} height={40} />
       )}
-      {/* Sólo el título del plan/periodo, sin repetir el nombre de la marca */}
       {planTitle && (
-        <div style={{ fontWeight: 700, fontSize: 14, marginTop: 8 }}>
-          {planTitle}
-        </div>
+        <div style={{ fontWeight: 700, fontSize: 14, marginTop: 8 }}>{planTitle}</div>
       )}
-      {/* Precio grande y en negrita */}
       {priceHuman && (
-        <div style={{ fontWeight: 800, fontSize: 18, marginTop: 2 }}>
-          {priceHuman}
-        </div>
+        <div style={{ fontWeight: 800, fontSize: 18, marginTop: 2 }}>{priceHuman}</div>
       )}
     </div>
   );
 }
 
-
 function TrustBlock({ ui }) {
-  // construimos la fila de enlaces que existan
   const links = [
-    ui?.support?.email   ? { label: 'Soporte',   href: `mailto:${ui.support.email}` } : null,
-    ui?.support?.whatsapp? { label: 'WhatsApp',  href: ui.support.whatsapp } : null,
-    ui?.legal?.termsUrl  ? { label: 'Términos',  href: ui.legal.termsUrl } : null,
-    ui?.legal?.privacyUrl? { label: 'Privacidad',href: ui.legal.privacyUrl } : null,
-    ui?.legal?.refundUrl ? { label: 'Reembolsos',href: ui.legal.refundUrl } : null,
+    ui?.support?.email    ? { label: 'Soporte',   href: `mailto:${ui.support.email}` } : null,
+    ui?.support?.whatsapp ? { label: 'WhatsApp',  href: ui.support.whatsapp } : null,
+    ui?.legal?.termsUrl   ? { label: 'Términos',  href: ui.legal.termsUrl } : null,
+    ui?.legal?.privacyUrl ? { label: 'Privacidad',href: ui.legal.privacyUrl } : null,
+    ui?.legal?.refundUrl  ? { label: 'Reembolsos',href: ui.legal.refundUrl } : null,
   ].filter(Boolean);
 
   return (
     <div style={{ marginTop: 12, borderTop: '1px solid #eef2f7', paddingTop: 12, textAlign: 'center' }}>
-      {/* línea de confianza centrada */}
       <div style={{ fontSize: 12, color: '#6b7280' }}>
         Pago seguro con <strong>Stripe</strong> · Datos cifrados (TLS) · No almacenamos tu tarjeta
       </div>
-
-      {/* enlaces centrados con separadores */}
       {links.length > 0 && (
         <div style={{ marginTop: 6, fontSize: 12 }}>
           {links.map((l, i) => (
@@ -89,16 +73,10 @@ function TrustBlock({ ui }) {
           ))}
         </div>
       )}
-
-      {/* powered by centrado */}
-      <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 6 }}>
-        Powered by Stripe
-      </div>
+      <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 6 }}>Powered by Stripe</div>
     </div>
   );
 }
-
-
 
 /* ---------- Form que usa PaymentElement (solo con clientSecret) ---------- */
 function PaymentForm({ prefill, onSuccess, onError, onClose }) {
@@ -139,8 +117,11 @@ function PaymentForm({ prefill, onSuccess, onError, onClose }) {
   return (
     <form onSubmit={onSubmit} style={{ display: 'grid', gap: 12 }}>
       <PaymentElement />
-      <button type="submit" disabled={loading || !stripe || !elements}
-        style={{ height: 44, borderRadius: 10, fontWeight: 700, border: 'none', cursor: 'pointer', background:'#10b981', color:'#fff' }}>
+      <button
+        type="submit"
+        disabled={loading || !stripe || !elements}
+        style={{ height: 44, borderRadius: 10, fontWeight: 700, border: 'none', cursor: 'pointer', background:'#10b981', color:'#fff' }}
+      >
         {loading ? 'Procesando…' : 'Pagar ahora'}
       </button>
       {msg && <div style={{ color: '#b91c1c', fontSize: 14 }}>{msg}</div>}
@@ -148,7 +129,7 @@ function PaymentForm({ prefill, onSuccess, onError, onClose }) {
   );
 }
 
-/* ---------- Overlay con selector SIEMPRE visible ---------- */
+/* ---------- Overlay ---------- */
 function PaymentOverlay({
   open, close, ui, mode,
   subscriptionOptions, selectedOption, onSelectSubscription,
@@ -156,18 +137,11 @@ function PaymentOverlay({
   onSuccess, onError, clearClientSecret, isFetchingSecret
 }) {
   if (!open) return null;
-
   const showLoader = isFetchingSecret || (mode === 'subscription' && !clientSecret);
 
   return (
-    <div onClick={close} style={{
-      position: 'fixed', inset: 0, background: 'rgba(0,0,0,.45)',
-      display: 'grid', placeItems: 'center', zIndex: 9999
-    }}>
-      <div onClick={(e) => e.stopPropagation()} style={{
-        width: 'min(620px, 94vw)', background: '#0b1320', borderRadius: 18, padding: 16,
-        boxShadow: '0 10px 30px rgba(0,0,0,.25)', color: '#e5e7eb'
-      }}>
+    <div onClick={close} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.45)', display: 'grid', placeItems: 'center', zIndex: 9999 }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ width: 'min(620px, 94vw)', background: '#0b1320', borderRadius: 18, padding: 16, boxShadow: '0 10px 30px rgba(0,0,0,.25)', color: '#e5e7eb' }}>
         <div style={{ background: '#fff', borderRadius: 12, padding: 16, color: '#0b1320' }}>
           <HeaderBrand
             ui={ui}
@@ -175,69 +149,28 @@ function PaymentOverlay({
             priceHuman={selectedOption?.priceHuman}
           />
 
-          {/* Selector SIEMPRE visible */}
           {mode === 'subscription' && subscriptionOptions?.length > 0 && (
             <>
-              <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 6 }}>
-                Elige el período de tu suscripción:
-              </div>
-              <PeriodSelector
-                options={subscriptionOptions}
-                selected={selectedOption}
-                onSelect={onSelectSubscription}
-                disabled={isFetchingSecret}
-              />
+              <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 6 }}>Elige el período de tu suscripción:</div>
+              <PeriodSelector options={subscriptionOptions} selected={selectedOption} onSelect={onSelectSubscription} disabled={isFetchingSecret} />
             </>
           )}
 
-         {/* Loader mientras pedimos/actualizamos clientSecret */}
-{showLoader && (
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '24px 0',
-      color: '#6b7280',
-      fontSize: 14,
-    }}
-    aria-live="polite"
-  >
-    <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-      <span>Preparando pago...</span>
-      {/* espacio exacto de 2 caracteres */}
-      <span style={{ display: 'inline-block', width: '2ch' }} />
-      {/* Spinner azul fuerte */}
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        aria-label="Cargando"
-        role="status"
-      >
-        <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="3" fill="none" opacity="0.25" />
-        <path
-          d="M22 12a10 10 0 0 0-10-10"
-          stroke="#2563EB"
-          strokeWidth="3"
-          strokeLinecap="round"
-          fill="none"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 12 12"
-            to="360 12 12"
-            dur="0.8s"
-            repeatCount="indefinite"
-          />
-        </path>
-      </svg>
-    </span>
-  </div>
-)}
+          {showLoader && (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '24px 0', color: '#6b7280', fontSize: 14 }} aria-live="polite">
+              <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span>Preparando pago...</span>
+                <span style={{ display: 'inline-block', width: '2ch' }} />
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-label="Cargando" role="status">
+                  <circle cx="12" cy="12" r="10" stroke="#2563EB" strokeWidth="3" fill="none" opacity="0.25" />
+                  <path d="M22 12a10 10 0 0 0-10-10" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" fill="none">
+                    <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite" />
+                  </path>
+                </svg>
+              </span>
+            </div>
+          )}
 
-          {/* PaymentElement solo con clientSecret */}
           {!showLoader && clientSecret && stripePromise && (
             <Elements
               key={clientSecret}
@@ -270,6 +203,18 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
   const pk = (publishableKey || import.meta.env.VITE_STRIPE_PK || '').trim();
   const stripePromise = useMemo(() => /^pk_(test|live)_/.test(pk) ? loadStripe(pk) : null, [pk]);
 
+  // Lee tu API y token secreto desde variables del frontend
+  const API_BASE = useMemo(
+    () => (import.meta.env.VITE_API_BASE || '').replace(/\/+$/, ''),
+    []
+  );
+  const FLOW_TOKEN = (import.meta.env.VITE_FLOW_TOKEN || '').trim();
+
+  const buildUrl = useCallback(
+    (path) => (API_BASE ? `${API_BASE}${path}` : path),
+    [API_BASE]
+  );
+
   const [open, setOpen] = useState(false);
   const [clientSecret, setClientSecret] = useState(null);
   const [prefill, setPrefill] = useState(null);
@@ -285,6 +230,10 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
     setIsFetchingSecret(true);
     try {
       const endpoint = opts.mode === 'subscription' ? '/api/create-subscription' : '/api/create-payment-intent';
+
+      // tolerar string -> number
+      const amount = opts.mode === 'one_time' ? Number(opts.amountInCents) : undefined;
+
       const body = opts.mode === 'subscription'
         ? {
             priceId: opts.priceId,
@@ -296,7 +245,7 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
             metadata: opts.metadata,
           }
         : {
-            amount: opts.amountInCents,
+            amount,
             currency: opts.currency || 'usd',
             customerEmail: opts.prefill?.email,
             customerName: opts.prefill?.name,
@@ -305,19 +254,30 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
             metadata: opts.metadata,
           };
 
-      const res = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-      if (!res.ok) { const text = await res.text(); throw new Error(`HTTP ${res.status}: ${text.slice(0,200)}`); }
+      const res = await fetch(buildUrl(endpoint), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Flow-Token': FLOW_TOKEN,                                       // ← token que exige tu API
+          'X-Request-Id': (crypto?.randomUUID && crypto.randomUUID()) || String(Date.now()), // idempotencia
+        },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`HTTP ${res.status}: ${text.slice(0,200)}`);
+      }
       const data = await res.json();
       if (!data?.clientSecret) throw new Error('Respuesta sin clientSecret');
       setClientSecret(data.clientSecret);
     } finally {
       setIsFetchingSecret(false);
     }
-  }, []);
+  }, [FLOW_TOKEN, buildUrl]);
 
   const onSelectSubscription = useCallback(async (opt) => {
     setSelectedOption(opt);
-    // crea/actualiza el intent según la opción elegida
     await fetchClientSecret({
       mode: 'subscription',
       priceId: opt.priceId,
@@ -328,7 +288,6 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
   }, [fetchClientSecret, prefill]);
 
   const openPay = useCallback(async (opts) => {
-    // opts: { mode, amountInCents?, priceId?, currency?, prefill?, metadata?, ui?, locale?, appearance?, subscriptionOptions?, defaultPriceId? }
     if (!opts?.mode) throw new Error('Debes indicar mode: "one_time" o "subscription"');
     if (opts.mode === 'one_time' && !opts.amountInCents) throw new Error('Falta amountInCents en pago único.');
     if (opts.mode === 'subscription' && !opts.priceId && !opts.subscriptionOptions) throw new Error('Pasa priceId o subscriptionOptions.');
@@ -340,8 +299,6 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
 
     if (opts.mode === 'subscription' && opts.subscriptionOptions?.length) {
       setSubscriptionOptions(opts.subscriptionOptions);
-
-      // Selección por defecto (ej.: 12 meses)
       if (opts.defaultPriceId) {
         const def = opts.subscriptionOptions.find(o => o.priceId === opts.defaultPriceId) || opts.subscriptionOptions[0];
         setSelectedOption(def);
@@ -353,12 +310,10 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
           metadata: def.metadata,
         });
       } else if (!opts.priceId) {
-        // Si no hay default y tampoco priceId, aún no hay clientSecret:
         setSelectedOption(null);
         setClientSecret(null);
       }
     } else {
-      // Crear inmediatamente (pago único o subs con priceId directo)
       setSubscriptionOptions(null);
       setSelectedOption(null);
       await fetchClientSecret(opts);
@@ -388,7 +343,6 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
   return (
     <StripePayCtx.Provider value={ctxValue}>
       {children}
-
       {open && (
         <PaymentOverlay
           open={open}

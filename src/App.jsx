@@ -14,7 +14,7 @@ import Gallery1 from '@/components/gallery/Gallery1';
 import Contact1 from '@/components/contact/Contact1';
 import Footer2 from '@/components/footer/Footer2';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
-import {StripeInlinePay} from '@/components/stripe/StripeInlinePay';
+import { StripeInlinePay } from '@/components/stripe/StripeInlinePay';
 import { translations } from '@/lib/translations';
 
 function App() {
@@ -91,28 +91,31 @@ function App() {
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://cdn.pixabay.com" />
       </Helmet>
-      
+
       <div className="min-h-screen gradient-bg">
-         <Header3 
-          language={language} 
+        <Header3
+          language={language}
           setLanguage={setLanguage}
           theme={theme}
           setTheme={setTheme}
           t={t}
-        /> 
-        
+        />
+
         <main>
           {/* <AISolutions1 t={t} /> */}
           <Services1 t={t} />
+
           <About3 t={t} />
-          
-           <Pricing1 t={t} /> 
+
+          <Pricing1 t={t} />
 
           <Contact1 t={t} />
         </main>
-        
+
         <Footer2 t={t} />
+
         <FloatingWhatsApp t={floatingWhatsAppTranslations[language]} />
+
         <Toaster />
       </div>
     </>
@@ -120,4 +123,3 @@ function App() {
 }
 
 export default App;
-  
