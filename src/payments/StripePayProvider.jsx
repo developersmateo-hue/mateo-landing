@@ -229,7 +229,12 @@ export function StripePayProvider({ publishableKey, children, appearanceTheme = 
   const fetchClientSecret = useCallback(async (opts) => {
     setIsFetchingSecret(true);
     try {
-      const endpoint = opts.mode === 'subscription' ? '/api/create-subscription' : '/api/create-payment-intent';
+      const API_BASE = import.meta.env.VITE_API_BASE || 'https://api-mateo-api-mateo.j6s7lb.easypanel.host';
+
+const endpoint = opts.mode === 'subscription'
+  ? `${API_BASE}/api/create-subscription`
+  : `${API_BASE}/api/create-payment-intent`;
+
 
       // tolerar string -> number
       const amount = opts.mode === 'one_time' ? Number(opts.amountInCents) : undefined;
