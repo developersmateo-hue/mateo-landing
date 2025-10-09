@@ -1,24 +1,677 @@
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="generator" content="Mateo Empresa Software" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://cdn.pixabay.com">
-		<title>Mateo</title>
-		<style>
-      .btn-primary, .btn-secondary {
-        min-height: 44px;
-        min-width: 44px;
+<html lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Crear página web y landing page profesional — Mateo</title>
+<meta name="description" content="Creamos páginas web y landing pages profesionales, rápidas y optimizadas para SEO. Posiciona tu negocio en Google desde el primer día." />
+
+<link rel="canonical" href="https://mateomi.com/" />
+
+<meta property="og:title" content="Crear página web y landing page profesional — Mateo" />
+<meta property="og:description" content="Creamos páginas web y landing pages profesionales, rápidas y optimizadas para SEO. Posiciona tu negocio en Google desde el primer día." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mateomi.com/" />
+<meta property="og:image" content="https://mateomi.com/og-image.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Crear página web y landing page profesional — Mateo" />
+<meta name="twitter:description" content="Creamos páginas web y landing pages profesionales, rápidas y optimizadas para SEO. Posiciona tu negocio en Google desde el primer día." />
+<meta name="twitter:image" content="https://mateomi.com/og-image.jpg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/chat.js"></script>
+
+</head>
+<body class="text-slate-800">
+<header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="container flex h-16 items-center justify-between">
+   <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
+  <img
+    src="/assets/logo/logo-mateo.webp"
+    width="140" height="30"              
+    alt="Mateo — Agencia de páginas web e IA"
+    class="h-8 md:h-10 w-auto block"
+    decoding="async"
+    loading="eager"
+  />
+</a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+      <a href="/#servicios" class="hover:text-slate-900">Servicios</a>
+      <a href="/#clientes" class="hover:text-slate-900">Clientes</a>
+      <a href="/crear-pagina-web.html" class="hover:text-slate-900">Planes</a>
+      <a href="/contacto-agencia-web.html" class="btn btn-primary">Contacto</a>
+    </nav>
+    <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
+      <svg width="24" height="24" fill="none" stroke="currentColor"><path stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
+    <nav class="container py-3 grid gap-2 text-sm">
+      <a href="/#servicios" class="py-2">Servicios</a>
+      <a href="/#clientes" class="py-2">Clientes</a>
+      <a href="/crear-pagina-web.html" class="py-2">Planes</a>
+      <a href="/contacto-agencia-web.html" class="py-2">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ******************************* Header (SEO-optimized) ******************************* -->
+<!-- HERO minimal con slider liviano y copy sincronizado -->
+<section class="relative pt-28 pb-16 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="hero-title">
+  <div class="container grid lg:grid-cols-2 gap-10 items-start">
+    <!-- Columna texto -->
+    <div>
+      <span class="badge">SEO técnico + IA aplicada</span>
+
+      <!-- H1 SEO (mantenemos keywords) -->
+      <h1 id="hero-title" class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+        Creamos páginas web y landing pages profesionales optimizadas
+      </h1>
+
+      <!-- Tagline FIJO (tu frase) -->
+      <p class="mt-3 text-xl md:text-2xl font-semibold leading-snug">
+        Atiende más clientes reduciendo costo y esfuerzo:
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-600">
+          Ahorro operativo inmediato
+        </span>
+      </p>
+
+      <!-- Texto secundario que cambia junto con la imagen -->
+      <p class="mt-4 text-base md:text-lg text-slate-700 min-h-[3.5rem]" data-hero-caption aria-live="polite">
+        Responde en segundos: presenta planes, precalifica, verifica disponibilidad y envía propuestas. Sin equipo extra.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/contacto-agencia-web.html" class="btn btn-primary">Comenzar ahora</a>
+        <a href="/crear-pagina-web.html" class="btn btn-ghost">Ver servicios</a>
+      </div>
+
+      <!-- Bullets técnicos (ligeros) -->
+      <ul class="mt-6 grid gap-2 text-sm text-slate-600">
+        <li>• Core Web Vitals optimizados</li>
+        <li>• Datos estructurados (JSON-LD), sitemap y robots</li>
+        <li>• Imágenes WebP y lazy-loading</li>
+      </ul>
+    </div>
+
+    <!-- Columna imagen (slider) -->
+    <div class="relative group">
+      <!-- Contenedor con altura responsiva -->
+      <div class="relative w-full overflow-hidden rounded-2xl shadow-soft bg-slate-200 aspect-[16/10] md:aspect-[5/3]" data-hero-slider data-rotate-interval="6500">
+        <!-- Slide 1 (visible al inicio) -->
+        <figure
+          class="absolute inset-0 opacity-100 transition-opacity duration-700"
+          data-hero-slide
+          data-caption="Responde en segundos: presenta planes, precalifica, verifica disponibilidad y envía propuestas. Sin equipo extra.">
+          <picture>
+            <!-- (Opcional) añade <link rel='preload' as='image' href='/assets/img/hero1.webp'> en <head> -->
+            <img
+              src="/assets/img/hero.webp"
+              alt="Agente de IA atendiendo clientes en tiempo real"
+              class="h-full w-full object-cover"
+              fetchpriority="high"
+              decoding="async">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-black/10 to-transparent"></div>
+        </figure>
+
+        <!-- Slide 2 -->
+        <figure
+          class="absolute inset-0 opacity-0 transition-opacity duration-700"
+          data-hero-slide
+          data-caption="Tranquilidad real: cada mensaje recibe respuesta y se convierte en una acción."
+        >
+          <picture>
+            <img
+              src="/assets/img/hero1.webp"
+              alt="Automatización de procesos con n8n y bots"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-black/10 to-transparent"></div>
+        </figure>
+
+        <!-- Slide 3 -->
+        <figure
+          class="absolute inset-0 opacity-0 transition-opacity duration-700"
+          data-hero-slide
+          data-caption="Asistentes virtuales 24/7: respuestas naturales multilenguaje, entrenados con tu documentación."
+        >
+          <picture>
+            <img
+              src="/assets/img/hero2.webp"
+              alt="Asistentes virtuales atendiendo clientes 24/7"
+              class="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-black/10 to-transparent"></div>
+        </figure>
+      </div>
+
+      <!-- Controles mínimos (opcionales) -->
+      <div class="absolute bottom-3 right-3 flex gap-2">
+        <button type="button" class="h-2 w-6 rounded-full bg-white/70 hover:bg-white transition" data-hero-dot="0" aria-label="Mostrar imagen 1"></button>
+        <button type="button" class="h-2 w-6 rounded-full bg-white/40 hover:bg-white transition" data-hero-dot="1" aria-label="Mostrar imagen 2"></button>
+        <button type="button" class="h-2 w-6 rounded-full bg-white/40 hover:bg-white transition" data-hero-dot="2" aria-label="Mostrar imagen 3"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS mínimo: rotación + sincronización de texto; pausa al hover; respeta reduced-motion -->
+  <script>
+    (() => {
+      const slider = document.querySelector('[data-hero-slider]');
+      if (!slider) return;
+      const slides = Array.from(slider.querySelectorAll('[data-hero-slide]'));
+      const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
+      const captionEl = document.querySelector('[data-hero-caption]');
+      const intervalMs = Number(slider.getAttribute('data-rotate-interval') || 6500);
+
+      let i = 0, timer = null, paused = false;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function show(idx) {
+        slides.forEach((s, k) => s.style.opacity = (k === idx ? '1' : '0'));
+        dots.forEach((d, k) => d.style.backgroundColor = (k === idx ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.4)'));
+        const txt = slides[idx].getAttribute('data-caption') || '';
+        if (captionEl) captionEl.textContent = txt;
+        i = idx;
       }
-    </style>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
-	</body>
+
+      function next() { show((i + 1) % slides.length); }
+
+      function start() {
+        if (prefersReduced) return; // no auto-rotar si el usuario reduce animaciones
+        stop();
+        timer = setInterval(next, intervalMs);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      // eventos
+      slider.addEventListener('mouseenter', () => { paused = true; stop(); });
+      slider.addEventListener('mouseleave', () => { if (paused) { paused = false; start(); } });
+
+      dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
+
+      // init
+      show(0);
+      start();
+    })();
+  </script>
+</section>
+
+
+<!-- ******************************* END Header (SEO-optimized) ******************************* -->
+
+
+
+<section class="py-12 border-y border-slate-200 bg-white">
+  <div class="container grid md:grid-cols-4 gap-6 text-center">
+    <div><p class="text-3xl font-bold">+120</p><p class="text-slate-600 text-sm mt-1">Sitios lanzados</p></div>
+    <div><p class="text-3xl font-bold">95</p><p class="text-slate-600 text-sm mt-1">Puntaje Lighthouse medio</p></div>
+    <div><p class="text-3xl font-bold">3–7d</p><p class="text-slate-600 text-sm mt-1">Tiempo de implementación</p></div>
+    <div><p class="text-3xl font-bold">+20%</p><p class="text-slate-600 text-sm mt-1">Conversión promedio</p></div>
+  </div>
+</section>
+
+<!-- ******************************* Servicios / Pricing (SEO-optimized) ******************************* -->
+<section id="servicios" class="py-16">
+  <div class="container">
+    <header class="text-center max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
+        Planes para crear página web y landing page
+      </h2>
+      <p class="mt-3 text-slate-600">
+        Paquetes claros para <strong>“crear página web”</strong> y
+        <strong>“crear landing page”</strong> con SEO técnico y alto rendimiento.
+      </p>
+
+      <!-- Selector visual (UI) -->
+      <div class="inline-flex items-center bg-slate-100 rounded-full p-1 mt-6">
+        <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">Mensual</span>
+        <span class="px-4 py-2 text-slate-600 text-sm font-medium">Anual (-20%)</span>
+      </div>
+    </header>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+      <!-- Plan 1 -->
+      <article
+        class="relative p-6 rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col
+               transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl hover:border-blue-300">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-semibold">Landing Page Básica SEO</h3>
+          <p class="mt-2 text-slate-600">Una landing rápida para captar leads. SEO on-page esencial.</p>
+          <div class="mt-4 flex items-baseline justify-center">
+            <span class="text-4xl font-bold">$299</span>
+            <span class="text-slate-500 ml-2 text-sm">/único</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">Entrega express. Ideal para campañas.</p>
+        </div>
+
+        <ul class="space-y-3 mb-8 text-sm text-slate-700">
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> 1 sección tipo “one-page”</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> SEO básico (títulos, meta, OG)</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Formulario conectado (n8n/WhatsApp)</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Imágenes WebP + lazy-loading</li>
+        </ul>
+
+        <a href="/contacto-agencia-web.html"
+           class="btn btn-ghost w-full text-center"
+           data-plan="Landing Page Básica SEO"
+           aria-label="Solicitar Landing Page Básica SEO">
+          Solicitar propuesta
+        </a>
+      </article>
+
+      <!-- Plan 2 (Más Popular) -->
+      <article
+        class="relative p-6 rounded-2xl border border-blue-300 bg-white shadow-soft flex flex-col ring-2 ring-blue-500
+               transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+        <!-- Badge -->
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1.5 rounded-full text-xs font-medium flex items-center gap-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+            Más Popular
+          </div>
+        </div>
+
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-semibold">Landing Page Profesional SEO</h3>
+          <p class="mt-2 text-slate-600">Secciones avanzadas, copy profesional y datos estructurados.</p>
+          <div class="mt-4 flex items-baseline justify-center">
+            <span class="text-4xl font-bold">$690</span>
+            <span class="text-slate-500 ml-2 text-sm">/único</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">Incluye optimizaciones Core Web Vitals.</p>
+        </div>
+
+        <ul class="space-y-3 mb-8 text-sm text-slate-700">
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Hasta 5 secciones + CTA</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> JSON-LD (Organization/Products/FAQ)</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Copywriting orientado a “crear página web”</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Integración Analytics + Search Console</li>
+        </ul>
+
+        <a href="/contacto-agencia-web.html"
+           class="btn btn-primary w-full text-center"
+           data-plan="Landing Page Profesional SEO"
+           aria-label="Solicitar Landing Page Profesional SEO">
+          Empezar ahora
+        </a>
+      </article>
+
+      <!-- Plan 3 (Suscripción) -->
+      <article
+        class="relative p-6 rounded-2xl border border-slate-200 bg-white shadow-soft flex flex-col
+               transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl hover:border-blue-300">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-semibold">Plan SEO para Páginas Web</h3>
+          <p class="mt-2 text-slate-600">Contenido mensual, FAQs enriquecidas y monitoreo Search Console.</p>
+          <div class="mt-4 flex items-baseline justify-center">
+            <span class="text-4xl font-bold">$390</span>
+            <span class="text-slate-500 ml-2 text-sm">/mes</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">Ahorra 20% con anualidad.</p>
+        </div>
+
+        <ul class="space-y-3 mb-8 text-sm text-slate-700">
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Optimización on-page continua</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Calendario de contenidos y FAQs rich</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Reporte mensual + acciones priorizadas</li>
+          <li class="flex items-start"><span class="mt-1 mr-2 h-5 w-5 rounded-full bg-green-500 text-white flex items-center justify-center">✓</span> Soporte para nuevas keywords</li>
+        </ul>
+
+        <a href="/contacto-agencia-web.html"
+           class="btn btn-ghost w-full text-center"
+           data-plan="Plan SEO para Páginas Web"
+           aria-label="Solicitar Plan SEO para Páginas Web">
+          Solicitar propuesta
+        </a>
+      </article>
+    </div>
+  </div>
+
+  <!-- Datos estructurados: productos/ofertas para rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Landing Page Básica SEO",
+        "description": "Landing rápida con SEO on-page esencial, formulario conectado y rendimiento optimizado.",
+        "brand": { "@type": "Brand", "name": "Mateo" },
+        "image": ["https://mateomi.com/og-image.jpg"],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "299",
+          "url": "https://mateomi.com/contacto-agencia-web.html",
+          "availability": "https://schema.org/InStock",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/NonRefundable"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Landing Page Profesional SEO",
+        "description": "Secciones avanzadas, copy profesional, datos estructurados y Core Web Vitals optimizados.",
+        "brand": { "@type": "Brand", "name": "Mateo" },
+        "image": ["https://mateomi.com/og-image.jpg"],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "690",
+          "url": "https://mateomi.com/contacto-agencia-web.html",
+          "availability": "https://schema.org/InStock",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/NonRefundable"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Plan SEO para Páginas Web",
+        "description": "Suscripción mensual de SEO con contenido, FAQs enriquecidas y seguimiento técnico.",
+        "brand": { "@type": "Brand", "name": "Mateo" },
+        "image": ["https://mateomi.com/og-image.jpg"],
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "390",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://mateomi.com/contacto-agencia-web.html",
+          "availability": "https://schema.org/InStock",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/NonRefundable"
+          }
+        }
+      }
+    }
+  ]
+}
+</script>
+
+
+</section>
+<!-- ******************************* END - Servicios / Pricing (SEO-optimized) ******************************* -->
+
+<!-- ******************************* clientes (SEO-optimized) ******************************* -->
+
+<!-- Resultados reales (marquee infinito, pause on hover, sin JS) -->
+<section id="clientes" class="py-16 bg-slate-50" aria-labelledby="clientes-title">
+  <!-- Keyframes locales (rápido y sin dependencias) -->
+  <style>
+    @keyframes scroll-x {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-scroll, .animate-scroll-slow { animation: none !important; }
+    }
+  </style>
+
+  <div class="container">
+    <h2 id="clientes-title" class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
+      Resultados reales
+    </h2>
+
+    <!-- Wrapper con máscara de desvanecido en bordes y pausa al hover -->
+    <div
+      class="mt-8 w-full overflow-hidden group
+             [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+
+      <!-- Pista doble para loop perfecto (duplica las tarjetas) -->
+      <div
+        class="flex gap-6
+               animate-scroll
+               group-hover:[animation-play-state:paused]
+               [animation:scroll-x_35s_linear_infinite]
+               md:[animation-duration:45s]">
+
+        <!-- BLOQUE 1 (original) -->
+        <div class="flex items-stretch gap-6">
+          <!-- Card -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col
+                   transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <svg class="absolute top-4 right-4 w-8 h-8 text-blue-400/30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V22h8.28v-8.28H6.56V11.1c0-1.7 1.38-3.08 3.08-3.08V6H7.17Zm9.67 0A5.17 5.17 0 0 0 11.67 11.17V22h8.28v-8.28h-3.72V11.1c0-1.7 1.38-3.08 3.08-3.08V6h-2.77Z"/>
+            </svg>
+            <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
+              <div class="flex text-yellow-500" aria-hidden="true">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Contratamos para <strong>crear una landing page</strong> y en semanas ya aparecía en Google.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">Andrea — Retail</figcaption>
+          </figure>
+
+          <!-- Card -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col
+                   transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
+              <div class="flex text-yellow-500" aria-hidden="true">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Buscábamos una <strong>página web moderna con SEO</strong> y logramos tráfico orgánico rápido.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">Luis — Servicios</figcaption>
+          </figure>
+
+          <!-- Card -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col
+                   transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
+              <div class="flex text-yellow-500" aria-hidden="true">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+              </div>
+            </div>
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Nuestra <strong>landing profesional</strong> convirtió 2× más que la anterior.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">María — Inmobiliaria</figcaption>
+          </figure>
+        </div>
+
+        <!-- BLOQUE 2 (duplicado para loop) -->
+        <div class="flex items-stretch gap-6" aria-hidden="true">
+          <!-- duplica exactamente las 3 cards anteriores -->
+          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <div class="mb-4"><div class="flex text-yellow-500" aria-hidden="true">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+            </div></div>
+            <blockquote class="italic text-slate-700 leading-relaxed">“Contratamos para <strong>crear una landing page</strong> y en semanas ya aparecía en Google.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">Andrea — Retail</figcaption>
+          </figure>
+
+          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <div class="mb-4"><div class="flex text-yellow-500" aria-hidden="true">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+            </div></div>
+            <blockquote class="italic text-slate-700 leading-relaxed">“Buscábamos una <strong>página web moderna con SEO</strong> y logramos tráfico orgánico rápido.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">Luis — Servicios</figcaption>
+          </figure>
+
+          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 will-change-transform hover:scale-[1.02] hover:shadow-xl">
+            <div class="mb-4"><div class="flex text-yellow-500" aria-hidden="true">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z"/></svg>
+            </div></div>
+            <blockquote class="italic text-slate-700 leading-relaxed">“Nuestra <strong>landing profesional</strong> convirtió 2× más que la anterior.”</blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">María — Inmobiliaria</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schema opcional (Review list) para rich snippets -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://mateomi.com/#organization",
+  "name": "Mateo",
+  "url": "https://mateomi.com/",
+  "logo": "https://mateomi.com/assets/logo/logo-mateo.webp",
+  "sameAs": [
+    "https://www.instagram.com/tu_cuenta",
+    "https://www.linkedin.com/company/tu_cuenta"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Andrea" },
+      "reviewBody": "Contratamos para crear una landing page y en semanas ya aparecía en Google.",
+      "datePublished": "2025-09-15",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Luis" },
+      "reviewBody": "Buscábamos una página web moderna con SEO y logramos tráfico orgánico rápido.",
+      "datePublished": "2025-09-20",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "María" },
+      "reviewBody": "Nuestra landing profesional convirtió 2× más que la anterior.",
+      "datePublished": "2025-09-25",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
+    }
+  ]
+}
+</script>
+
+</section>
+
+
+<!-- ******************************* END clientes (SEO-optimized) ******************************* -->
+
+
+<section class="py-16">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Preguntas frecuentes</h2>
+    <div class="mt-6 divide-y divide-slate-200">
+      <details class="py-4">
+        <summary class="font-semibold cursor-pointer">¿Cuánto cuesta crear una landing page?</summary>
+        <p class="mt-2 text-slate-600">Desde $299 con SEO on-page y formulario conectado.</p>
+      </details>
+      <details class="py-4">
+        <summary class="font-semibold cursor-pointer">¿Cómo publican en EasyPanel/cPanel?</summary>
+        <p class="mt-2 text-slate-600">Compilamos con <code>npm run build</code> y subimos <code>/dist</code>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-blue-600 text-white text-center">
+  <div class="container">
+    <h2 class="text-3xl md:text-4xl font-extrabold">¿Listo para crear tu página web?</h2>
+    <p class="mt-2 opacity-90">Empieza hoy y posiciona tu negocio en Google.</p>
+    <a href="/contacto-agencia-web.html" class="btn btn-ghost mt-6">Hablar ahora</a>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-300">
+  <div class="container py-8 text-sm grid md:grid-cols-3 gap-6">
+    <div>
+      <div class="flex items-center gap-2 font-semibold text-white">
+        <img src="/favicon.svg" class="h-5 w-5" alt="Mateo"><span>Mateo</span>
+      </div>
+      <p class="mt-3 opacity-80">Creamos páginas web y landing pages con SEO y rendimiento.</p>
+    </div>
+    <nav class="grid gap-2">
+      <a href="/crear-pagina-web.html" class="hover:text-white">Planes</a>
+      <a href="/contacto-agencia-web.html" class="hover:text-white">Contacto</a>
+      <a href="/sitemap.xml" class="hover:text-white">Sitemap</a>
+    </nav>
+    <div class="opacity-80">
+      © 2025 Mateo. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Chat -->
+<div id="floating-chat" class="fixed bottom-4 right-6 z-60">
+  <!-- Bubble message -->
+  <div id="chat-bubble" class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium"></div>
+
+  <!-- Floating Button -->
+  <button
+    id="chat-toggle"
+    aria-label="Abrir chat de WhatsApp"
+    class="w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400"
+  >
+    <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 20 25" stroke="currentColor">
+      <path stroke-width="2" d="M8 10h8m-8 4h5m4 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div
+    id="chat-window"
+    class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="chat-title"
+  >
+    <header class="p-4 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-between text-white">
+      <h3 id="chat-title" class="font-bold text-lg">Mateo</h3>
+      <button id="chat-close" aria-label="Cerrar chat">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
+
+    <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
+      <input id="chat-input" type="text" placeholder="Escribe tu mensaje..." class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none" />
+      <button id="chat-send" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" d="M5 12l14-9v18L5 12z"/></svg>
+      </button>
+    </footer>
+  </div>
+</div>
+
+
+</body>
 </html>
-  
