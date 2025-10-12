@@ -34,7 +34,7 @@ function showBubble() {
     bubbleIndex = (bubbleIndex + 1) % bubbles.length;
   }
 }
-setInterval(showBubble, 10000);
+//setInterval(showBubble, 10000);
 
 // Botón: animación de pulso sutil
 setInterval(() => {
