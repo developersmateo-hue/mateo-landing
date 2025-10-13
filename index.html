@@ -69,23 +69,22 @@
 <!-- ******************************* Header (SEO-optimized) ******************************* -->
 <!-- HERO minimal con slider liviano y copy sincronizado -->
 <section class="relative pt-28 pb-16 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="hero-title">
-  <div class="container grid lg:grid-cols-2 gap-10 items-start">
+  <div class="container grid lg:grid-cols-2 gap-10 items-start ">
     <!-- Columna texto -->
     <div>
-      <span class="badge">IA aplicada + SEO técnico + soporte humano</span>
 
       <!-- H1 SEO optimizado -->
       <h1 id="hero-title" class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-        Crear página web, tienda virtual o landing page inteligente con IA
+        Transforma tu negocio con una web inteligente.
       </h1>
 
       <!-- Subtítulo emocional -->
-      <p class="mt-3 text-xl md:text-2xl font-semibold leading-snug">
-        Transforma tu presencia digital con tecnología y acompañamiento real:
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-600">
-          Resultados medibles y asistencia 24/7
-        </span>
-      </p>
+       <p class="mt-3 text-xl md:text-2xl font-semibold leading-snug">
+    Transforma tu web en una experiencia automatizada de ventas. 
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+      Mientras duermes, tu web sigue vendiendo.
+    </span>
+  </p>
 
       <!-- Texto secundario dinámico -->
       <p class="mt-4 text-base md:text-lg text-slate-700 min-h-[3.5rem]" data-hero-caption aria-live="polite">
@@ -98,12 +97,6 @@
         <a href="/crear-pagina-web.html" class="btn btn-ghost">Ver soluciones</a>
       </div>
 
-      <!-- Bullets técnicos -->
-      <ul class="mt-6 grid gap-2 text-sm text-slate-600">
-        <li>• Páginas web y landings inteligentes con IA</li>
-        <li>• Integración de asistentes virtuales para WhatsApp</li>
-        <li>• SEO técnico, datos estructurados y Web Vitals optimizados</li>
-      </ul>
     </div>
 
     <!-- Columna imagen (slider) -->
@@ -127,7 +120,7 @@
         </figure>
 
         <!-- Slide 3 -->
-        <figure class="absolute inset-0 opacity-0 transition-opacity duration-700" data-hero-slide data-caption="Convierte más visitantes con páginas web inteligentes optimizadas para SEO y rendimiento.">
+        <figure class="absolute inset-0 opacity-0 transition-opacity duration-700" data-hero-slide data-caption="Tu web ahora piensa, conversa y vende sola.">
           <picture>
             <img src="/assets/img/hero2.webp" alt="Landing page optimizada con inteligencia artificial" class="h-full w-full object-cover" loading="lazy" decoding="async">
           </picture>
@@ -189,26 +182,84 @@
 <!-- ******************************* END Header (SEO-optimized) ******************************* -->
 
 
-
-<section class="py-12 border-y border-slate-200 bg-white">
-  <div class="container grid md:grid-cols-4 gap-6 text-center">
-    <div><p class="text-3xl font-bold">+120</p><p class="text-slate-600 text-sm mt-1">Sitios lanzados</p></div>
-    <div><p class="text-3xl font-bold">95</p><p class="text-slate-600 text-sm mt-1">Puntaje Lighthouse medio</p></div>
-    <div><p class="text-3xl font-bold">3–7d</p><p class="text-slate-600 text-sm mt-1">Tiempo de implementación</p></div>
-    <div><p class="text-3xl font-bold">+20%</p><p class="text-slate-600 text-sm mt-1">Conversión promedio</p></div>
+<!-- MÉTRICAS con animación de conteo -->
+<section id="metrics" class="py-16 border-y border-slate-200 bg-white">
+  <div class="container grid md:grid-cols-4 gap-8 text-center">
+    <div class="fade-in">
+      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="120">0</p>
+      <p class="text-slate-600 text-sm mt-2">Sitios lanzados</p>
+    </div>
+    <div class="fade-in">
+      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="95">0</p>
+      <p class="text-slate-600 text-sm mt-2">Puntaje Lighthouse medio</p>
+    </div>
+    <div class="fade-in">
+      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="7">0</p>
+      <p class="text-slate-600 text-sm mt-2">Días promedio de implementación</p>
+    </div>
+    <div class="fade-in">
+      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="20">0</p>
+      <p class="text-slate-600 text-sm mt-2">Aumento en conversión</p>
+    </div>
   </div>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    // Animar números y aparición al hacer scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.parentElement.classList.add('visible');
+            animateCount(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(c => observer.observe(c));
+
+      function animateCount(el) {
+        const target = +el.getAttribute('data-target');
+        const isPercent = el.textContent.includes('%') || el.getAttribute('data-target').includes('%');
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function update(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const value = Math.floor(progress * target);
+          el.textContent = (isPercent ? '+' : '+') + value + (isPercent ? '%' : '');
+          if (progress < 1) requestAnimationFrame(update);
+          else el.textContent = (isPercent ? '+' : '+') + target + (isPercent ? '%' : '');
+        }
+
+        requestAnimationFrame(update);
+      }
+    });
+  </script>
 </section>
+
 
 <!-- ******************************* Servicios / Pricing (SEO-optimized + IA aplicada) ******************************* -->
 <section id="servicios" class="py-16">
   <div class="container">
     <header class="text-center max-w-2xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
-        Planes para crear página web, landing page o tienda virtual inteligente con IA
+        Planes
       </h2>
       <p class="mt-3 text-slate-600">
-        Elige el plan ideal para <strong>crear tu página web profesional</strong>,
-        <strong>landing page optimizada</strong> o <strong>tienda online inteligente</strong>.
         Todos nuestros proyectos incluyen <strong>IA aplicada</strong>, <strong>SEO técnico</strong> y <strong>soporte humano experto</strong>.
       </p>
 
@@ -415,11 +466,10 @@
 
   <div class="container">
     <h2 id="clientes-title" class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-center">
-      Resultados reales de clientes que confiaron en Mateo
+      Historias de éxito
     </h2>
     <p class="text-center max-w-2xl mx-auto mt-3 text-slate-600">
-      Testimonios de empresas y emprendedores que decidieron <strong>crear su página web con inteligencia artificial</strong>
-      y hoy disfrutan de más clientes, mejor posicionamiento y soporte técnico constante.
+      Clientes que transformaron su presencia digital con <strong>Mateo.</strong>
     </p>
 
     <!-- Carrusel continuo -->
