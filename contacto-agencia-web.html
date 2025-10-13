@@ -28,6 +28,8 @@
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/chat.js"></script>
+  <script type="module" src="/src/contact.js"></script>
 
   <!-- Datos estructurados -->
   <!-- Breadcrumbs -->
@@ -72,9 +74,17 @@
 <body class="text-slate-800">
 <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
   <div class="container flex h-16 items-center justify-between">
-    <a href="/" class="flex items-center gap-2 font-semibold text-slate-800" aria-label="Inicio — Mateo">
-      <img src="/assets/logo/logo-mateo.webp" alt="Mateo" class="h-6 w-6"><span>Mateo</span>
-    </a>
+   <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
+  <img
+    src="/assets/logo/logo-mateo.webp"
+    width="140" height="30"              
+    alt="Mateo — Agencia de páginas web e IA"
+    class="h-8 md:h-10 w-auto block"
+    decoding="async"
+    loading="eager"
+  />
+</a>
+
     <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
       <a href="/#servicios" class="hover:text-slate-900">Servicios</a>
       <a href="/#clientes" class="hover:text-slate-900">Clientes</a>
@@ -94,73 +104,219 @@
     </nav>
   </div>
 </header>
+<!-- ******************************* END Preguntas frecuentes (SEO-optimized) ******************************* -->
 
-<section class="pt-28 pb-16 bg-gradient-to-b from-blue-50 to-white">
-  <div class="container max-w-3xl">
-    <h1 class="text-4xl font-extrabold">Contacto — Agencia de páginas web</h1>
-    <p class="mt-2 text-slate-600">Cuéntanos sobre tu negocio y objetivos. Te respondemos en 24–48 horas.</p>
+<!-- *******************************  CONTACTO (SEO-optimized) ******************************* -->
+<section id="contact" class="py-20 bg-slate-900 text-white">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <!-- Header -->
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">
+        Contacto
+      </h2>
+      <p class="text-xl text-white/80 max-w-3xl mx-auto">
+        ¿Listo para transformar tu negocio? Hablemos 🚀
+      </p>
+    </div>
 
-    <!-- Formulario -->
-    <form class="mt-8 grid gap-4" data-contact method="post" action="https://n8n-tu-dominio/webhook/tu-webhook-id">
-      <!-- Honeypot -->
-      <input type="text" name="company_website" class="hidden" tabindex="-1" autocomplete="off">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <!-- Formulario -->
+      <div class="fade-left">
+        <h3 class="text-3xl font-bold mb-8">Envíanos un mensaje</h3>
 
-      <div class="grid md:grid-cols-2 gap-4">
-        <input required name="name" placeholder="Nombre" class="w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <input required type="email" name="email" placeholder="Correo" class="w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <form id="contact-form" class="space-y-6">
+          <!-- Nombre -->
+          <div>
+            <label class="block text-sm font-medium mb-2">Nombre completo</label>
+            <input type="text" name="name" required placeholder="Tu nombre"
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" name="email" required placeholder="tu@email.com"
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <!-- Teléfono -->
+          <div>
+            <label class="block text-sm font-medium mb-2">WhatsApp / Teléfono</label>
+            <input type="tel" name="phone" id="phone" required placeholder="+1 234 567 8900"
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <!-- Empresa -->
+          <div>
+            <label class="block text-sm font-medium mb-2">Empresa</label>
+            <input type="text" name="company" placeholder="Tu empresa (opcional)"
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
+          </div>
+
+          <!-- Mensaje -->
+          <div>
+            <label class="block text-sm font-medium mb-2">Mensaje</label>
+            <textarea name="message" id="message" rows="5" maxlength="300"
+              placeholder="Cuéntanos brevemente qué necesitas automatizar o crear..."
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500"></textarea>
+            <div class="flex justify-between text-xs text-white/60 mt-2">
+              <span>Máximo 300 caracteres</span>
+              <span id="msg-count">0/300</span>
+            </div>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 py-3 text-lg font-semibold rounded-lg transition-all">
+            Enviar Mensaje
+          </button>
+        </form>
       </div>
 
-      <input name="phone" placeholder="WhatsApp (opcional)" class="w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <!-- Info de contacto -->
+      <div class="space-y-8 fade-right">
+        <h3 class="text-3xl font-bold mb-8">Información de Contacto</h3>
 
-      <textarea required name="message" placeholder="¿Qué necesitas? (crear página web, crear landing page, SEO…)" class="w-full rounded-2xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 h-36"></textarea>
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M16 12H8m8-4H8m2 8h6m2 4H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold">Email</h4>
+            <a href="mailto:contact@mateomi.com" class="text-white/70 hover:text-white">contact@mateomi.com</a>
+          </div>
+        </div>
 
-      <button class="btn btn-primary w-full md:w-auto">Enviar</button>
-    </form>
-  </div>
-</section>
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M3 5a2 2 0 012-2h3.6a1 1 0 01.95.68l1.24 3.73a1 1 0 01-.27 1.05L8.91 10.91a11.05 11.05 0 005.19 5.19l2.45-1.66a1 1 0 011.05-.27l3.73 1.24a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C10.61 21 3 13.39 3 4v1z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold">Teléfono</h4>
+            <a href="tel:+15174027564" class="text-white/70 hover:text-white">+1 (517) 402-7564</a>
+          </div>
+        </div>
 
-<section class="py-16">
-  <div class="container">
-    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Preguntas frecuentes</h2>
-    <div class="mt-6 divide-y divide-slate-200">
-      <details class="py-4">
-        <summary class="font-semibold cursor-pointer">¿Cuánto cuesta crear una landing page?</summary>
-        <p class="mt-2 text-slate-600">Desde $299 con SEO on-page y formulario conectado.</p>
-      </details>
-      <details class="py-4">
-        <summary class="font-semibold cursor-pointer">¿Cómo publican en EasyPanel/cPanel?</summary>
-        <p class="mt-2 text-slate-600">Compilamos con <code>npm run build</code> y subimos <code>/dist</code>.</p>
-      </details>
+        <div class="flex items-start space-x-4">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M12 11c0 1.38-1.12 2.5-2.5 2.5S7 12.38 7 11s1.12-2.5 2.5-2.5S12 9.62 12 11z" />
+              <path stroke-width="2" d="M12 22s8-4.94 8-11A8 8 0 004 11c0 6.06 8 11 8 11z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold">Dirección</h4>
+            <p class="text-white/70">123 Tech Street, Silicon Valley, CA 94000, USA</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+
+ <!-- Toast -->
+<div
+  id="toast"
+  class="hidden fixed top-16 right-6 z-[9999] bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
+></div>
+
+
 </section>
 
-<section class="py-16 bg-blue-600 text-white text-center">
-  <div class="container">
-    <h2 class="text-3xl md:text-4xl font-extrabold">¿Listo para crear tu página web?</h2>
-    <p class="mt-2 opacity-90">Empieza hoy y posiciona tu negocio en Google.</p>
-    <a href="/contacto-agencia-web.html" class="btn btn-ghost mt-6">Hablar ahora</a>
-  </div>
-</section>
+<!-- *******************************  END CONTACTO (SEO-optimized) ******************************* -->
 
-<footer class="bg-slate-900 text-slate-300">
-  <div class="container py-8 text-sm grid md:grid-cols-3 gap-6">
+
+<footer class="bg-slate-900 text-slate-300 border-t border-slate-800">
+  <div class="container py-10 grid md:grid-cols-3 gap-8 text-sm">
+    
+    <!-- Brand -->
     <div>
-      <div class="flex items-center gap-2 font-semibold text-white">
-        <img src="/assets/logo/logo-mateo.webp" class="h-5 w-5" alt="Mateo"><span>Mateo</span>
+      <div class="flex items-center gap-2 font-semibold text-white text-lg">
+        <img src="/favicon.svg" class="h-5 w-5" alt="Mateo logo">
+        <span>Mateo</span>
       </div>
-      <p class="mt-3 opacity-80">Creamos páginas web y landing pages con SEO y rendimiento.</p>
+    <p class="mt-3 leading-relaxed opacity-80">
+  Diseñamos <strong>páginas web con Inteligencia Artificial</strong> que atraen, analizan y convierten.
+</p>
+<p class="mt-3 opacity-70">
+  Más visibilidad, más clientes y <strong>mejor posicionamiento</strong>.
+</p>
+
+
     </div>
-    <nav class="grid gap-2">
-      <a href="/crear-pagina-web.html" class="hover:text-white">Planes</a>
-      <a href="/contacto-agencia-web.html" class="hover:text-white">Contacto</a>
-      <a href="/sitemap.xml" class="hover:text-white">Sitemap</a>
+
+    <!-- Navegación -->
+    <nav class="grid gap-2 md:justify-self-center">
+      <h3 class="font-semibold text-white mb-2">Enlaces útiles</h3>
+      <a href="/crear-pagina-web.html" class="hover:text-white transition">Crear página web</a>
+      <a href="/tiendas-virtuales.html" class="hover:text-white transition">Tiendas virtuales</a>
+      <a href="/contacto-agencia-web.html" class="hover:text-white transition">Contacto</a>
+      <a href="/sitemap.html" class="hover:text-white transition">Sitemap</a>
     </nav>
-    <div class="opacity-80">
-      © 2025 Mateo. Todos los derechos reservados.
+
+    <!-- Info / Derechos -->
+    <div class="md:text-right flex flex-col justify-between">
+      <div class="space-y-2">
+        <h3 class="font-semibold text-white mb-1">Contáctanos</h3>
+        <a href="mailto:contact@mateomi.com" class="hover:text-white transition">contact@mateomi.com</a><br>
+        <a href="tel:+15174027564" class="hover:text-white transition">+1 (517) 402-7564</a>
+        <p class="opacity-70 mt-2">Soporte técnico y atención personalizada.</p>
+      </div>
+
+      <p class="mt-6 text-xs opacity-60">
+        © 2025 Mateo. Todos los derechos reservados. <br>
+        Diseñado con ❤️ por el equipo de ingenieros de Mateo.
+      </p>
     </div>
   </div>
 </footer>
+
+
+<!-- Floating Chat -->
+<div id="floating-chat" class="fixed bottom-4 right-6 z-60">
+  <!-- Bubble message -->
+  <div id="chat-bubble" class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium"></div>
+
+  <!-- Floating Button -->
+  <button
+    id="chat-toggle"
+    aria-label="Abrir chat de WhatsApp"
+    class="w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400"
+  >
+    <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 20 25" stroke="currentColor">
+      <path stroke-width="2" d="M8 10h8m-8 4h5m4 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div
+    id="chat-window"
+    class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="chat-title"
+  >
+    <header class="p-4 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-between text-white">
+      <h3 id="chat-title" class="font-bold text-lg">Mateo</h3>
+      <button id="chat-close" aria-label="Cerrar chat">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
+
+    <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
+      <input id="chat-input" type="text" placeholder="Escribe tu mensaje..." class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none" />
+      <button id="chat-send" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" d="M5 12l14-9v18L5 12z"/></svg>
+      </button>
+    </footer>
+  </div>
+</div>
+
 
 </body>
 </html>
