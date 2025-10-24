@@ -1,6 +1,6 @@
 
 const WEBHOOK_URL =
-  'https://n8n-n8n.mwsycw.easypanel.host/webhook/e0c5f767-d7d5-4356-96-mateo-landing-page';
+  'https://n8n-n8n.mwsycw.easypanel.host/webhook/e0c5f767-d7d5-4356-96-mateo-landing-page-mateo';
 
 // === ELEMENTOS ===
 const btnToggle = document.getElementById('chat-toggle');

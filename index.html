@@ -368,7 +368,7 @@
         <!-- Palabras flotantes -->
         <div class="relative flex flex-wrap justify-center gap-4 text-sm text-white">
           <span class="tag">🚀 Crecimiento</span>
-          <span class="tag">✨ Automatización</span>
+          <span class="tag">✨ Calidad</span>
           <span class="tag">💡 Estrategia</span>
           <span class="tag">🌍 Presencia</span>
           <span class="tag">⚙️ Escalabilidad</span>
@@ -1118,46 +1118,54 @@
 
   <!-- Floating Chat -->
   <div id="floating-chat" class="fixed bottom-4 right-6 z-[9999]">
-    <!-- Bubble message -->
-    <div id="chat-bubble"
-      class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium">
-    </div>
-
-    <!-- Floating Button -->
-    <button id="chat-toggle" aria-label="Abrir chat de WhatsApp"
-      class="w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400">
-      <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 20 25"
-        stroke="currentColor">
-        <path stroke-width="2" d="M8 10h8m-8 4h5m4 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </button>
-
-    <!-- Chat Window -->
-    <div id="chat-window"
-      class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
-      role="dialog" aria-modal="true" aria-labelledby="chat-title">
-      <header class="p-4 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-between text-white">
-        <h3 id="chat-title" class="font-bold text-lg">Mateo</h3>
-        <button id="chat-close" aria-label="Cerrar chat">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </header>
-
-      <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
-
-      <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
-        <input id="chat-input" type="text" placeholder="Escribe tu mensaje..."
-          class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none" />
-        <button id="chat-send" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-width="2" d="M5 12l14-9v18L5 12z" />
-          </svg>
-        </button>
-      </footer>
-    </div>
+  <!-- Bubble message -->
+  <div id="chat-bubble"
+       class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium">
   </div>
+
+  <!-- Floating Button (WhatsApp style) -->
+  <button id="chat-toggle" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"
+    class="w-16 h-16 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#72E3A6]">
+    <!-- WhatsApp logo -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8" aria-hidden="true" fill="currentColor">
+      <path d="M19.11 17.49c-.26-.13-1.53-.76-1.77-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.2-.57.07-.26-.13-1.11-.41-2.11-1.31-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.31.39-.46.13-.15.18-.26.26-.44.09-.18.04-.33-.02-.46-.06-.13-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.46-.15 0-.33-.02-.51-.02-.18 0-.46.07-.71.33-.24.26-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.87 2.86 4.53 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.53-.62 1.74-1.22.22-.6.22-1.12.15-1.22-.07-.11-.24-.17-.5-.3z"/>
+      <path d="M26.47 5.53C23.62 2.68 19.93 1 16 1 8.83 1 3 6.83 3 14c0 2.43.64 4.79 1.86 6.88L3 31l10.36-1.86C15.35 29.36 17.65 30 20 30c7.17 0 13-5.83 13-13 0-3.93-1.68-7.62-4.53-10.47zM20 27.5c-2.08 0-4.12-.55-5.91-1.59l-.42-.25-6.14 1.1 1.17-6-.27-.44C7.37 18.33 6.5 16.22 6.5 14 6.5 8.2 11.2 3.5 17 3.5c3.05 0 5.92 1.19 8.08 3.35C27.24 9 28.5 11.85 28.5 15c0 5.8-4.7 10.5-10.5 10.5z"/>
+    </svg>
+    <span class="sr-only">Abrir chat de WhatsApp</span>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="chat-window"
+       class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
+       role="dialog" aria-modal="true" aria-labelledby="chat-title">
+    <header class="p-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-between text-white">
+      <h3 id="chat-title" class="font-bold text-lg">Soporte • Mateo</h3>
+      <button id="chat-close" aria-label="Cerrar chat" title="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-width="2" d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </header>
+
+    <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
+
+    <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
+      <input id="chat-input" type="text" placeholder="Escribe tu mensaje..."
+             class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none"
+             aria-label="Escribir mensaje" />
+      <!-- Send button (WhatsApp-like) -->
+      <button id="chat-send" class="bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full p-2 transition transform hover:scale-105"
+              aria-label="Enviar mensaje" title="Enviar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="w-5 h-5 transform -rotate-45" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <!-- Paper plane outline -->
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75 20.25 12 3.75 20.25 7.5 12 3.75 3.75z"/>
+        </svg>
+      </button>
+    </footer>
+  </div>
+</div>
+
 
 
 
