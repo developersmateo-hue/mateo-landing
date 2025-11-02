@@ -51,8 +51,6 @@
 
       <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
         <a href="/#servicios" class="hover:text-slate-900">Servicios</a>
-        <a href="/#clientes" class="hover:text-slate-900">Clientes</a>
-        <a href="/#pricing " class="hover:text-slate-900">Planes</a>
         <a href="/#contact" class="btn btn-primary">Contacto</a>
       </nav>
       <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
@@ -64,8 +62,6 @@
     <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
       <nav class="container py-3 grid gap-2 text-sm">
         <a href="/#servicios" class="py-2">Servicios</a>
-        <a href="/#clientes" class="py-2">Clientes</a>
-        <a href="/#pricing" class="py-2">Planes</a>
         <a href="/#contact" class="py-2">Contacto</a>
       </nav>
     </div>
@@ -73,129 +69,142 @@
 
 
 
-<!-- ===================== HERO FULLSCREEN MODERNO (ENFOCADO EN AUTOMATIZACIÓN Y CLIENTES) ===================== -->
-<section class="relative w-full h-screen overflow-hidden bg-slate-900" aria-labelledby="hero-title">
+  <!-- ===================== HERO FULLSCREEN MODERNO (ENFOCADO EN AUTOMATIZACIÓN Y CLIENTES) ===================== -->
+  <section class="relative w-full h-screen overflow-hidden bg-slate-900" aria-labelledby="hero-title">
 
-  <!-- Slider de fondo -->
-  <div class="absolute inset-0 w-full h-full" data-hero-slider data-rotate-interval="6000">
-    <!-- Imagen 1 -->
-    <figure class="absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
-      data-caption="Automatiza, responde y convierte clientes en segundos.">
-      <img src="/assets/img/hero.webp" alt="Landing automatizada para captar clientes"
-        class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
+    <!-- Slider de fondo -->
+    <div class="absolute inset-0 w-full h-full" data-hero-slider data-rotate-interval="6000">
+      <!-- Imagen 1 -->
+      <figure class="absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-caption="Automatiza, responde y convierte clientes en segundos.">
+        <img src="/assets/img/hero.webp" alt="Landing automatizada para captar clientes"
+          class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
 
-    <!-- Imagen 2 -->
-    <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
-      data-caption="Tu sitio web trabaja por ti 24/7 mientras duermes.">
-      <img src="/assets/img/hero1.webp" alt="Asistente de IA atendiendo clientes" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
+      <!-- Imagen 2 -->
+      <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-caption="Tu sitio web trabaja por ti 24/7 mientras duermes.">
+        <img src="/assets/img/hero1.webp" alt="Asistente de IA atendiendo clientes" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
 
-    <!-- Imagen 3 -->
-    <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
-      data-caption="Automatiza tu negocio y haz crecer tus resultados con inteligencia artificial.">
-      <img src="/assets/img/hero2.webp" alt="Automatización de marketing digital" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
-  </div>
-
-  <!-- Contenido centrado -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 z-10">
-    <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-lg animate-fadeUp">
-      Webs que piensan, responden y venden por ti
-    </h1>
-    <p class="mt-4 text-lg md:text-2xl font-medium text-blue-100/90 max-w-2xl animate-fadeUp delay-200">
-      Automatizamos tu negocio para que <strong>conviertas más clientes</strong> sin perder tiempo.
-    </p>
-
-    <!-- CTA principal -->
-    <div class="mt-8 flex flex-wrap gap-4 justify-center animate-fadeUp delay-400">
-      <a href="/#contact"
-        class="px-8 py-3 rounded-full bg-emerald-400 text-slate-900 font-bold shadow-lg hover:bg-emerald-300 hover:scale-105 transition-all duration-300">
-        Solicitar asesoría
-      </a>
-      <a href="#servicios"
-        class="px-8 py-3 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10 hover:scale-105 transition-all duration-300">
-        Ver soluciones →
-      </a>
+      <!-- Imagen 3 -->
+      <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-caption="Automatiza tu negocio y haz crecer tus resultados con inteligencia artificial.">
+        <img src="/assets/img/hero2.webp" alt="Automatización de marketing digital" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
     </div>
 
-    <!-- Texto de subtítulo dinámico -->
-    <p data-hero-caption class="mt-6 text-sm md:text-base text-blue-100/80 italic tracking-wide animate-fadeUp delay-600">
-      Automatiza procesos, capta leads y haz crecer tu negocio.
-    </p>
-  </div>
+    <!-- Contenido centrado -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 z-10">
+      <h1 id="hero-title"
+        class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-lg animate-fadeUp">
+        Webs que piensan, responden y venden por ti
+      </h1>
+      <p class="mt-4 text-lg md:text-2xl font-medium text-blue-100/90 max-w-2xl animate-fadeUp delay-200">
+        Automatizamos tu negocio para que <strong>conviertas más clientes</strong> sin perder tiempo.
+      </p>
 
-  <!-- Indicadores del slider -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-    <button type="button" class="h-2 w-8 rounded-full bg-white/80 hover:bg-emerald-400 transition" data-hero-dot="0"
-      aria-label="Mostrar imagen 1"></button>
-    <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="1"
-      aria-label="Mostrar imagen 2"></button>
-    <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="2"
-      aria-label="Mostrar imagen 3"></button>
-  </div>
+      <!-- CTA principal -->
+      <div class="mt-8 flex flex-wrap gap-4 justify-center animate-fadeUp delay-400">
+        <a href="/#contact"
+          class="px-8 py-3 rounded-full bg-emerald-400 text-slate-900 font-bold shadow-lg hover:bg-emerald-300 hover:scale-105 transition-all duration-300">
+          Solicitar asesoría
+        </a>
+        <a href="#servicios"
+          class="px-8 py-3 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10 hover:scale-105 transition-all duration-300">
+          Ver soluciones →
+        </a>
+      </div>
 
-  <!-- Script Slider -->
-  <script>
-    (() => {
-      const slider = document.querySelector('[data-hero-slider]');
-      if (!slider) return;
-      const slides = Array.from(slider.querySelectorAll('[data-hero-slide]'));
-      const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
-      const captionEl = document.querySelector('[data-hero-caption]');
-      const intervalMs = Number(slider.getAttribute('data-rotate-interval') || 6000);
+      <!-- Texto de subtítulo dinámico -->
+      <p data-hero-caption
+        class="mt-6 text-sm md:text-base text-blue-100/80 italic tracking-wide animate-fadeUp delay-600">
+        Automatiza procesos, capta leads y haz crecer tu negocio.
+      </p>
+    </div>
 
-      let i = 0, timer = null;
+    <!-- Indicadores del slider -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <button type="button" class="h-2 w-8 rounded-full bg-white/80 hover:bg-emerald-400 transition" data-hero-dot="0"
+        aria-label="Mostrar imagen 1"></button>
+      <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="1"
+        aria-label="Mostrar imagen 2"></button>
+      <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="2"
+        aria-label="Mostrar imagen 3"></button>
+    </div>
 
-      function show(idx) {
-        slides.forEach((s, k) => s.style.opacity = k === idx ? '1' : '0');
-        dots.forEach((d, k) => d.style.backgroundColor = k === idx ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)');
-        const txt = slides[idx].getAttribute('data-caption') || '';
-        if (captionEl) captionEl.textContent = txt;
-        i = idx;
+    <!-- Script Slider -->
+    <script>
+      (() => {
+        const slider = document.querySelector('[data-hero-slider]');
+        if (!slider) return;
+        const slides = Array.from(slider.querySelectorAll('[data-hero-slide]'));
+        const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
+        const captionEl = document.querySelector('[data-hero-caption]');
+        const intervalMs = Number(slider.getAttribute('data-rotate-interval') || 6000);
+
+        let i = 0, timer = null;
+
+        function show(idx) {
+          slides.forEach((s, k) => s.style.opacity = k === idx ? '1' : '0');
+          dots.forEach((d, k) => d.style.backgroundColor = k === idx ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)');
+          const txt = slides[idx].getAttribute('data-caption') || '';
+          if (captionEl) captionEl.textContent = txt;
+          i = idx;
+        }
+
+        function next() { show((i + 1) % slides.length); }
+
+        function start() {
+          stop();
+          timer = setInterval(next, intervalMs);
+        }
+
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        slider.addEventListener('mouseenter', stop);
+        slider.addEventListener('mouseleave', start);
+        dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
+
+        show(0);
+        start();
+      })();
+    </script>
+
+    <!-- Estilos -->
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
-      function next() { show((i + 1) % slides.length); }
-
-      function start() {
-        stop();
-        timer = setInterval(next, intervalMs);
+      .animate-fadeUp {
+        animation: fadeUp 1s ease-out forwards;
       }
 
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-      dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
-
-      show(0);
-      start();
-    })();
-  </script>
-
-  <!-- Estilos -->
-  <style>
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
+      .delay-200 {
+        animation-delay: 0.2s;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      .delay-400 {
+        animation-delay: 0.4s;
       }
-    }
-    .animate-fadeUp {
-      animation: fadeUp 1s ease-out forwards;
-    }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-600 { animation-delay: 0.6s; }
-  </style>
-</section>
+
+      .delay-600 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </section>
 
 
 
@@ -286,344 +295,352 @@
   </section>
 
 
-  <!-- ===================== SECCIÓN DE SERVICIOS ===================== -->
-  <section id="servicios" class="relative py-10 bg-gradient-to-b from-blue-50 via-white to-slate-50">
+
+
+
+  <!-- ===================== SECCIÓN DE SERVICIOS (FUSIÓN PERFECTA CON EL FONDO SIGUIENTE) ===================== -->
+  <section id="servicios"
+    class="relative py-20 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
+    <!-- Fondo animado -->
+    <div class="absolute inset-0">
+      <div
+        class="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.15),transparent_60%)] animate-slowRotate">
+      </div>
+    </div>
+
     <div class="container relative z-10">
-      <!-- Encabezado -->
-      <div class="text-center mb-6">
-        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-          Soluciones que impulsan tu negocio 🚀
+      <div class="text-center mb-14">
+        <h2
+          class="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 text-transparent bg-clip-text">
+          Soluciones Inteligentes que Transforman Negocios 🚀
         </h2>
-        <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-lg">
-          En <strong>Mateo</strong>, la tecnología trabaja por ti.
+        <p class="mt-4 max-w-2xl mx-auto text-blue-100 text-lg leading-relaxed">
+          Combinamos <strong>automatización, diseño y tecnología</strong> para que tu marca crezca sin límites.
         </p>
       </div>
 
-      <!-- Grid de servicios -->
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Servicio 1 -->
+      <!-- Servicios -->
+      <div class="grid md:grid-cols-3 gap-10">
         <div
-          class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-transform duration-300 hover:-translate-y-2">
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
           <div
-            class="w-12 h-12 mb-4 flex items-center justify-center bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-xl shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18m-9 5h9" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Landing Inteligente</h3>
-          <p class="mt-3 text-slate-600 leading-relaxed">
-            Diseños únicos, conexión con <strong>WhatsApp y asistentes IA</strong>. Convierte visitantes en clientes y
-            más...
+          <h3 class="text-2xl font-bold mb-3">Landing Inteligente</h3>
+          <p class="text-blue-100/90 leading-relaxed">
+            Diseños únicos con <strong>asistentes IA integrados</strong>, chat automatizado y conexión con
+            <strong>WhatsApp</strong>.
+            Capta más clientes en menos tiempo.
           </p>
-          <div class="mt-5">
-            <a href="/#contact" class="inline-block text-blue-600 font-semibold hover:text-blue-700 hover:underline">
-              Solicitar propuesta →
-            </a>
-          </div>
+          <a href="/#contact" class="inline-block mt-5 text-emerald-400 font-semibold hover:underline transition-all">
+            Solicitar propuesta →
+          </a>
         </div>
 
-        <!-- Servicio 2 -->
         <div
-          class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-transform duration-300 hover:-translate-y-2">
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
           <div
-            class="w-12 h-12 mb-4 flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-500 text-white rounded-xl shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Web Avanzada con IA</h3>
-          <p class="mt-3 text-slate-600 leading-relaxed">
-            Páginas completas con <strong>automatización inteligente</strong> y análisis en tiempo real.Es solo el
-            comienzo de lo que podemos construir contigo
+          <h3 class="text-2xl font-bold mb-3">Automatizaciones Avanzadas</h3>
+          <p class="text-blue-100/90 leading-relaxed">
+            Implementamos <strong>procesos automáticos</strong> que gestionan leads, agendan citas, envían correos y
+            responden clientes 24/7.
+            Optimiza tu negocio con soluciones inteligentes en tiempo real.
           </p>
-          <div class="mt-5">
-            <a href="/#contact" class="inline-block text-blue-600 font-semibold hover:text-blue-700 hover:underline">
-              Agendar reunión →
-            </a>
-          </div>
+          <a href="/#contact" class="inline-block mt-5 text-emerald-400 font-semibold hover:underline transition-all">
+            Agendar reunión →
+          </a>
         </div>
 
-
-        <!-- Servicio 3 -->
         <div
-          class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-transform duration-300 hover:-translate-y-2">
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
           <div
-            class="w-12 h-12 mb-4 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-emerald-500 text-white rounded-xl shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-emerald-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 17v2h6v-2m-7-8l3-3m0 0l3 3m-3-3v12" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">SEO Inteligente</h3>
-          <p class="mt-3 text-slate-600 leading-relaxed">
-            Posicionamiento automático con <strong>IA, auditorías y contenido optimizado, resultados reales — y aún hay
-              más por descubrir.</strong>.
+          <h3 class="text-2xl font-bold mb-3">Tiendas y Soluciones Digitales</h3>
+          <p class="text-blue-100/90 leading-relaxed">
+            Creamos <strong>tiendas virtuales, apps móviles</strong> y <strong>sistemas personalizados</strong> para tu
+            empresa.
+            Potencia tu presencia digital con integraciones, pagos en línea y <strong>escalabilidad
+              garantizada</strong>.
           </p>
-          <div class="mt-5">
-            <a href="/#contact" class="inline-block text-blue-600 font-semibold hover:text-blue-700 hover:underline">
-              Mejorar mi SEO →
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Card de partículas de palabras -->
-      <div class="relative mt-10 mx-auto max-w-2xl p-8 rounded-3xl bg-slate-900 overflow-hidden text-center shadow-xl">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-indigo-500/10 to-emerald-400/10"></div>
-        <h4 class="relative text-xl font-semibold text-white mb-2">Palabras que nos definen</h4>
-        <p class="relative text-slate-400 text-sm mb-6">Innovación, resultados y crecimiento constante.</p>
-
-        <!-- Palabras flotantes -->
-        <div class="relative flex flex-wrap justify-center gap-4 text-sm text-white">
-          <span class="tag">🚀 Crecimiento</span>
-          <span class="tag">✨ Calidad</span>
-          <span class="tag">💡 Estrategia</span>
-          <span class="tag">🌍 Presencia</span>
-          <span class="tag">⚙️ Escalabilidad</span>
-          <span class="tag">🤖 Inteligencia Artificial</span>
-          <span class="tag">📈 Posicionamiento</span>
+          <a href="/#contact" class="inline-block mt-5 text-emerald-400 font-semibold hover:underline transition-all">
+            Ver opciones →
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Fondo decorativo -->
-    <div class="absolute inset-0 bg-gradient-to-t from-blue-100/20 to-transparent pointer-events-none rounded-t-[3rem]">
-    </div>
+    <!-- 🔹 Fondo inferior corregido: transición perfecta hacia el blanco -->
+    <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
 
-    <!-- Animación partículas -->
+    <!-- Animaciones -->
     <style>
-      .tag {
-        position: relative;
-        display: inline-block;
-        padding: 6px 12px;
-        border-radius: 9999px;
-        background: linear-gradient(90deg, #3b82f6, #6366f1, #10b981);
-        color: white;
-        font-weight: 600;
-        box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
-        animation: floatTag 6s ease-in-out infinite alternate;
-      }
-
-      @keyframes floatTag {
+      @keyframes slowRotate {
         0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 0.9;
-        }
-
-        50% {
-          transform: translateY(-10px) rotate(3deg);
-          opacity: 1;
+          transform: rotate(0deg) scale(1);
         }
 
         100% {
-          transform: translateY(10px) rotate(-3deg);
-          opacity: 0.9;
+          transform: rotate(360deg) scale(1.1);
         }
       }
 
-      .tag:nth-child(odd) {
-        animation-duration: 5s;
-        animation-delay: 0.5s;
-      }
-
-      .tag:nth-child(even) {
-        animation-duration: 7s;
-        animation-delay: 1s;
+      .animate-slowRotate {
+        animation: slowRotate 40s linear infinite;
       }
     </style>
   </section>
 
-<!-- ===================== SECCIÓN DE PREGUNTAS FRECUENTES (VERSIÓN MODERNA + EFECTOS SUAVES + SEO OPTIMIZADA) ===================== -->
-<section id="faq" class="relative py-20 bg-gradient-to-b from-slate-50 via-white to-blue-50 border-t border-slate-200 overflow-hidden">
-  <div class="container relative z-10">
-    <!-- Encabezado -->
-    <div class="text-center mb-12 fade-in-up">
-      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-        Preguntas Frecuentes
-      </h2>
-      <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-lg">
-        Encuentra respuestas rápidas sobre nuestras <strong>landing pages inteligentes</strong>, <strong>automatizaciones</strong> y <strong>soluciones digitales</strong>.
-      </p>
-    </div>
 
-    <!-- FAQ Accordion -->
-    <div id="faq-list" class="max-w-5xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl shadow-xl overflow-hidden divide-y divide-slate-200">
-      
-      <!-- Pregunta 1 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          ¿Qué es una landing page?
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+
+
+
+
+
+  <!-- ===================== SECCIÓN DE PREGUNTAS FRECUENTES (VERSIÓN MODERNA + EFECTOS SUAVES + SEO OPTIMIZADA) ===================== -->
+  <section id="faq" class="relative py-10 bg-gradient-to-b from-white via-slate-50 to-blue-50  overflow-hidden">
+    <div class="container relative z-10">
+      <!-- Encabezado -->
+      <div class="text-center mb-12 fade-in-up">
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+          Preguntas Frecuentes
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-lg">
+          Encuentra respuestas rápidas sobre nuestras <strong>landing pages inteligentes</strong>,
+          <strong>automatizaciones</strong> y <strong>soluciones digitales</strong>.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div id="faq-list"
+        class="max-w-5xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl shadow-xl overflow-hidden divide-y divide-slate-200">
+
+        <!-- Pregunta 1 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            ¿Qué es una landing page?
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+            Una <strong>landing page</strong> es una página creada para convertir visitantes en clientes. Resume lo más
+            importante de tu negocio, muestra tus servicios y guía al usuario hacia una acción concreta como
+            <em>contactarte o comprar</em>.
+          </div>
+        </details>
+
+        <!-- Pregunta 2 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            ¿Qué beneficios tiene una landing optimizada?
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+            Mejora tu posicionamiento en Google, capta clientes potenciales y aumenta tus conversiones. Nuestras
+            <strong>landing pages inteligentes</strong> están diseñadas con IA, optimizadas para SEO y enfocadas en
+            resultados medibles.
+          </div>
+        </details>
+
+        <!-- Pregunta 3 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            ¿Qué es una automatización y cómo ayuda?
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+            Las <strong>automatizaciones</strong> permiten que tu sitio atienda, responda y gestione clientes
+            automáticamente. Te ahorran tiempo, reducen errores y garantizan atención 24/7 con una experiencia fluida y
+            profesional.
+          </div>
+        </details>
+
+        <!-- Pregunta 4 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            ¿Qué soporte ofrece su empresa?
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+            Contamos con un <strong>equipo de profesionales especializados</strong> en diseño, desarrollo web y
+            optimización. Te acompañamos desde la creación hasta el crecimiento continuo de tu producto digital.
+          </div>
+        </details>
+
+        <!-- Más preguntas (ocultas al inicio) -->
+        <div id="more-faq" class="hidden">
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              ¿Puedo conectar mi landing con WhatsApp o redes sociales?
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+              Sí. Integramos tu landing con <strong>WhatsApp, Instagram, correo electrónico</strong> y chatbots
+              inteligentes, para que tus clientes se comuniquen fácilmente desde cualquier canal.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              ¿Desarrollan aplicaciones o sistemas a medida?
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+              Sí, además de landings y automatizaciones, nuestro equipo también crea <strong>aplicaciones
+                móviles</strong> y <strong>sistemas completos personalizados</strong> según las necesidades del cliente.
+              Una vez que trabajas con nosotros, tienes acceso a un <strong>ecosistema de crecimiento continuo</strong>
+              y nuevas soluciones digitales.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              ¿Puedo actualizar o mejorar mi sitio después de lanzarlo?
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+              Por supuesto. Nuestras soluciones están pensadas para <strong>escalar contigo</strong>. Puedes solicitar
+              rediseños, nuevas funciones o integraciones a medida en cualquier momento.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              ¿Cómo puedo comunicarme con su empresa?
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+              Puedes comunicarte fácilmente usando el <strong>botón de chat flotante</strong> en la esquina inferior
+              derecha, enviando un mensaje desde el <a href="/#contact"
+                class="text-blue-600 font-medium hover:underline">formulario de contacto</a> o revisando nuestros datos
+              al final de la página.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              ¿Qué diferencia a su empresa de otras?
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
+              No solo desarrollamos productos digitales, sino que acompañamos a cada cliente en su evolución. Nuestro
+              enfoque combina <strong>IA, diseño, estrategia y soporte humano experto</strong> para escalar tu negocio
+              de forma sostenible.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Botón "Ver más" -->
+      <div class="text-center mt-8">
+        <button id="toggle-more"
+          class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
+          <span>Ver más preguntas</span>
+          <svg id="arrow-more" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
           </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-          Una <strong>landing page</strong> es una página creada para convertir visitantes en clientes. Resume lo más importante de tu negocio, muestra tus servicios y guía al usuario hacia una acción concreta como <em>contactarte o comprar</em>.
-        </div>
-      </details>
-
-      <!-- Pregunta 2 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          ¿Qué beneficios tiene una landing optimizada?
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-          Mejora tu posicionamiento en Google, capta clientes potenciales y aumenta tus conversiones. Nuestras <strong>landing pages inteligentes</strong> están diseñadas con IA, optimizadas para SEO y enfocadas en resultados medibles.
-        </div>
-      </details>
-
-      <!-- Pregunta 3 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          ¿Qué es una automatización y cómo ayuda?
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-          Las <strong>automatizaciones</strong> permiten que tu sitio atienda, responda y gestione clientes automáticamente. Te ahorran tiempo, reducen errores y garantizan atención 24/7 con una experiencia fluida y profesional.
-        </div>
-      </details>
-
-      <!-- Pregunta 4 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          ¿Qué soporte ofrece su empresa?
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-          Contamos con un <strong>equipo de profesionales especializados</strong> en diseño, desarrollo web y optimización. Te acompañamos desde la creación hasta el crecimiento continuo de tu producto digital.
-        </div>
-      </details>
-
-      <!-- Más preguntas (ocultas al inicio) -->
-      <div id="more-faq" class="hidden">
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            ¿Puedo conectar mi landing con WhatsApp o redes sociales?
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-            Sí. Integramos tu landing con <strong>WhatsApp, Instagram, correo electrónico</strong> y chatbots inteligentes, para que tus clientes se comuniquen fácilmente desde cualquier canal.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            ¿Desarrollan aplicaciones o sistemas a medida?
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-            Sí, además de landings y automatizaciones, nuestro equipo también crea <strong>aplicaciones móviles</strong> y <strong>sistemas completos personalizados</strong> según las necesidades del cliente. 
-            Una vez que trabajas con nosotros, tienes acceso a un <strong>ecosistema de crecimiento continuo</strong> y nuevas soluciones digitales.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            ¿Puedo actualizar o mejorar mi sitio después de lanzarlo?
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-            Por supuesto. Nuestras soluciones están pensadas para <strong>escalar contigo</strong>. Puedes solicitar rediseños, nuevas funciones o integraciones a medida en cualquier momento.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            ¿Cómo puedo comunicarme con su empresa?
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-            Puedes comunicarte fácilmente usando el <strong>botón de chat flotante</strong> en la esquina inferior derecha, enviando un mensaje desde el <a href="/#contact" class="text-blue-600 font-medium hover:underline">formulario de contacto</a> o revisando nuestros datos al final de la página.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            ¿Qué diferencia a su empresa de otras?
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content">
-            No solo desarrollamos productos digitales, sino que acompañamos a cada cliente en su evolución. Nuestro enfoque combina <strong>IA, diseño, estrategia y soporte humano experto</strong> para escalar tu negocio de forma sostenible.
-          </div>
-        </details>
+        </button>
       </div>
     </div>
 
-    <!-- Botón "Ver más" -->
-    <div class="text-center mt-8">
-      <button id="toggle-more" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
-        <span>Ver más preguntas</span>
-        <svg id="arrow-more" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Estilos -->
-  <style>
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s ease-out forwards;
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    <!-- Estilos -->
+    <style>
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.8s ease-out forwards;
       }
-    }
-    details .answer-content {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: all 0.4s ease-in-out;
-    }
-    details[open] .answer-content {
-      max-height: 300px;
-      opacity: 1;
-    }
-  </style>
 
-  <!-- Script de interacción -->
-  <script>
-    const toggleMore = document.getElementById("toggle-more");
-    const moreFaq = document.getElementById("more-faq");
-    const arrowMore = document.getElementById("arrow-more");
-    let expanded = false;
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    toggleMore.addEventListener("click", () => {
-      expanded = !expanded;
-      moreFaq.classList.toggle("hidden");
-      arrowMore.classList.toggle("rotate-180");
-      toggleMore.querySelector("span").textContent = expanded ? "Ver menos preguntas" : "Ver más preguntas";
-    });
-  </script>
+      details .answer-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+      }
 
-  <!-- Datos estructurados FAQ Schema -->
-  <script type="application/ld+json">
+      details[open] .answer-content {
+        max-height: 300px;
+        opacity: 1;
+      }
+    </style>
+
+    <!-- Script de interacción -->
+    <script>
+      const toggleMore = document.getElementById("toggle-more");
+      const moreFaq = document.getElementById("more-faq");
+      const arrowMore = document.getElementById("arrow-more");
+      let expanded = false;
+
+      toggleMore.addEventListener("click", () => {
+        expanded = !expanded;
+        moreFaq.classList.toggle("hidden");
+        arrowMore.classList.toggle("rotate-180");
+        toggleMore.querySelector("span").textContent = expanded ? "Ver menos preguntas" : "Ver más preguntas";
+      });
+    </script>
+
+    <!-- Datos estructurados FAQ Schema -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -640,7 +657,7 @@
     ]
   }
   </script>
-</section>
+  </section>
 
 
   <!-- Resultados reales (marquee infinito, pause on hover, sin JS) -->
@@ -888,7 +905,7 @@
           Contacto
         </h2>
         <p class="text-xl text-white/80 max-w-3xl mx-auto">
-          ¿Listo para transformar tu negocio? Hablemos 🚀
+          ¿Listo para transformar tu negocio? Hablemos
         </p>
       </div>
 
@@ -975,7 +992,7 @@
             </div>
           </div>
 
-          <div class="flex items-start space-x-4">
+          <!-- <div class="flex items-start space-x-4">
             <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-width="2"
@@ -987,7 +1004,7 @@
               <h4 class="text-xl font-semibold">Dirección</h4>
               <p class="text-white/70">123 Tech Street, Silicon Valley, CA 94000, USA</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -1023,12 +1040,13 @@
 
       <!-- Navegación -->
       <nav class="grid gap-2 md:justify-self-center">
-        <h3 class="font-semibold text-white mb-2">Enlaces útiles</h3>
-        <a href="/crear-pagina-web.html" class="hover:text-white transition">Crear página web</a>
-        <a href="/tiendas-virtuales.html" class="hover:text-white transition">Tiendas virtuales</a>
-        <a href="/#contact" class="hover:text-white transition">Contacto</a>
-        <a href="/sitemap.html" class="hover:text-white transition">Sitemap</a>
+        <h3 class="font-semibold text-white mb-2">Nuestros Servicios</h3>
+        <a href="/#servicios" class="hover:text-white transition">Landing Pages Inteligentes</a>
+        <a href="/#servicios" class="hover:text-white transition">Automatizaciones y Bots IA</a>
+        <a href="/#servicios" class="hover:text-white transition">Tiendas Virtuales y Apps</a>
+        <a href="/#contact" class="hover:text-white transition">Consultoría Personalizada</a>
       </nav>
+
 
       <!-- Info / Derechos -->
       <div class="md:text-right flex flex-col justify-between">
@@ -1049,53 +1067,57 @@
 
   <!-- Floating Chat -->
   <div id="floating-chat" class="fixed bottom-4 right-6 z-[9999]">
-  <!-- Bubble message -->
-  <div id="chat-bubble"
-       class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium">
+    <!-- Bubble message -->
+    <div id="chat-bubble"
+      class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium">
+    </div>
+
+    <!-- Floating Button (WhatsApp style) -->
+    <button id="chat-toggle" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"
+      class="w-16 h-16 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#72E3A6]">
+      <!-- WhatsApp logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8" aria-hidden="true"
+        fill="currentColor">
+        <path
+          d="M19.11 17.49c-.26-.13-1.53-.76-1.77-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.2-.57.07-.26-.13-1.11-.41-2.11-1.31-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.31.39-.46.13-.15.18-.26.26-.44.09-.18.04-.33-.02-.46-.06-.13-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.46-.15 0-.33-.02-.51-.02-.18 0-.46.07-.71.33-.24.26-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.87 2.86 4.53 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.53-.62 1.74-1.22.22-.6.22-1.12.15-1.22-.07-.11-.24-.17-.5-.3z" />
+        <path
+          d="M26.47 5.53C23.62 2.68 19.93 1 16 1 8.83 1 3 6.83 3 14c0 2.43.64 4.79 1.86 6.88L3 31l10.36-1.86C15.35 29.36 17.65 30 20 30c7.17 0 13-5.83 13-13 0-3.93-1.68-7.62-4.53-10.47zM20 27.5c-2.08 0-4.12-.55-5.91-1.59l-.42-.25-6.14 1.1 1.17-6-.27-.44C7.37 18.33 6.5 16.22 6.5 14 6.5 8.2 11.2 3.5 17 3.5c3.05 0 5.92 1.19 8.08 3.35C27.24 9 28.5 11.85 28.5 15c0 5.8-4.7 10.5-10.5 10.5z" />
+      </svg>
+      <span class="sr-only">Abrir chat de WhatsApp</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chat-window"
+      class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
+      role="dialog" aria-modal="true" aria-labelledby="chat-title">
+      <header class="p-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-between text-white">
+        <h3 id="chat-title" class="font-bold text-lg">Soporte • Mateo</h3>
+        <button id="chat-close" aria-label="Cerrar chat" title="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-width="2" d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+
+      <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
+
+      <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
+        <input id="chat-input" type="text" placeholder="Escribe tu mensaje..."
+          class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none" aria-label="Escribir mensaje" />
+        <!-- Send button (WhatsApp-like) -->
+        <button id="chat-send"
+          class="bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full p-2 transition transform hover:scale-105"
+          aria-label="Enviar mensaje" title="Enviar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 transform -rotate-45" fill="none"
+            stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <!-- Paper plane outline -->
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75 20.25 12 3.75 20.25 7.5 12 3.75 3.75z" />
+          </svg>
+        </button>
+      </footer>
+    </div>
   </div>
-
-  <!-- Floating Button (WhatsApp style) -->
-  <button id="chat-toggle" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"
-    class="w-16 h-16 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#72E3A6]">
-    <!-- WhatsApp logo -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8" aria-hidden="true" fill="currentColor">
-      <path d="M19.11 17.49c-.26-.13-1.53-.76-1.77-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.2-.57.07-.26-.13-1.11-.41-2.11-1.31-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.11-.11.26-.31.39-.46.13-.15.18-.26.26-.44.09-.18.04-.33-.02-.46-.06-.13-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.46-.15 0-.33-.02-.51-.02-.18 0-.46.07-.71.33-.24.26-.93.91-.93 2.22s.95 2.57 1.08 2.75c.13.18 1.87 2.86 4.53 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.53-.62 1.74-1.22.22-.6.22-1.12.15-1.22-.07-.11-.24-.17-.5-.3z"/>
-      <path d="M26.47 5.53C23.62 2.68 19.93 1 16 1 8.83 1 3 6.83 3 14c0 2.43.64 4.79 1.86 6.88L3 31l10.36-1.86C15.35 29.36 17.65 30 20 30c7.17 0 13-5.83 13-13 0-3.93-1.68-7.62-4.53-10.47zM20 27.5c-2.08 0-4.12-.55-5.91-1.59l-.42-.25-6.14 1.1 1.17-6-.27-.44C7.37 18.33 6.5 16.22 6.5 14 6.5 8.2 11.2 3.5 17 3.5c3.05 0 5.92 1.19 8.08 3.35C27.24 9 28.5 11.85 28.5 15c0 5.8-4.7 10.5-10.5 10.5z"/>
-    </svg>
-    <span class="sr-only">Abrir chat de WhatsApp</span>
-  </button>
-
-  <!-- Chat Window -->
-  <div id="chat-window"
-       class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
-       role="dialog" aria-modal="true" aria-labelledby="chat-title">
-    <header class="p-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-between text-white">
-      <h3 id="chat-title" class="font-bold text-lg">Soporte • Mateo</h3>
-      <button id="chat-close" aria-label="Cerrar chat" title="Cerrar">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-width="2" d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </header>
-
-    <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
-
-    <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
-      <input id="chat-input" type="text" placeholder="Escribe tu mensaje..."
-             class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none"
-             aria-label="Escribir mensaje" />
-      <!-- Send button (WhatsApp-like) -->
-      <button id="chat-send" class="bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full p-2 transition transform hover:scale-105"
-              aria-label="Enviar mensaje" title="Enviar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             class="w-5 h-5 transform -rotate-45" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <!-- Paper plane outline -->
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75 20.25 12 3.75 20.25 7.5 12 3.75 3.75z"/>
-        </svg>
-      </button>
-    </footer>
-  </div>
-</div>
 
 
 
