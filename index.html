@@ -43,29 +43,37 @@
 
 <body class="text-slate-800">
   <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="container flex h-16 items-center justify-between">
-      <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
-        <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
-          class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
-      </a>
+  <div class="container flex h-16 items-center justify-between">
+    <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
+      <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
+        class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
+    </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
-        <a href="/#servicios" class="hover:text-slate-900">Servicios</a>
-        <a href="/#contact" class="btn btn-primary">Contacto</a>
-      </nav>
-      <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
-        <svg width="24" height="24" fill="none" stroke="currentColor">
-          <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-      </button>
-    </div>
-    <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
-      <nav class="container py-3 grid gap-2 text-sm">
-        <a href="/#servicios" class="py-2">Servicios</a>
-        <a href="/#contact" class="py-2">Contacto</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Navegación Desktop -->
+    <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+      <a href="/#about" class="hover:text-slate-900">Nosotros</a>
+      <a href="/#servicios" class="hover:text-slate-900">Servicios</a>
+      <a href="/#contact" class="btn btn-primary">Contacto</a>
+    </nav>
+
+    <!-- Botón menú móvil -->
+    <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
+      <svg width="24" height="24" fill="none" stroke="currentColor">
+        <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navegación Móvil -->
+  <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
+    <nav class="container py-3 grid gap-2 text-sm">
+      <a href="/#about" class="py-2">Nosotros</a>
+      <a href="/#servicios" class="py-2">Servicios</a>
+      <a href="/#contact" class="py-2">Contacto</a>
+    </nav>
+  </div>
+</header>
+
 
 
 
@@ -408,6 +416,153 @@
 
 
 
+
+
+
+
+  <!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO ===================== -->
+<section id="about" class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+  <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
+
+    <!-- Columna izquierda: Texto -->
+    <div class="space-y-6 fade-in-left">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Equipo digital a tu favor, <br>
+        <span class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+          impulsando tu negocio todos los días
+        </span>
+      </h2>
+
+      <p class="text-blue-100/90 text-lg leading-relaxed">
+        En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
+        No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
+      </p>
+
+      <p class="text-blue-200/80">
+        Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma constante.
+        Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
+      </p>
+
+      <div class="mt-6">
+        <a href="/#contact" class="inline-block bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform">
+          Conoce más sobre nosotros →
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Video con overlay -->
+    <div class="relative group fade-in-right">
+      <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative">
+        <video id="aboutVideo" class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
+          <source src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4" type="video/mp4"> <!-- Ejemplo temporal -->
+          Tu navegador no soporta video HTML5.
+        </video>
+
+        <!-- Overlay con botón Play -->
+        <button id="playButton" aria-label="Reproducir video"
+          class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition">
+          <span class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg transition-transform hover:scale-110">
+            ▶
+          </span>
+        </button>
+      </div>
+
+      <p class="text-sm text-blue-200/70 mt-3 text-center">
+        Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
+      </p>
+    </div>
+  </div>
+
+  <!-- Fondo animado sutil -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate"></div>
+
+  <!-- Animaciones -->
+<style>
+  @keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .fade-in-left { animation: fadeLeft 0.8s ease-out both; }
+  .fade-in-right { animation: fadeRight 0.8s ease-out both; }
+
+  @keyframes slowRotate {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1.1); }
+  }
+  .animate-slowRotate { animation: slowRotate 50s linear infinite; }
+
+  /* Pulsación del botón */
+  #playButton span {
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+
+  /* Mostrar/ocultar suavemente el botón */
+  #playButton {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .video-container:hover #playButton {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+<!-- Script del botón Play / Pause -->
+<script>
+  const playButton = document.getElementById("playButton");
+  const aboutVideo = document.getElementById("aboutVideo");
+  const videoContainer = playButton.closest(".aspect-video");
+
+  let isPlaying = false;
+
+  playButton.addEventListener("click", () => {
+    if (isPlaying) {
+      aboutVideo.pause();
+      playButton.querySelector("span").textContent = "▶";
+      playButton.classList.remove("bg-black/60");
+    } else {
+      aboutVideo.play();
+      playButton.querySelector("span").textContent = "⏸";
+      playButton.classList.add("bg-black/60");
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Volver al estado "play" cuando el video termina
+  aboutVideo.addEventListener("ended", () => {
+    isPlaying = false;
+    playButton.querySelector("span").textContent = "▶";
+    playButton.classList.remove("bg-black/60");
+  });
+
+  // Mostrar el botón cuando el usuario entra con el mouse al video
+  videoContainer.addEventListener("mouseenter", () => {
+    playButton.style.opacity = "1";
+    playButton.style.visibility = "visible";
+  });
+
+  // Ocultar el botón cuando sale el mouse (solo si está reproduciendo)
+  videoContainer.addEventListener("mouseleave", () => {
+    if (isPlaying) {
+      playButton.style.opacity = "0";
+      playButton.style.visibility = "hidden";
+    }
+  });
+</script>
+
+
+</section>
 
 
 
