@@ -1,0 +1,119 @@
+{
+  "nav_about": "Nosotros",
+  "nav_services": "Servicios",
+  "nav_contact": "Contacto",
+
+  "hero_title": "Webs que piensan, responden y venden por ti",
+  "hero_subtitle": "Automatizamos tu negocio para que conviertas más clientes sin perder tiempo.",
+  "hero_cta1": "Solicitar asesoría",
+  "hero_cta2": "Ver soluciones →",
+  "hero_caption_default": "Automatiza procesos, capta leads y haz crecer tu negocio.",
+  "hero_caption1": "Automatiza, responde y convierte clientes en segundos.",
+  "hero_caption2": "Tu sitio web trabaja por ti 24/7 mientras duermes.",
+  "hero_caption3": "Automatiza tu negocio y haz crecer tus resultados con inteligencia artificial.",
+
+  "about_title": "Equipo digital a tu favor, impulsando tu negocio todos los días",
+  "about_text1": "En Mateo, combinamos diseño, desarrollo y automatización en un solo equipo.",
+  "about_text2": "Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma constante.",
+  "about_button": "Conoce más sobre nosotros →",
+
+  "metrics_sites_launched": "Sitios lanzados",
+  "metrics_lighthouse_score": "Puntaje Lighthouse medio",
+  "metrics_implementation_days": "Días promedio de implementación",
+  "metrics_conversion_increase": "Aumento en conversión",
+
+  "services_title": "Soluciones Inteligentes que Transforman Negocios",
+  "services_subtitle": "Combinamos automatización, diseño y tecnología para que tu marca crezca sin límites.",
+
+  "service_1_title": "Landing Inteligente",
+  "service_1_desc": "Diseños únicos con asistentes IA integrados, chat automatizado y conexión con WhatsApp. Capta más clientes en menos tiempo.",
+  "service_1_cta": "Solicitar propuesta →",
+
+  "service_2_title": "Automatizaciones",
+  "service_2_desc": "Implementamos procesos automáticos que gestionan leads, agendan citas, envían correos y responden clientes 24/7. Optimiza tu negocio con soluciones inteligentes en tiempo real.",
+  "service_2_cta": "Agendar reunión →",
+
+  "service_3_title": "Soluciones Digitales",
+  "service_3_desc": "Creamos tiendas virtuales, apps móviles y sistemas personalizados para tu empresa. Potencia tu presencia digital con integraciones, pagos en línea y escalabilidad garantizada.",
+  "service_3_cta": "Ver opciones →",
+
+  "about_title_main": "Equipo digital a tu favor,",
+  "about_title_highlight": "impulsando tu negocio todos los días",
+  "about_text_1": "En Mateo, combinamos diseño, desarrollo y automatización en un solo equipo. No solo creamos páginas web: construimos sistemas que trabajan por ti.",
+  "about_text_2": "Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma constante. Nuestros clientes nos ven como su equipo de marketing, desarrollo y soporte, todo en uno.",
+  "about_cta": "Conoce más sobre nosotros →",
+  "about_caption": "Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.",
+
+  "faq_title": "Preguntas Frecuentes",
+  "faq_subtitle": "Encuentra respuestas rápidas sobre nuestras landing pages inteligentes, automatizaciones y soluciones digitales.",
+  "faq_q1": "¿Qué es una landing page?",
+  "faq_a1": "Una landing page es una página creada para convertir visitantes en clientes. Resume lo más importante de tu negocio, muestra tus servicios y guía al usuario hacia una acción concreta como contactarte o comprar.",
+  "faq_q2": "¿Qué beneficios tiene una landing optimizada?",
+  "faq_a2": "Mejora tu posicionamiento en Google, capta clientes potenciales y aumenta tus conversiones. Nuestras landing pages inteligentes están diseñadas con IA, optimizadas para SEO y enfocadas en resultados medibles.",
+  "faq_q3": "¿Qué es una automatización y cómo ayuda?",
+  "faq_a3": "Las automatizaciones permiten que tu sitio atienda, responda y gestione clientes automáticamente. Te ahorran tiempo, reducen errores y garantizan atención 24/7 con una experiencia fluida y profesional.",
+  "faq_q4": "¿Qué soporte ofrece su empresa?",
+  "faq_a4": "Contamos con un equipo de profesionales especializados en diseño, desarrollo web y optimización. Te acompañamos desde la creación hasta el crecimiento continuo de tu producto digital.",
+  "faq_q5": "¿Puedo conectar mi landing con WhatsApp o redes sociales?",
+  "faq_a5": "Sí. Integramos tu landing con WhatsApp, Instagram, correo electrónico y chatbots inteligentes, para que tus clientes se comuniquen fácilmente desde cualquier canal.",
+  "faq_q6": "¿Desarrollan aplicaciones o sistemas a medida?",
+  "faq_a6": "Sí, además de landings y automatizaciones, nuestro equipo también crea aplicaciones móviles y sistemas completos personalizados según las necesidades del cliente.",
+  "faq_q7": "¿Puedo actualizar o mejorar mi sitio después de lanzarlo?",
+  "faq_a7": "Por supuesto. Nuestras soluciones están pensadas para escalar contigo. Puedes solicitar rediseños, nuevas funciones o integraciones a medida en cualquier momento.",
+  "faq_q8": "¿Cómo puedo comunicarme con su empresa?",
+  "faq_a8": "Puedes comunicarte fácilmente usando el botón de chat flotante, el formulario de contacto o revisando nuestros datos al final de la página.",
+  "faq_q9": "¿Qué diferencia a su empresa de otras?",
+  "faq_a9": "No solo desarrollamos productos digitales, sino que acompañamos a cada cliente en su evolución. Nuestro enfoque combina IA, diseño, estrategia y soporte humano experto para escalar tu negocio de forma sostenible.",
+  "faq_more": "Ver más preguntas",
+
+  "clientes_title": "Historias de éxito",
+  "clientes_subtitle": "Clientes que transformaron su presencia digital con Mateo.",
+  "clientes_quote1": "“Contratamos para crear una landing page con IA y en semanas ya aparecía en Google. El equipo siempre disponible.”",
+  "clientes_quote2": "“Buscábamos una página web moderna y optimizada. Gracias a su IA, recibimos más consultas sin aumentar el gasto.”",
+  "clientes_quote3": "“Nuestra landing con IA convirtió el doble. Nos encanta tener soporte técnico siempre disponible.”",
+  "clientes_person1": "Andrea — Retail",
+  "clientes_person2": "Luis — Servicios",
+  "clientes_person3": "María — Inmobiliaria",
+
+  "contact_title": "Contacto",
+  "contact_subtitle": "¿Listo para transformar tu negocio? Hablemos",
+  "contact_form_title": "Envíanos un mensaje",
+  "contact_name_label": "Nombre completo",
+  "contact_name_placeholder": "Tu nombre",
+  "contact_email_label": "Email",
+  "contact_email_placeholder": "tu@email.com",
+  "contact_phone_label": "WhatsApp / Teléfono",
+  "contact_phone_placeholder": "+1 234 567 8900",
+  "contact_company_label": "Empresa",
+  "contact_company_placeholder": "Tu empresa (opcional)",
+  "contact_message_label": "Mensaje",
+  "contact_message_placeholder": "Cuéntanos brevemente qué necesitas automatizar o crear...",
+  "contact_message_limit": "Máximo 300 caracteres",
+  "contact_button": "Enviar Mensaje",
+  "contact_info_title": "Información de Contacto",
+  "contact_email_title": "Email",
+  "contact_phone_title": "Teléfono",
+
+  "footer_brand_desc1": "Creamos sitios inteligentes que impulsan tu negocio con tecnología y estrategia real.",
+  "footer_brand_desc2": "Más visibilidad, más confianza y resultados medibles.",
+  "footer_services_title": "Nuestros Servicios",
+  "footer_service1": "Landing Pages Inteligentes",
+  "footer_service2": "Automatizaciones y Bots IA",
+  "footer_service3": "Tiendas Virtuales y Apps",
+  "footer_service4": "Consultoría Personalizada",
+  "footer_contact_title": "Contáctanos",
+  "footer_support": "Soporte técnico y atención personalizada.",
+  "footer_rights": "© 2025 Mateo. Todos los derechos reservados.",
+
+  "chat_bubble_text": "¿Necesitas ayuda? ¡Escríbenos por WhatsApp!",
+  "chat_open_label": "Abrir chat de WhatsApp",
+  "chat_header": "Soporte • Mateo",
+  "chat_input_placeholder": "Escribe tu mensaje..."
+
+
+
+  
+ 
+
+
+}
