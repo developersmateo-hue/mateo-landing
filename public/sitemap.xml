@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- Página principal -->
   <url>
     <loc>https://mateomi.com/</loc>
     <lastmod>2025-11-03</lastmod>
@@ -10,7 +9,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Variante con www -->
   <url>
     <loc>https://www.mateomi.com/</loc>
     <lastmod>2025-11-03</lastmod>
@@ -18,23 +16,22 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Secciones principales -->
   <url>
     <loc>https://mateomi.com/#servicios</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://mateomi.com/#about</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 
-    <!-- Video: Somos Mateo (ES) -->
     <video:video>
       <video:thumbnail_loc>
-        https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60
+        https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=60
       </video:thumbnail_loc>
       <video:title>Somos Mateo - Equipo y filosofía</video:title>
       <video:description>
@@ -45,19 +42,19 @@
       </video:content_loc>
     </video:video>
 
-    <!-- Video: We Are Mateo (EN) -->
     <video:video>
       <video:thumbnail_loc>
-        https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60
+        https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=60
       </video:thumbnail_loc>
       <video:title>We Are Mateo - Who We Are</video:title>
       <video:description>
-        Discover how Mateo builds smart websites with automation and AI to help businesses grow.
+        Discover how Mateo uses automation and AI-powered websites to help businesses grow.
       </video:description>
       <video:content_loc>
         https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4
       </video:content_loc>
     </video:video>
+
   </url>
 
   <url>
