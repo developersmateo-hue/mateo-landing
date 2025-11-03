@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
+
+# Bloquear carpetas internas de código
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /lib/
+
+# Opcional (puedes dejarlo o eliminarlo)
+# Disallow: /*?*
+# Disallow: /*#*
+
+# Sitemap para Google
 Sitemap: https://mateomi.com/sitemap.xml
