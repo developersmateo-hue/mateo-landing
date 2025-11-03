@@ -44,19 +44,45 @@
 <body class="text-slate-800">
 
   <!-- ******************************* START Header (SEO-optimized) ******************************* -->
-  <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="container flex h-16 items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
-        <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
-          class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
-      </a>
+  <!-- ******************************* START Header (SEO-optimized) ******************************* -->
+<header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="container flex h-16 items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
+      <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
+        class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
+    </a>
 
-      
+    <!-- 🌍 Selector de idioma móvil (centrado en el header) -->
+    <div class="absolute left-1/2 -translate-x-1/2 md:hidden">
+      <div class="relative group">
+        <button id="langToggleMobile"
+          class="flex items-center gap-1 px-2 py-1 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-xs font-medium shadow-sm hover:bg-white transition-all duration-300">
+          <span id="langFlagMobile">🇪🇸</span>
+          <svg class="w-3 h-3 text-slate-500 transition-transform group-hover:rotate-180" fill="none"
+            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
 
-      <!-- Navegación Desktop -->
-      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
-        <!-- 🌍 Selector de idioma visible en desktop y móvil -->
+        <!-- Menú desplegable móvil -->
+        <div id="langMenuMobile"
+          class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-28 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
+          <button data-lang="es"
+            class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
+            🇪🇸 Español
+          </button>
+          <button data-lang="en"
+            class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
+            🇺🇸 English
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegación Desktop -->
+    <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+      <!-- 🌍 Selector de idioma visible solo en desktop -->
       <div class="relative group">
         <button id="langToggle"
           class="flex items-center gap-2 px-3 py-1.5 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-sm font-medium shadow-sm hover:bg-white transition-all duration-300">
@@ -68,7 +94,7 @@
           </svg>
         </button>
 
-        <!-- Menú desplegable -->
+        <!-- Menú desplegable desktop -->
         <div id="langMenu"
           class="hidden absolute right-0 mt-2 w-36 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
           <button data-lang="es"
@@ -81,28 +107,30 @@
           </button>
         </div>
       </div>
-        <a href="/#about" data-i18n="nav_about" class="hover:text-slate-900">Nosotros</a>
-        <a href="/#servicios" data-i18n="nav_services" class="hover:text-slate-900">Servicios</a>
-        <a href="/#contact" data-i18n="nav_contact" class="btn btn-primary">Contacto</a>
-      </nav>
 
-      <!-- Botón menú móvil -->
-      <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
-        <svg width="24" height="24" fill="none" stroke="currentColor">
-          <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-      </button>
-    </div>
+      <a href="/#about" data-i18n="nav_about" class="hover:text-slate-900">Nosotros</a>
+      <a href="/#servicios" data-i18n="nav_services" class="hover:text-slate-900">Servicios</a>
+      <a href="/#contact" data-i18n="nav_contact" class="btn btn-primary">Contacto</a>
+    </nav>
 
-    <!-- Navegación Móvil -->
-    <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
-      <nav class="container py-3 grid gap-2 text-sm">
-        <a href="/#about" data-i18n="nav_about" class="py-2">Nosotros</a>
-        <a href="/#servicios" data-i18n="nav_services" class="py-2">Servicios</a>
-        <a href="/#contact" data-i18n="nav_contact" class="py-2">Contacto</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Botón menú móvil -->
+    <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
+      <svg width="24" height="24" fill="none" stroke="currentColor">
+        <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navegación Móvil -->
+  <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
+    <nav class="container py-3 grid gap-2 text-sm">
+      <a href="/#about" data-i18n="nav_about" class="py-2">Nosotros</a>
+      <a href="/#servicios" data-i18n="nav_services" class="py-2">Servicios</a>
+      <a href="/#contact" data-i18n="nav_contact" class="py-2">Contacto</a>
+    </nav>
+  </div>
+</header>
+
 
 
 
@@ -1243,7 +1271,7 @@
 
 
 
-
+<!-- Cambio de idioma (Multilenguaje SEO + dinámico) -->
 <script>
   async function loadLanguage(lang) {
     const response = await fetch(`/lang/${lang}.json`);
@@ -1257,11 +1285,10 @@
     });
 
     // 🔹 Actualiza los placeholders de inputs y textareas
-document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-  const key = el.getAttribute("data-i18n-placeholder");
-  if (translations[key]) el.setAttribute("placeholder", translations[key]);
-});
-
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (translations[key]) el.setAttribute("placeholder", translations[key]);
+    });
 
     // 🔹 Actualiza los captions del slider dinámicamente
     document.querySelectorAll("[data-i18n-caption]").forEach(el => {
@@ -1279,55 +1306,90 @@ document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
       captionEl.textContent = translations[key] || translations["hero_caption_default"];
     }
 
-    // Guardar el idioma seleccionado
+    // Guardar idioma
     localStorage.setItem("lang", lang);
     updateLangUI(lang);
 
-    // 🔥 Emitir evento global para que otros scripts (como el video) reaccionen
+    // 🔥 Emitir evento global (para video u otros scripts)
     const event = new CustomEvent("languageChanged", { detail: { lang } });
     document.dispatchEvent(event);
   }
 
   function updateLangUI(lang) {
+    // --- Desktop ---
     const flagEl = document.getElementById("langFlag");
     const labelEl = document.getElementById("langLabel");
+
+    // --- Mobile ---
+    const flagMobile = document.getElementById("langFlagMobile");
+    const labelMobile = document.getElementById("langLabelMobile");
+
     if (lang === "es") {
-      flagEl.textContent = "🇪🇸";
-      labelEl.textContent = "Español";
+      if (flagEl) flagEl.textContent = "🇪🇸";
+      if (labelEl) labelEl.textContent = "Español";
+      if (flagMobile) flagMobile.textContent = "🇪🇸";
+      if (labelMobile) labelMobile.textContent = "Español";
     } else {
-      flagEl.textContent = "🇺🇸";
-      labelEl.textContent = "English";
+      if (flagEl) flagEl.textContent = "🇺🇸";
+      if (labelEl) labelEl.textContent = "English";
+      if (flagMobile) flagMobile.textContent = "🇺🇸";
+      if (labelMobile) labelMobile.textContent = "English";
     }
   }
 
+  // === Selector Desktop ===
   const langToggle = document.getElementById("langToggle");
   const langMenu = document.getElementById("langMenu");
 
-  // Mostrar / ocultar menú
-  langToggle.addEventListener("click", () => {
-    langMenu.classList.toggle("hidden");
-  });
-
-  // Cambiar idioma al hacer clic
-  langMenu.querySelectorAll("[data-lang]").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const lang = e.target.closest("button").dataset.lang;
-      loadLanguage(lang);
-      langMenu.classList.add("hidden");
+  if (langToggle && langMenu) {
+    langToggle.addEventListener("click", () => {
+      langMenu.classList.toggle("hidden");
     });
-  });
 
-  // Cerrar si se hace clic fuera del menú
-  document.addEventListener("click", e => {
-    if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-      langMenu.classList.add("hidden");
-    }
-  });
+    langMenu.querySelectorAll("[data-lang]").forEach(btn => {
+      btn.addEventListener("click", e => {
+        const lang = e.target.closest("button").dataset.lang;
+        loadLanguage(lang);
+        langMenu.classList.add("hidden");
+      });
+    });
 
-  // Idioma inicial
+    document.addEventListener("click", e => {
+      if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+        langMenu.classList.add("hidden");
+      }
+    });
+  }
+
+  // === Selector Móvil ===
+  const langToggleMobile = document.getElementById("langToggleMobile");
+  const langMenuMobile = document.getElementById("langMenuMobile");
+
+  if (langToggleMobile && langMenuMobile) {
+    langToggleMobile.addEventListener("click", () => {
+      langMenuMobile.classList.toggle("hidden");
+    });
+
+    langMenuMobile.querySelectorAll("[data-lang]").forEach(btn => {
+      btn.addEventListener("click", e => {
+        const lang = e.target.closest("button").dataset.lang;
+        loadLanguage(lang);
+        langMenuMobile.classList.add("hidden");
+      });
+    });
+
+    document.addEventListener("click", e => {
+      if (!langToggleMobile.contains(e.target) && !langMenuMobile.contains(e.target)) {
+        langMenuMobile.classList.add("hidden");
+      }
+    });
+  }
+
+  // === Idioma inicial ===
   const savedLang = localStorage.getItem("lang") || "es";
   loadLanguage(savedLang);
 </script>
+
 
 
 
