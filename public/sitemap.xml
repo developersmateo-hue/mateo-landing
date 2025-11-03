@@ -1,15 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Página principal -->
   <url>
     <loc>https://mateomi.com/</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Variante con www -->
   <url>
     <loc>https://www.mateomi.com/</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Sección - Servicios -->
+  <url>
+    <loc>https://mateomi.com/#servicios</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sección - Nosotros -->
+  <url>
+    <loc>https://mateomi.com/#about</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sección - Preguntas frecuentes -->
+  <url>
+    <loc>https://mateomi.com/#faq</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Sección - Contacto -->
+  <url>
+    <loc>https://mateomi.com/#contact</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sección - Clientes / Historias de éxito -->
+  <url>
+    <loc>https://mateomi.com/#clientes</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+
+  <!-- 📹 Video: "Somos Mateo" -->
+  <url>
+    <loc>https://mateomi.com/#about</loc>
+    <video:video>
+      <video:thumbnail_loc>https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=60</video:thumbnail_loc>
+      <video:title>Somos Mateo - Equipo y filosofía</video:title>
+      <video:description>Conoce cómo Mateo combina diseño, desarrollo e inteligencia artificial para impulsar negocios digitales.</video:description>
+      <video:content_loc>https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes">https://mateomi.com/#about</video:player_loc>
+    </video:video>
+  </url>
+
+  <!-- 📹 Video en inglés (si Google lo detecta como idioma alterno) -->
+  <url>
+    <loc>https://mateomi.com/#about</loc>
+    <video:video>
+      <video:thumbnail_loc>https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=60</video:thumbnail_loc>
+      <video:title>We Are Mateo - Who We Are</video:title>
+      <video:description>Discover how Mateo uses automation and AI-powered websites to help businesses grow smartly.</video:description>
+      <video:content_loc>https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes">https://mateomi.com/#about</video:player_loc>
+    </video:video>
+  </url>
+
 </urlset>
