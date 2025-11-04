@@ -36,7 +36,6 @@
   <!-- ✅ Scripts -->
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="/src/chat.js"></script>
-  <script type="module" src="/src/contact.js"></script>
 
 </head>
 
@@ -45,91 +44,91 @@
 
   <!-- ******************************* START Header (SEO-optimized) ******************************* -->
   <!-- ******************************* START Header (SEO-optimized) ******************************* -->
-<header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-  <div class="container flex h-16 items-center justify-between">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
-      <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
-        class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
-    </a>
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="container flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2" aria-label="Inicio — Mateo">
+        <img src="/assets/logo/logo-mateo.webp" width="140" height="30" alt="Mateo — Agencia de páginas web e IA"
+          class="h-8 md:h-10 w-auto block" decoding="async" loading="eager" />
+      </a>
 
-    <!-- 🌍 Selector de idioma móvil (centrado en el header) -->
-    <div class="absolute left-1/2 -translate-x-1/2 md:hidden">
-      <div class="relative group">
-        <button id="langToggleMobile"
-          class="flex items-center gap-1 px-2 py-1 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-xs font-medium shadow-sm hover:bg-white transition-all duration-300">
-          <span id="langFlagMobile">🇪🇸</span>
-          <svg class="w-3 h-3 text-slate-500 transition-transform group-hover:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </button>
+      <!-- 🌍 Selector de idioma móvil (centrado en el header) -->
+      <div class="absolute left-1/2 -translate-x-1/2 md:hidden">
+        <div class="relative group">
+          <button id="langToggleMobile"
+            class="flex items-center gap-1 px-2 py-1 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-xs font-medium shadow-sm hover:bg-white transition-all duration-300">
+            <span id="langFlagMobile">🇪🇸</span>
+            <svg class="w-3 h-3 text-slate-500 transition-transform group-hover:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
 
-        <!-- Menú desplegable móvil -->
-        <div id="langMenuMobile"
-          class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-28 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
-          <button data-lang="es"
-            class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
-            🇪🇸 Español
-          </button>
-          <button data-lang="en"
-            class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
-            🇺🇸 English
-          </button>
+          <!-- Menú desplegable móvil -->
+          <div id="langMenuMobile"
+            class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-28 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
+            <button data-lang="es"
+              class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
+              🇪🇸 Español
+            </button>
+            <button data-lang="en"
+              class="flex items-center w-full px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-100 transition">
+              🇺🇸 English
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- Navegación Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+        <!-- 🌍 Selector de idioma visible solo en desktop -->
+        <div class="relative group">
+          <button id="langToggle"
+            class="flex items-center gap-2 px-3 py-1.5 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-sm font-medium shadow-sm hover:bg-white transition-all duration-300">
+            <span id="langFlag">🇪🇸</span>
+            <span id="langLabel">Español</span>
+            <svg class="w-4 h-4 text-slate-500 transition-transform group-hover:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+
+          <!-- Menú desplegable desktop -->
+          <div id="langMenu"
+            class="hidden absolute right-0 mt-2 w-36 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
+            <button data-lang="es"
+              class="flex items-center w-full px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 transition">
+              <span class="mr-2">🇪🇸</span> Español
+            </button>
+            <button data-lang="en"
+              class="flex items-center w-full px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 transition">
+              <span class="mr-2">🇺🇸</span> English
+            </button>
+          </div>
+        </div>
+
+        <a href="/#about" data-i18n="nav_about" class="hover:text-slate-900">Nosotros</a>
+        <a href="/#servicios" data-i18n="nav_services" class="hover:text-slate-900">Servicios</a>
+        <a href="/#contact" data-i18n="nav_contact" class="btn btn-primary">Contacto</a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
+        <svg width="24" height="24" fill="none" stroke="currentColor">
+          <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
     </div>
 
-    <!-- Navegación Desktop -->
-    <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
-      <!-- 🌍 Selector de idioma visible solo en desktop -->
-      <div class="relative group">
-        <button id="langToggle"
-          class="flex items-center gap-2 px-3 py-1.5 border border-slate-300 rounded-full bg-white/70 text-slate-700 text-sm font-medium shadow-sm hover:bg-white transition-all duration-300">
-          <span id="langFlag">🇪🇸</span>
-          <span id="langLabel">Español</span>
-          <svg class="w-4 h-4 text-slate-500 transition-transform group-hover:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </button>
-
-        <!-- Menú desplegable desktop -->
-        <div id="langMenu"
-          class="hidden absolute right-0 mt-2 w-36 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden z-50">
-          <button data-lang="es"
-            class="flex items-center w-full px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 transition">
-            <span class="mr-2">🇪🇸</span> Español
-          </button>
-          <button data-lang="en"
-            class="flex items-center w-full px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 transition">
-            <span class="mr-2">🇺🇸</span> English
-          </button>
-        </div>
-      </div>
-
-      <a href="/#about" data-i18n="nav_about" class="hover:text-slate-900">Nosotros</a>
-      <a href="/#servicios" data-i18n="nav_services" class="hover:text-slate-900">Servicios</a>
-      <a href="/#contact" data-i18n="nav_contact" class="btn btn-primary">Contacto</a>
-    </nav>
-
-    <!-- Botón menú móvil -->
-    <button class="md:hidden inline-flex p-2 rounded hover:bg-slate-100" data-nav-toggle aria-label="Abrir menú">
-      <svg width="24" height="24" fill="none" stroke="currentColor">
-        <path stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Navegación Móvil -->
-  <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
-    <nav class="container py-3 grid gap-2 text-sm">
-      <a href="/#about" data-i18n="nav_about" class="py-2">Nosotros</a>
-      <a href="/#servicios" data-i18n="nav_services" class="py-2">Servicios</a>
-      <a href="/#contact" data-i18n="nav_contact" class="py-2">Contacto</a>
-    </nav>
-  </div>
-</header>
+    <!-- Navegación Móvil -->
+    <div class="md:hidden hidden border-t border-slate-200" data-nav-menu>
+      <nav class="container py-3 grid gap-2 text-sm">
+        <a href="/#about" data-i18n="nav_about" class="py-2">Nosotros</a>
+        <a href="/#servicios" data-i18n="nav_services" class="py-2">Servicios</a>
+        <a href="/#contact" data-i18n="nav_contact" class="py-2">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
 
 
@@ -137,118 +136,139 @@
 
 
   <!-- ===================== HERO FULLSCREEN MODERNO (INTERNACIONALIZADO COMPLETO) ===================== -->
-<section class="relative w-full h-screen overflow-hidden bg-slate-900" aria-labelledby="hero-title">
+  <section class="relative w-full h-screen overflow-hidden bg-slate-900" aria-labelledby="hero-title">
 
-  <!-- Slider de fondo -->
-  <div class="absolute inset-0 w-full h-full" data-hero-slider data-rotate-interval="6000">
-    <!-- Imagen 1 -->
-    <figure class="absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out"
-      data-hero-slide data-i18n-caption="hero_caption1">
-      <img src="/assets/img/hero.webp" alt="Landing automatizada para captar clientes" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
+    <!-- Slider de fondo -->
+    <div class="absolute inset-0 w-full h-full" data-hero-slider data-rotate-interval="6000">
+      <!-- Imagen 1 -->
+      <figure class="absolute inset-0 opacity-100 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-i18n-caption="hero_caption1">
+        <img src="/assets/img/hero.webp" alt="Landing automatizada para captar clientes"
+          class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
 
-    <!-- Imagen 2 -->
-    <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"
-      data-hero-slide data-i18n-caption="hero_caption2">
-      <img src="/assets/img/hero1.webp" alt="Asistente de IA atendiendo clientes" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
+      <!-- Imagen 2 -->
+      <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-i18n-caption="hero_caption2">
+        <img src="/assets/img/hero1.webp" alt="Asistente de IA atendiendo clientes" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
 
-    <!-- Imagen 3 -->
-    <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out"
-      data-hero-slide data-i18n-caption="hero_caption3">
-      <img src="/assets/img/hero2.webp" alt="Automatización de marketing digital" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
-    </figure>
-  </div>
-
-  <!-- Contenido centrado -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 z-10">
-    <h1 id="hero-title"
-      class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-lg animate-fadeUp"
-      data-i18n="hero_title">
-      Webs que piensan, responden y venden por ti
-    </h1>
-
-    <p class="mt-4 text-lg md:text-2xl font-medium text-blue-100/90 max-w-2xl animate-fadeUp delay-200"
-      data-i18n="hero_subtitle">
-      Automatizamos tu negocio para que <strong>conviertas más clientes</strong> sin perder tiempo.
-    </p>
-
-    <!-- CTA principal -->
-    <div class="mt-8 flex flex-wrap gap-4 justify-center animate-fadeUp delay-400">
-      <a href="/#contact"
-        class="px-8 py-3 rounded-full bg-emerald-400 text-slate-900 font-bold shadow-lg hover:bg-emerald-300 hover:scale-105 transition-all duration-300"
-        data-i18n="hero_cta1">
-        Solicitar asesoría
-      </a>
+      <!-- Imagen 3 -->
+      <figure class="absolute inset-0 opacity-0 transition-opacity duration-[1200ms] ease-in-out" data-hero-slide
+        data-i18n-caption="hero_caption3">
+        <img src="/assets/img/hero2.webp" alt="Automatización de marketing digital" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+      </figure>
     </div>
 
-    <!-- Texto dinámico -->
-    <p data-hero-caption class="mt-6 text-sm md:text-base text-blue-100/80 italic tracking-wide animate-fadeUp delay-600"
-      data-i18n="hero_caption_default">
-      Automatiza procesos, capta leads y haz crecer tu negocio.
-    </p>
-  </div>
+    <!-- Contenido centrado -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 z-10">
+      <h1 id="hero-title"
+        class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-lg animate-fadeUp"
+        data-i18n="hero_title">
+        Webs que piensan, responden y venden por ti
+      </h1>
 
-  <!-- Indicadores del slider -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-    <button type="button" class="h-2 w-8 rounded-full bg-white/80 hover:bg-emerald-400 transition" data-hero-dot="0"
-      aria-label="Mostrar imagen 1"></button>
-    <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="1"
-      aria-label="Mostrar imagen 2"></button>
-    <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="2"
-      aria-label="Mostrar imagen 3"></button>
-  </div>
+      <p class="mt-4 text-lg md:text-2xl font-medium text-blue-100/90 max-w-2xl animate-fadeUp delay-200"
+        data-i18n="hero_subtitle">
+        Automatizamos tu negocio para que <strong>conviertas más clientes</strong> sin perder tiempo.
+      </p>
 
-  <!-- Script Slider -->
-  <script>
-    (() => {
-      const slider = document.querySelector('[data-hero-slider]');
-      if (!slider) return;
-      const slides = Array.from(slider.querySelectorAll('[data-hero-slide]'));
-      const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
-      const captionEl = document.querySelector('[data-hero-caption]');
-      const intervalMs = Number(slider.getAttribute('data-rotate-interval') || 6000);
+      <!-- CTA principal -->
+      <div class="mt-8 flex flex-wrap gap-4 justify-center animate-fadeUp delay-400">
+        <a href="/#contact"
+          class="px-8 py-3 rounded-full bg-emerald-400 text-slate-900 font-bold shadow-lg hover:bg-emerald-300 hover:scale-105 transition-all duration-300"
+          data-i18n="hero_cta1">
+          Solicitar asesoría
+        </a>
+      </div>
 
-      let i = 0, timer = null;
+      <!-- Texto dinámico -->
+      <p data-hero-caption
+        class="mt-6 text-sm md:text-base text-blue-100/80 italic tracking-wide animate-fadeUp delay-600"
+        data-i18n="hero_caption_default">
+        Automatiza procesos, capta leads y haz crecer tu negocio.
+      </p>
+    </div>
 
-      function show(idx) {
-        slides.forEach((s, k) => s.style.opacity = k === idx ? '1' : '0');
-        dots.forEach((d, k) => d.style.backgroundColor = k === idx ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)');
-        const key = slides[idx].getAttribute('data-i18n-caption');
-        if (captionEl && key && window.currentTranslations?.[key]) {
-          captionEl.textContent = window.currentTranslations[key];
+    <!-- Indicadores del slider -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+      <button type="button" class="h-2 w-8 rounded-full bg-white/80 hover:bg-emerald-400 transition" data-hero-dot="0"
+        aria-label="Mostrar imagen 1"></button>
+      <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="1"
+        aria-label="Mostrar imagen 2"></button>
+      <button type="button" class="h-2 w-8 rounded-full bg-white/40 hover:bg-emerald-400 transition" data-hero-dot="2"
+        aria-label="Mostrar imagen 3"></button>
+    </div>
+
+    <!-- Script Slider -->
+    <script>
+      (() => {
+        const slider = document.querySelector('[data-hero-slider]');
+        if (!slider) return;
+        const slides = Array.from(slider.querySelectorAll('[data-hero-slide]'));
+        const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
+        const captionEl = document.querySelector('[data-hero-caption]');
+        const intervalMs = Number(slider.getAttribute('data-rotate-interval') || 6000);
+
+        let i = 0, timer = null;
+
+        function show(idx) {
+          slides.forEach((s, k) => s.style.opacity = k === idx ? '1' : '0');
+          dots.forEach((d, k) => d.style.backgroundColor = k === idx ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.4)');
+          const key = slides[idx].getAttribute('data-i18n-caption');
+          if (captionEl && key && window.currentTranslations?.[key]) {
+            captionEl.textContent = window.currentTranslations[key];
+          }
+          i = idx;
         }
-        i = idx;
+
+        function next() { show((i + 1) % slides.length); }
+        function start() { stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        slider.addEventListener('mouseenter', stop);
+        slider.addEventListener('mouseleave', start);
+        dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
+
+        show(0);
+        start();
+      })();
+    </script>
+
+    <!-- Estilos -->
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
-      function next() { show((i + 1) % slides.length); }
-      function start() { stop(); timer = setInterval(next, intervalMs); }
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      .animate-fadeUp {
+        animation: fadeUp 1s ease-out forwards;
+      }
 
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-      dots.forEach((d, k) => d.addEventListener('click', () => { show(k); start(); }));
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
 
-      show(0);
-      start();
-    })();
-  </script>
+      .delay-400 {
+        animation-delay: 0.4s;
+      }
 
-  <!-- Estilos -->
-  <style>
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeUp { animation: fadeUp 1s ease-out forwards; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-600 { animation-delay: 0.6s; }
-  </style>
-</section>
+      .delay-600 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </section>
 
 
 
@@ -256,188 +276,201 @@
   <!-- ******************************* END Header (SEO-optimized) ******************************* -->
 
 
-<!-- ===================== MÉTRICAS CON ANIMACIÓN DE CONTEO (INTERNACIONALIZADO) ===================== -->
-<section id="metrics" class="py-8 border-y border-slate-200 bg-white">
-  <div class="container grid md:grid-cols-4 gap-8 text-center">
+  <!-- ===================== MÉTRICAS CON ANIMACIÓN DE CONTEO (INTERNACIONALIZADO) ===================== -->
+  <section id="metrics" class="py-8 border-y border-slate-200 bg-white">
+    <div class="container grid md:grid-cols-4 gap-8 text-center">
 
-    <div class="fade-in">
-      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="120">0</p>
-      <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_sites_launched">Sitios lanzados</p>
+      <div class="fade-in">
+        <p class="text-4xl font-extrabold text-slate-900 counter" data-target="120">0</p>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_sites_launched">Sitios lanzados</p>
+      </div>
+
+      <div class="fade-in">
+        <p class="text-4xl font-extrabold text-slate-900 counter" data-target="95">0</p>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_lighthouse_score">Puntaje Lighthouse medio</p>
+      </div>
+
+      <div class="fade-in">
+        <p class="text-4xl font-extrabold text-slate-900 counter" data-target="7">0</p>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_implementation_days">Días promedio de implementación
+        </p>
+      </div>
+
+      <div class="fade-in">
+        <p class="text-4xl font-extrabold text-slate-900 counter" data-target="20">0</p>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_conversion_increase">Aumento en conversión</p>
+      </div>
+
     </div>
 
-    <div class="fade-in">
-      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="95">0</p>
-      <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_lighthouse_score">Puntaje Lighthouse medio</p>
-    </div>
-
-    <div class="fade-in">
-      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="7">0</p>
-      <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_implementation_days">Días promedio de implementación</p>
-    </div>
-
-    <div class="fade-in">
-      <p class="text-4xl font-extrabold text-slate-900 counter" data-target="20">0</p>
-      <p class="text-slate-600 text-sm mt-2" data-i18n="metrics_conversion_increase">Aumento en conversión</p>
-    </div>
-
-  </div>
-
-  <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // === Animar números ===
-      const counters = document.querySelectorAll('.counter');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.parentElement.classList.add('visible');
-            animateCount(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.4 });
-
-      counters.forEach(c => observer.observe(c));
-
-      function animateCount(el) {
-        const target = +el.getAttribute('data-target');
-        const isPercent = el.textContent.includes('%') || el.getAttribute('data-target').includes('%');
-        const duration = 2000;
-        const startTime = performance.now();
-
-        function update(now) {
-          const progress = Math.min((now - startTime) / duration, 1);
-          const value = Math.floor(progress * target);
-          el.textContent = (isPercent ? '+' : '+') + value + (isPercent ? '%' : '');
-          if (progress < 1) requestAnimationFrame(update);
-          else el.textContent = (isPercent ? '+' : '+') + target + (isPercent ? '%' : '');
-        }
-
-        requestAnimationFrame(update);
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
       }
 
-      // === MENÚ MÓVIL ===
-      const toggle = document.querySelector("[data-nav-toggle]");
-      const menu = document.querySelector("[data-nav-menu]");
-      const links = menu?.querySelectorAll("a") || [];
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
 
-      links.forEach(link => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // === Animar números ===
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.parentElement.classList.add('visible');
+              animateCount(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+
+        counters.forEach(c => observer.observe(c));
+
+        function animateCount(el) {
+          const target = +el.getAttribute('data-target');
+          const isPercent = el.textContent.includes('%') || el.getAttribute('data-target').includes('%');
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function update(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+            el.textContent = (isPercent ? '+' : '+') + value + (isPercent ? '%' : '');
+            if (progress < 1) requestAnimationFrame(update);
+            else el.textContent = (isPercent ? '+' : '+') + target + (isPercent ? '%' : '');
+          }
+
+          requestAnimationFrame(update);
+        }
+
+        // === MENÚ MÓVIL ===
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const menu = document.querySelector("[data-nav-menu]");
+        const links = menu?.querySelectorAll("a") || [];
+
+        links.forEach(link => {
+          link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+          });
         });
       });
-    });
-  </script>
-</section>
+    </script>
+  </section>
 
 
 
 
 
 
-<!-- ===================== SECCIÓN DE SERVICIOS (INTERNACIONALIZADA) ===================== -->
-<section id="servicios"
-  class="relative py-20 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
-  <!-- Fondo animado -->
-  <div class="absolute inset-0">
-    <div
-      class="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.15),transparent_60%)] animate-slowRotate">
-    </div>
-  </div>
-
-  <div class="container relative z-10">
-    <!-- Encabezado -->
-    <div class="text-center mb-10">
-      <h2 data-i18n="services_title"
-        class="text-3xl pb-6 md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 text-transparent bg-clip-text">
-        Soluciones Inteligentes que Transforman Negocios 
-      </h2>
-      <p data-i18n="services_subtitle" class="mt-0 max-w-2xl mx-auto text-blue-100 text-lg leading-relaxed">
-        Combinamos <strong>automatización, diseño y tecnología</strong> para que tu marca crezca sin límites.
-      </p>
-    </div>
-
-    <!-- Servicios -->
-    <div class="grid md:grid-cols-3 gap-10">
-
-      <!-- Servicio 1 -->
+  <!-- ===================== SECCIÓN DE SERVICIOS (INTERNACIONALIZADA) ===================== -->
+  <section id="servicios"
+    class="relative py-20 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white overflow-hidden">
+    <!-- Fondo animado -->
+    <div class="absolute inset-0">
       <div
-        class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
-        <div
-          class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18m-9 5h9" />
-          </svg>
-        </div>
-        <h3 data-i18n="service_1_title" class="text-2xl font-bold mb-3">Landing Inteligente</h3>
-        <p data-i18n="service_1_desc" class="text-blue-100/90 leading-relaxed">
-          Diseños únicos con <strong>asistentes IA integrados</strong>, chat automatizado y conexión con
-          <strong>WhatsApp</strong>.
-          Capta más clientes en menos tiempo.
+        class="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.15),transparent_60%)] animate-slowRotate">
+      </div>
+    </div>
+
+    <div class="container relative z-10">
+      <!-- Encabezado -->
+      <div class="text-center mb-10">
+        <h2 data-i18n="services_title"
+          class="text-3xl pb-6 md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 text-transparent bg-clip-text">
+          Soluciones Inteligentes que Transforman Negocios
+        </h2>
+        <p data-i18n="services_subtitle" class="mt-0 max-w-2xl mx-auto text-blue-100 text-lg leading-relaxed">
+          Combinamos <strong>automatización, diseño y tecnología</strong> para que tu marca crezca sin límites.
         </p>
       </div>
 
-      <!-- Servicio 2 -->
-      <div
-        class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
-        <div
-          class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-          </svg>
-        </div>
-        <h3 data-i18n="service_2_title" class="text-2xl font-bold mb-3">Automatizaciones Avanzadas</h3>
-        <p data-i18n="service_2_desc" class="text-blue-100/90 leading-relaxed">
-          Implementamos <strong>procesos automáticos</strong> que gestionan leads, agendan citas, envían correos y
-          responden clientes 24/7.
-          Optimiza tu negocio con soluciones inteligentes en tiempo real.
-        </p>
-      </div>
+      <!-- Servicios -->
+      <div class="grid md:grid-cols-3 gap-10">
 
-      <!-- Servicio 3 -->
-      <div
-        class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+        <!-- Servicio 1 -->
         <div
-          class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-emerald-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 17v2h6v-2m-7-8l3-3m0 0l3 3m-3-3v12" />
-          </svg>
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+          <div
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18m-9 5h9" />
+            </svg>
+          </div>
+          <h3 data-i18n="service_1_title" class="text-2xl font-bold mb-3">Landing Inteligente</h3>
+          <p data-i18n="service_1_desc" class="text-blue-100/90 leading-relaxed">
+            Diseños únicos con <strong>asistentes IA integrados</strong>, chat automatizado y conexión con
+            <strong>WhatsApp</strong>.
+            Capta más clientes en menos tiempo.
+          </p>
         </div>
-        <h3 data-i18n="service_3_title" class="text-2xl font-bold mb-3">Tiendas y Soluciones Digitales</h3>
-        <p data-i18n="service_3_desc" class="text-blue-100/90 leading-relaxed">
-          Creamos <strong>tiendas virtuales, apps móviles</strong> y <strong>sistemas personalizados</strong> para tu
-          empresa.
-          Potencia tu presencia digital con integraciones, pagos en línea y <strong>escalabilidad
-            garantizada</strong>.
-        </p>
+
+        <!-- Servicio 2 -->
+        <div
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+          <div
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <h3 data-i18n="service_2_title" class="text-2xl font-bold mb-3">Automatizaciones Avanzadas</h3>
+          <p data-i18n="service_2_desc" class="text-blue-100/90 leading-relaxed">
+            Implementamos <strong>procesos automáticos</strong> que gestionan leads, agendan citas, envían correos y
+            responden clientes 24/7.
+            Optimiza tu negocio con soluciones inteligentes en tiempo real.
+          </p>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div
+          class="group p-10 bg-gradient-to-b from-white/10 via-white/5 to-transparent rounded-3xl border border-white/10 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+          <div
+            class="w-14 h-14 mb-5 flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-500 to-emerald-500 text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 17v2h6v-2m-7-8l3-3m0 0l3 3m-3-3v12" />
+            </svg>
+          </div>
+          <h3 data-i18n="service_3_title" class="text-2xl font-bold mb-3">Tiendas y Soluciones Digitales</h3>
+          <p data-i18n="service_3_desc" class="text-blue-100/90 leading-relaxed">
+            Creamos <strong>tiendas virtuales, apps móviles</strong> y <strong>sistemas personalizados</strong> para tu
+            empresa.
+            Potencia tu presencia digital con integraciones, pagos en línea y <strong>escalabilidad
+              garantizada</strong>.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Fondo inferior (transición suave hacia blanco) -->
-  <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+    <!-- Fondo inferior (transición suave hacia blanco) -->
+    <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
 
-  <!-- Animaciones -->
-  <style>
-    @keyframes slowRotate {
-      0% { transform: rotate(0deg) scale(1); }
-      100% { transform: rotate(360deg) scale(1.1); }
-    }
-    .animate-slowRotate { animation: slowRotate 40s linear infinite; }
-  </style>
-</section>
+    <!-- Animaciones -->
+    <style>
+      @keyframes slowRotate {
+        0% {
+          transform: rotate(0deg) scale(1);
+        }
+
+        100% {
+          transform: rotate(360deg) scale(1.1);
+        }
+      }
+
+      .animate-slowRotate {
+        animation: slowRotate 40s linear infinite;
+      }
+    </style>
+  </section>
 
 
 
@@ -445,182 +478,229 @@
 
 
 
-<!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
-<section id="about"
-  class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-  <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
+  <!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
+  <section id="about"
+    class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
 
-    <!-- Columna izquierda: Texto -->
-    <div class="space-y-6 fade-in-left">
-      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
-        <span data-i18n="about_title_highlight"
-          class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-          impulsando tu negocio todos los días
-        </span>
-      </h2>
+      <!-- Columna izquierda: Texto -->
+      <div class="space-y-6 fade-in-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
+          <span data-i18n="about_title_highlight"
+            class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            impulsando tu negocio todos los días
+          </span>
+        </h2>
 
-      <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
-        En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
-        No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
-      </p>
+        <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
+          En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
+          No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
+        </p>
 
-      <p class="text-blue-200/80" data-i18n="about_text_2">
-        Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
-        constante.
-        Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
-      </p>
+        <p class="text-blue-200/80" data-i18n="about_text_2">
+          Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
+          constante.
+          Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
+        </p>
 
-      <!-- <div class="mt-6">
+        <!-- <div class="mt-6">
         <a href="/#contact" data-i18n="about_cta"
           class="inline-block bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform">
           Conoce más sobre nosotros →
         </a>
       </div> -->
+      </div>
+
+      <!-- Columna derecha: Video con overlay -->
+      <div class="relative group fade-in-right">
+        <div
+          class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
+          <video id="aboutVideo" class="w-full h-full object-cover"
+            poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
+            <source id="aboutVideoSource"
+              src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
+              type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+
+          <!-- Overlay con botón Play / Pause -->
+          <button id="playButton" aria-label="Reproducir video"
+            class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition">
+            <span class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg transition-transform hover:scale-110">
+              ▶
+            </span>
+          </button>
+        </div>
+
+        <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
+          Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
+        </p>
+      </div>
     </div>
 
-  <!-- Columna derecha: Video con overlay -->
-<div class="relative group fade-in-right">
-  <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
-    <video id="aboutVideo" class="w-full h-full object-cover"
-      poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
-      <source id="aboutVideoSource"
-        src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
-        type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
+    <!-- Fondo animado -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
+    </div>
 
-    <!-- Overlay con botón Play / Pause -->
-    <button id="playButton" aria-label="Reproducir video"
-      class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition">
-      <span class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg transition-transform hover:scale-110">
-        ▶
-      </span>
-    </button>
-  </div>
+    <!-- Estilos -->
+    <style>
+      @keyframes fadeLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
 
-  <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
-    Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
-  </p>
-</div>
-  </div>
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
 
-  <!-- Fondo animado -->
-  <div
-    class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
-  </div>
+      @keyframes fadeRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
 
-  <!-- Estilos -->
-  <style>
-    @keyframes fadeLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
 
-    @keyframes fadeRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
+      .fade-in-left {
+        animation: fadeLeft 0.8s ease-out both;
+      }
 
-    .fade-in-left { animation: fadeLeft 0.8s ease-out both; }
-    .fade-in-right { animation: fadeRight 0.8s ease-out both; }
+      .fade-in-right {
+        animation: fadeRight 0.8s ease-out both;
+      }
 
-    @keyframes slowRotate {
-      0% { transform: rotate(0deg) scale(1); }
-      100% { transform: rotate(360deg) scale(1.1); }
-    }
+      @keyframes slowRotate {
+        0% {
+          transform: rotate(0deg) scale(1);
+        }
 
-    .animate-slowRotate { animation: slowRotate 50s linear infinite; }
+        100% {
+          transform: rotate(360deg) scale(1.1);
+        }
+      }
 
-    #playButton span { animation: pulse 2s infinite ease-in-out; }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
+      .animate-slowRotate {
+        animation: slowRotate 50s linear infinite;
+      }
 
-    #playButton { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
-    .video-container:hover #playButton { opacity: 1; visibility: visible; }
-  </style>
+      #playButton span {
+        animation: pulse 2s infinite ease-in-out;
+      }
 
-<!-- Script del botón Play/Pause + cambio dinámico del video según idioma -->
-<script>
-  const playButton = document.getElementById("playButton");
-  const aboutVideo = document.getElementById("aboutVideo");
-  const videoContainer = playButton.closest(".aspect-video");
-  let isPlaying = false;
+      @keyframes pulse {
 
-  // URLs de los videos por idioma
-  const videoUrls = {
-    es: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4",
-    en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4"
-  };
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
 
-  // ▶ Reproducir / Pausar
-  playButton.addEventListener("click", () => {
-    if (isPlaying) {
-      aboutVideo.pause();
-      playButton.querySelector("span").textContent = "▶";
-    } else {
-      aboutVideo.play();
-      playButton.querySelector("span").textContent = "⏸";
-    }
-    isPlaying = !isPlaying;
-  });
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+      }
 
-  // Cuando termina el video, volver a "Play"
-  aboutVideo.addEventListener("ended", () => {
-    isPlaying = false;
-    playButton.querySelector("span").textContent = "▶";
-  });
+      #playButton {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
 
-  // Mostrar / ocultar el botón con hover
-  videoContainer.addEventListener("mouseenter", () => {
-    playButton.style.opacity = "1";
-    playButton.style.visibility = "visible";
-  });
-  videoContainer.addEventListener("mouseleave", () => {
-    if (isPlaying) {
-      playButton.style.opacity = "0";
-      playButton.style.visibility = "hidden";
-    }
-  });
+      .video-container:hover #playButton {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
 
-  // 🔄 Función para cambiar video según idioma
-  function updateAboutVideo(lang) {
-    const newUrl = videoUrls[lang] || videoUrls["es"];
-    const currentUrl = aboutVideo.getAttribute("data-current-src");
+    <!-- Script del botón Play/Pause + cambio dinámico del video según idioma -->
+    <script>
+      const playButton = document.getElementById("playButton");
+      const aboutVideo = document.getElementById("aboutVideo");
+      const videoContainer = playButton.closest(".aspect-video");
+      let isPlaying = false;
 
-    if (currentUrl !== newUrl) {
-      // Pausar y reiniciar
-      aboutVideo.pause();
-      isPlaying = false;
-      playButton.querySelector("span").textContent = "▶";
+      // URLs de los videos por idioma
+      const videoUrls = {
+        es: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4",
+        en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4"
+      };
 
-      // Actualizar la fuente directamente en el <video>
-      aboutVideo.setAttribute("src", `${newUrl}?v=${Date.now()}`);
-      aboutVideo.setAttribute("data-current-src", newUrl);
+      // ▶ Reproducir / Pausar
+      playButton.addEventListener("click", () => {
+        if (isPlaying) {
+          aboutVideo.pause();
+          playButton.querySelector("span").textContent = "▶";
+        } else {
+          aboutVideo.play();
+          playButton.querySelector("span").textContent = "⏸";
+        }
+        isPlaying = !isPlaying;
+      });
 
-      // Forzar recarga del video
-      aboutVideo.load();
+      // Cuando termina el video, volver a "Play"
+      aboutVideo.addEventListener("ended", () => {
+        isPlaying = false;
+        playButton.querySelector("span").textContent = "▶";
+      });
 
-      // Mostrar el botón de play nuevamente
-      playButton.style.opacity = "1";
-      playButton.style.visibility = "visible";
-    }
-  }
+      // Mostrar / ocultar el botón con hover
+      videoContainer.addEventListener("mouseenter", () => {
+        playButton.style.opacity = "1";
+        playButton.style.visibility = "visible";
+      });
+      videoContainer.addEventListener("mouseleave", () => {
+        if (isPlaying) {
+          playButton.style.opacity = "0";
+          playButton.style.visibility = "hidden";
+        }
+      });
 
-  // Idioma inicial al cargar
-  const initialLang = localStorage.getItem("lang") || "es";
-  updateAboutVideo(initialLang);
+      // 🔄 Función para cambiar video según idioma
+      function updateAboutVideo(lang) {
+        const newUrl = videoUrls[lang] || videoUrls["es"];
+        const currentUrl = aboutVideo.getAttribute("data-current-src");
 
-  // Escuchar el evento global de cambio de idioma
-  document.addEventListener("languageChanged", (e) => {
-    updateAboutVideo(e.detail.lang);
-  });
-</script>
+        if (currentUrl !== newUrl) {
+          // Pausar y reiniciar
+          aboutVideo.pause();
+          isPlaying = false;
+          playButton.querySelector("span").textContent = "▶";
+
+          // Actualizar la fuente directamente en el <video>
+          aboutVideo.setAttribute("src", `${newUrl}?v=${Date.now()}`);
+          aboutVideo.setAttribute("data-current-src", newUrl);
+
+          // Forzar recarga del video
+          aboutVideo.load();
+
+          // Mostrar el botón de play nuevamente
+          playButton.style.opacity = "1";
+          playButton.style.visibility = "visible";
+        }
+      }
+
+      // Idioma inicial al cargar
+      const initialLang = localStorage.getItem("lang") || "es";
+      updateAboutVideo(initialLang);
+
+      // Escuchar el evento global de cambio de idioma
+      document.addEventListener("languageChanged", (e) => {
+        updateAboutVideo(e.detail.lang);
+      });
+    </script>
 
 
-</section>
+  </section>
 
 
 
@@ -629,191 +709,201 @@
 
   <!-- ===================== SECCIÓN DE PREGUNTAS FRECUENTES (VERSIÓN MODERNA + EFECTOS SUAVES + SEO OPTIMIZADA) ===================== -->
   <!-- ===================== SECCIÓN DE PREGUNTAS FRECUENTES ===================== -->
-<section id="faq" class="relative py-10 bg-gradient-to-b from-white via-slate-50 to-blue-50 overflow-hidden">
-  <div class="container relative z-10">
-    <!-- Encabezado -->
-    <div class="text-center mb-12 fade-in-up">
-      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900" data-i18n="faq_title">
-        Preguntas Frecuentes
-      </h2>
-      <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-lg" data-i18n="faq_subtitle">
-        Encuentra respuestas rápidas sobre nuestras <strong>landing pages inteligentes</strong>,
-        <strong>automatizaciones</strong> y <strong>soluciones digitales</strong>.
-      </p>
-    </div>
+  <section id="faq" class="relative py-10 bg-gradient-to-b from-white via-slate-50 to-blue-50 overflow-hidden">
+    <div class="container relative z-10">
+      <!-- Encabezado -->
+      <div class="text-center mb-12 fade-in-up">
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900" data-i18n="faq_title">
+          Preguntas Frecuentes
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-slate-600 text-lg" data-i18n="faq_subtitle">
+          Encuentra respuestas rápidas sobre nuestras <strong>landing pages inteligentes</strong>,
+          <strong>automatizaciones</strong> y <strong>soluciones digitales</strong>.
+        </p>
+      </div>
 
-    <!-- FAQ Accordion -->
-    <div id="faq-list"
-      class="max-w-5xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl shadow-xl overflow-hidden divide-y divide-slate-200">
+      <!-- FAQ Accordion -->
+      <div id="faq-list"
+        class="max-w-5xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-3xl shadow-xl overflow-hidden divide-y divide-slate-200">
 
-      <!-- Pregunta 1 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary
-          class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          <span data-i18n="faq_q1">¿Qué es una landing page?</span>
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <!-- Pregunta 1 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            <span data-i18n="faq_q1">¿Qué es una landing page?</span>
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a1">
+            Una landing page es una página creada para convertir visitantes en clientes. Resume lo más importante de tu
+            negocio, muestra tus servicios y guía al usuario hacia una acción concreta como contactarte o comprar.
+          </div>
+        </details>
+
+        <!-- Pregunta 2 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            <span data-i18n="faq_q2">¿Qué beneficios tiene una landing optimizada?</span>
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a2">
+            Mejora tu posicionamiento en Google, capta clientes potenciales y aumenta tus conversiones. Nuestras landing
+            pages inteligentes están diseñadas con IA, optimizadas para SEO y enfocadas en resultados medibles.
+          </div>
+        </details>
+
+        <!-- Pregunta 3 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            <span data-i18n="faq_q3">¿Qué es una automatización y cómo ayuda?</span>
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a3">
+            Las automatizaciones permiten que tu sitio atienda, responda y gestione clientes automáticamente. Te ahorran
+            tiempo, reducen errores y garantizan atención 24/7 con una experiencia fluida y profesional.
+          </div>
+        </details>
+
+        <!-- Pregunta 4 -->
+        <details class="group transition-all duration-500 ease-in-out">
+          <summary
+            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+            <span data-i18n="faq_q4">¿Qué soporte ofrece su empresa?</span>
+            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a4">
+            Contamos con un equipo de profesionales especializados en diseño, desarrollo web y optimización. Te
+            acompañamos desde la creación hasta el crecimiento continuo de tu producto digital.
+          </div>
+        </details>
+
+        <!-- Más preguntas -->
+        <div id="more-faq" class="hidden">
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              <span data-i18n="faq_q5">¿Puedo conectar mi landing con WhatsApp o redes sociales?</span>
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a5">
+              Sí. Integramos tu landing con WhatsApp, Instagram, correo electrónico y chatbots inteligentes, para que
+              tus clientes se comuniquen fácilmente desde cualquier canal.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              <span data-i18n="faq_q6">¿Desarrollan aplicaciones o sistemas a medida?</span>
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a6">
+              Sí, además de landings y automatizaciones, nuestro equipo también crea aplicaciones móviles y sistemas
+              completos personalizados según las necesidades del cliente.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              <span data-i18n="faq_q7">¿Puedo actualizar o mejorar mi sitio después de lanzarlo?</span>
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a7">
+              Por supuesto. Nuestras soluciones están pensadas para escalar contigo. Puedes solicitar rediseños, nuevas
+              funciones o integraciones a medida en cualquier momento.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              <span data-i18n="faq_q8">¿Cómo puedo comunicarme con su empresa?</span>
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a8">
+              Puedes comunicarte fácilmente usando el botón de chat flotante en la esquina inferior derecha, enviando un
+              mensaje desde el formulario de contacto o revisando nuestros datos al final de la página.
+            </div>
+          </details>
+
+          <details class="group transition-all duration-500 ease-in-out">
+            <summary
+              class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
+              <span data-i18n="faq_q9">¿Qué diferencia a su empresa de otras?</span>
+              <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a9">
+              No solo desarrollamos productos digitales, sino que acompañamos a cada cliente en su evolución. Nuestro
+              enfoque combina IA, diseño, estrategia y soporte humano experto para escalar tu negocio de forma
+              sostenible.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Botón "Ver más" -->
+      <div class="text-center mt-8">
+        <button id="toggle-more"
+          class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
+          <span data-i18n="faq_more">Ver más preguntas</span>
+          <svg id="arrow-more" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
           </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a1">
-          Una landing page es una página creada para convertir visitantes en clientes. Resume lo más importante de tu negocio, muestra tus servicios y guía al usuario hacia una acción concreta como contactarte o comprar.
-        </div>
-      </details>
-
-      <!-- Pregunta 2 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary
-          class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          <span data-i18n="faq_q2">¿Qué beneficios tiene una landing optimizada?</span>
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a2">
-          Mejora tu posicionamiento en Google, capta clientes potenciales y aumenta tus conversiones. Nuestras landing pages inteligentes están diseñadas con IA, optimizadas para SEO y enfocadas en resultados medibles.
-        </div>
-      </details>
-
-      <!-- Pregunta 3 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary
-          class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          <span data-i18n="faq_q3">¿Qué es una automatización y cómo ayuda?</span>
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a3">
-          Las automatizaciones permiten que tu sitio atienda, responda y gestione clientes automáticamente. Te ahorran tiempo, reducen errores y garantizan atención 24/7 con una experiencia fluida y profesional.
-        </div>
-      </details>
-
-      <!-- Pregunta 4 -->
-      <details class="group transition-all duration-500 ease-in-out">
-        <summary
-          class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-          <span data-i18n="faq_q4">¿Qué soporte ofrece su empresa?</span>
-          <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a4">
-          Contamos con un equipo de profesionales especializados en diseño, desarrollo web y optimización. Te acompañamos desde la creación hasta el crecimiento continuo de tu producto digital.
-        </div>
-      </details>
-
-      <!-- Más preguntas -->
-      <div id="more-faq" class="hidden">
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary
-            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            <span data-i18n="faq_q5">¿Puedo conectar mi landing con WhatsApp o redes sociales?</span>
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a5">
-            Sí. Integramos tu landing con WhatsApp, Instagram, correo electrónico y chatbots inteligentes, para que tus clientes se comuniquen fácilmente desde cualquier canal.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary
-            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            <span data-i18n="faq_q6">¿Desarrollan aplicaciones o sistemas a medida?</span>
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a6">
-            Sí, además de landings y automatizaciones, nuestro equipo también crea aplicaciones móviles y sistemas completos personalizados según las necesidades del cliente.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary
-            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            <span data-i18n="faq_q7">¿Puedo actualizar o mejorar mi sitio después de lanzarlo?</span>
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a7">
-            Por supuesto. Nuestras soluciones están pensadas para escalar contigo. Puedes solicitar rediseños, nuevas funciones o integraciones a medida en cualquier momento.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary
-            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            <span data-i18n="faq_q8">¿Cómo puedo comunicarme con su empresa?</span>
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a8">
-            Puedes comunicarte fácilmente usando el botón de chat flotante en la esquina inferior derecha, enviando un mensaje desde el formulario de contacto o revisando nuestros datos al final de la página.
-          </div>
-        </details>
-
-        <details class="group transition-all duration-500 ease-in-out">
-          <summary
-            class="flex justify-between items-center px-6 py-5 cursor-pointer text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors">
-            <span data-i18n="faq_q9">¿Qué diferencia a su empresa de otras?</span>
-            <svg class="w-5 h-5 text-blue-500 transition-transform duration-300 group-open:rotate-180" fill="none"
-              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div class="px-6 pb-5 text-slate-600 leading-relaxed answer-content" data-i18n="faq_a9">
-            No solo desarrollamos productos digitales, sino que acompañamos a cada cliente en su evolución. Nuestro enfoque combina IA, diseño, estrategia y soporte humano experto para escalar tu negocio de forma sostenible.
-          </div>
-        </details>
+        </button>
       </div>
     </div>
 
-    <!-- Botón "Ver más" -->
-    <div class="text-center mt-8">
-      <button id="toggle-more"
-        class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
-        <span data-i18n="faq_more">Ver más preguntas</span>
-        <svg id="arrow-more" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
-          stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-        </svg>
-      </button>
-    </div>
-  </div>
+    <!-- Script -->
+    <script>
+      const toggleMore = document.getElementById("toggle-more");
+      const moreFaq = document.getElementById("more-faq");
+      const arrowMore = document.getElementById("arrow-more");
+      let expanded = false;
 
-  <!-- Script -->
-  <script>
-    const toggleMore = document.getElementById("toggle-more");
-    const moreFaq = document.getElementById("more-faq");
-    const arrowMore = document.getElementById("arrow-more");
-    let expanded = false;
-
-    toggleMore.addEventListener("click", () => {
-      expanded = !expanded;
-      moreFaq.classList.toggle("hidden");
-      arrowMore.classList.toggle("rotate-180");
-      toggleMore.querySelector("span").textContent = expanded
-        ? window.currentTranslations?.faq_less || "Ver menos preguntas"
-        : window.currentTranslations?.faq_more || "Ver más preguntas";
-    });
-  </script>
-</section>
+      toggleMore.addEventListener("click", () => {
+        expanded = !expanded;
+        moreFaq.classList.toggle("hidden");
+        arrowMore.classList.toggle("rotate-180");
+        toggleMore.querySelector("span").textContent = expanded
+          ? window.currentTranslations?.faq_less || "Ver menos preguntas"
+          : window.currentTranslations?.faq_more || "Ver más preguntas";
+      });
+    </script>
+  </section>
 
 
-    <!-- Datos estructurados FAQ Schema -->
-    <script type="application/ld+json">
+  <!-- Datos estructurados FAQ Schema -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -833,7 +923,7 @@
 
   <!-- Resultados reales (marquee infinito, pause on hover, sin JS) -->
   <!-- ******************************* Clientes / Resultados Reales (SEO + Trust) ******************************* -->
-  <section id="clientes" class="bg-slate-50"  aria-labelledby="clientes-title">
+  <section id="clientes" class="bg-slate-50" aria-labelledby="clientes-title">
     <style>
       @keyframes scroll-x {
         0% {
@@ -868,135 +958,147 @@
     </style>
 
 
-  <!-- ===================== SECCIÓN DE HISTORIAS DE ÉXITO ===================== -->
-<section id="clientes" class="relative py-16 bg-gradient-to-b from-blue-50 via-white to-slate-50 overflow-hidden">
-  <div class="container">
-    <!-- Título -->
-    <h2 id="clientes-title" data-i18n="clientes_title"
-      class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-center">
-      Historias de éxito
-    </h2>
-    <p class="text-center max-w-2xl mx-auto mt-3 text-slate-600" data-i18n="clientes_subtitle">
-      Clientes que transformaron su presencia digital con <strong>Mateo.</strong>
-    </p>
+    <!-- ===================== SECCIÓN DE HISTORIAS DE ÉXITO ===================== -->
+    <section id="clientes" class="relative py-16 bg-gradient-to-b from-blue-50 via-white to-slate-50 overflow-hidden">
+      <div class="container">
+        <!-- Título -->
+        <h2 id="clientes-title" data-i18n="clientes_title"
+          class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-center">
+          Historias de éxito
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mt-3 text-slate-600" data-i18n="clientes_subtitle">
+          Clientes que transformaron su presencia digital con <strong>Mateo.</strong>
+        </p>
 
-    <!-- Carrusel continuo -->
-    <div
-      class="mt-10 w-full overflow-hidden group
+        <!-- Carrusel continuo -->
+        <div
+          class="mt-10 w-full overflow-hidden group
            [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
 
-      <div class="flex gap-6
+          <div class="flex gap-6
              animate-scroll
              group-hover:[animation-play-state:paused]
              [animation:scroll-x_35s_linear_infinite]
              md:[animation-duration:45s]">
 
-        <!-- BLOQUE 1 -->
-        <div class="flex items-stretch gap-6">
-          <!-- Card 1 -->
-          <figure
-            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <svg class="absolute top-4 right-4 w-8 h-8 text-blue-400/30" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M7.17 6A5.17 5.17 0 0 0 2 11.17V22h8.28v-8.28H6.56V11.1c0-1.7 1.38-3.08 3.08-3.08V6H7.17Zm9.67 0A5.17 5.17 0 0 0 11.67 11.17V22h8.28v-8.28h-3.72V11.1c0-1.7 1.38-3.08 3.08-3.08V6h-2.77Z" />
-            </svg>
-            <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
-              <div class="flex text-yellow-500" aria-hidden="true">
-                <template id="stars-template">
+            <!-- BLOQUE 1 -->
+            <div class="flex items-stretch gap-6">
+              <!-- Card 1 -->
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <svg class="absolute top-4 right-4 w-8 h-8 text-blue-400/30" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M7.17 6A5.17 5.17 0 0 0 2 11.17V22h8.28v-8.28H6.56V11.1c0-1.7 1.38-3.08 3.08-3.08V6H7.17Zm9.67 0A5.17 5.17 0 0 0 11.67 11.17V22h8.28v-8.28h-3.72V11.1c0-1.7 1.38-3.08 3.08-3.08V6h-2.77Z" />
+                </svg>
+                <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
+                  <div class="flex text-yellow-500" aria-hidden="true">
+                    <template id="stars-template">
+                      <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path
+                          d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                      </svg>
+                    </template>
+                    <script>
+                      // Generar 5 estrellas automáticamente
+                      const stars = document.currentScript.previousElementSibling;
+                      for (let i = 0; i < 5; i++) {
+                        stars.appendChild(document.getElementById("stars-template").content.cloneNode(true));
+                      }
+                    </script>
+                  </div>
+                </div>
+                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote1">
+                  “Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google.
+                  El equipo siempre disponible.”
+                </blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person1">Andrea — Retail
+                </figcaption>
+              </figure>
+
+              <!-- Card 2 -->
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <div class="mb-4 flex text-yellow-500" aria-hidden="true">
                   <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
                     <path
                       d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
                   </svg>
-                </template>
-                <script>
-                  // Generar 5 estrellas automáticamente
-                  const stars = document.currentScript.previousElementSibling;
-                  for (let i = 0; i < 5; i++) {
-                    stars.appendChild(document.getElementById("stars-template").content.cloneNode(true));
-                  }
-                </script>
-              </div>
-            </div>
-            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote1">
-              “Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google. El equipo siempre disponible.”
-            </blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person1">Andrea — Retail</figcaption>
-          </figure>
+                </div>
+                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote2">
+                  “Buscábamos una <strong>página web moderna y optimizada</strong>. Gracias a su IA, recibimos más
+                  consultas sin aumentar el gasto.”
+                </blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person2">Luis —
+                  Servicios</figcaption>
+              </figure>
 
-          <!-- Card 2 -->
-          <figure
-            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <div class="mb-4 flex text-yellow-500" aria-hidden="true">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg>
+              <!-- Card 3 -->
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <div class="mb-4 flex text-yellow-500" aria-hidden="true">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+                  </svg>
+                </div>
+                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote3">
+                  “Nuestra <strong>landing con IA</strong> convirtió el doble. Nos encanta tener soporte técnico siempre
+                  disponible.”
+                </blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person3">María —
+                  Inmobiliaria</figcaption>
+              </figure>
             </div>
-            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote2">
-              “Buscábamos una <strong>página web moderna y optimizada</strong>. Gracias a su IA, recibimos más consultas sin aumentar el gasto.”
-            </blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person2">Luis — Servicios</figcaption>
-          </figure>
 
-          <!-- Card 3 -->
-          <figure
-            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <div class="mb-4 flex text-yellow-500" aria-hidden="true">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                <path
-                  d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-              </svg>
+            <!-- BLOQUE 2 (duplicado para loop infinito) -->
+            <div class="flex items-stretch gap-6" aria-hidden="true">
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <blockquote class="italic text-slate-700 leading-relaxed">“Contratamos para <strong>crear una landing
+                    page con IA</strong> y en semanas ya aparecía en Google.”</blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700">Andrea — Retail</figcaption>
+              </figure>
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <blockquote class="italic text-slate-700 leading-relaxed">“Buscábamos una <strong>página web moderna y
+                    optimizada</strong> y logramos tráfico orgánico real.”</blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700">Luis — Servicios</figcaption>
+              </figure>
+              <figure
+                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                <blockquote class="italic text-slate-700 leading-relaxed">“Nuestra <strong>landing con IA</strong>
+                  convirtió el doble que la anterior.”</blockquote>
+                <figcaption class="mt-4 text-sm font-medium text-slate-700">María — Inmobiliaria</figcaption>
+              </figure>
             </div>
-            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote3">
-              “Nuestra <strong>landing con IA</strong> convirtió el doble. Nos encanta tener soporte técnico siempre disponible.”
-            </blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person3">María — Inmobiliaria</figcaption>
-          </figure>
-        </div>
-
-        <!-- BLOQUE 2 (duplicado para loop infinito) -->
-        <div class="flex items-stretch gap-6" aria-hidden="true">
-          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <blockquote class="italic text-slate-700 leading-relaxed">“Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google.”</blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700">Andrea — Retail</figcaption>
-          </figure>
-          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <blockquote class="italic text-slate-700 leading-relaxed">“Buscábamos una <strong>página web moderna y optimizada</strong> y logramos tráfico orgánico real.”</blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700">Luis — Servicios</figcaption>
-          </figure>
-          <figure class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-            <blockquote class="italic text-slate-700 leading-relaxed">“Nuestra <strong>landing con IA</strong> convirtió el doble que la anterior.”</blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-slate-700">María — Inmobiliaria</figcaption>
-          </figure>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- Schema enriquecido de reseñas -->
@@ -1049,229 +1151,271 @@
 
 
 
- <!-- ===================== CONTACTO (SEO + Multilenguaje) ===================== -->
-<section id="contact" class="py-8 bg-slate-900 text-white">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <!-- Header -->
-    <div class="text-center mb-8 fade-in">
-      <h2
-        class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400"
-        data-i18n="contact_title">
-        Contacto
-      </h2>
-      <p class="text-xl text-white/80 max-w-3xl mx-auto" data-i18n="contact_subtitle">
-        ¿Listo para transformar tu negocio? Hablemos
-      </p>
-    </div>
+  <!-- ===================== CONTACTO (Optimizado UX + Multilenguaje) ===================== -->
+  <section id="contact" class="py-12 bg-slate-900 text-white">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <!-- Header -->
+      <div class="text-center mb-10 fade-in">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400"
+          data-i18n="contact_title">
+          Contacto
+        </h2>
+        <p class="text-lg text-white/80 max-w-2xl mx-auto" data-i18n="contact_subtitle">
+          ¿Listo para transformar tu negocio? Hablemos
+        </p>
+      </div>
 
-    <div class="grid lg:grid-cols-2 gap-8 items-start">
-      <!-- Formulario -->
-      <div class="fade-left">
-        <h3 class="text-3xl font-bold mb-8" data-i18n="contact_form_title">Envíanos un mensaje</h3>
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <!-- Formulario -->
+        <div class="fade-left bg-white/5 p-8 rounded-2xl border border-white/10 shadow-lg backdrop-blur-md">
+          <h3 class="text-2xl font-bold mb-6" data-i18n="contact_form_title">Envíanos un mensaje</h3>
 
-        <form id="contact-form" class="space-y-6">
-          <!-- Nombre -->
-          <div>
-            <label class="block text-sm font-medium mb-2" data-i18n="contact_name_label">Nombre completo</label>
-            <input type="text" name="name" required data-i18n-placeholder="contact_name_placeholder"
-              placeholder="Tu nombre"
-              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label class="block text-sm font-medium mb-2" data-i18n="contact_email_label">Email</label>
-            <input type="email" name="email" required data-i18n-placeholder="contact_email_placeholder"
-              placeholder="tu@email.com"
-              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
-          </div>
-
-          <!-- Teléfono -->
-          <div>
-            <label class="block text-sm font-medium mb-2" data-i18n="contact_phone_label">WhatsApp / Teléfono</label>
-            <input type="tel" name="phone" id="phone" required data-i18n-placeholder="contact_phone_placeholder"
-              placeholder="+1 234 567 8900"
-              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
-          </div>
-
-          <!-- Empresa -->
-          <div>
-            <label class="block text-sm font-medium mb-2" data-i18n="contact_company_label">Empresa</label>
-            <input type="text" name="company" data-i18n-placeholder="contact_company_placeholder"
-              placeholder="Tu empresa (opcional)"
-              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500" />
-          </div>
-
-          <!-- Mensaje -->
-          <div>
-            <label class="block text-sm font-medium mb-2" data-i18n="contact_message_label">Mensaje</label>
-            <textarea name="message" id="message" rows="5" maxlength="300"
-              data-i18n-placeholder="contact_message_placeholder"
-              placeholder="Cuéntanos brevemente qué necesitas automatizar o crear..."
-              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500"></textarea>
-            <div class="flex justify-between text-xs text-white/60 mt-2">
-              <span data-i18n="contact_message_limit">Máximo 300 caracteres</span>
-              <span id="msg-count">0/300</span>
+          <form id="contact-form" class="space-y-5">
+            <!-- Nombre -->
+            <div>
+              <label for="name" class="block text-sm font-medium mb-1" data-i18n="contact_name_label">Nombre
+                completo</label>
+              <input id="name" type="text" name="name" required data-i18n-placeholder="contact_name_placeholder"
+                placeholder="Tu nombre"
+                class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
             </div>
-          </div>
 
-          <button type="submit" data-i18n="contact_button"
-            class="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 py-3 text-lg font-semibold rounded-lg transition-all">
-            Enviar Mensaje
-          </button>
-        </form>
-      </div>
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-medium mb-1" data-i18n="contact_email_label">Email</label>
+              <input id="email" type="email" name="email" required data-i18n-placeholder="contact_email_placeholder"
+                placeholder="tu@email.com"
+                class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
 
-      <!-- Información de contacto -->
-      <div class="space-y-8 fade-right">
-        <h3 class="text-3xl font-bold mb-8" data-i18n="contact_info_title">Información de Contacto</h3>
+            <!-- Teléfono -->
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-1" data-i18n="contact_phone_label">WhatsApp /
+                Teléfono</label>
+              <input id="phone" type="tel" name="phone" required data-i18n-placeholder="contact_phone_placeholder"
+                placeholder="+1 234 567 8900" pattern="[0-9+ ]+" title="Solo números y el símbolo +"
+                class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
 
-        <!-- Email -->
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-width="2"
-                d="M16 12H8m8-4H8m2 8h6m2 4H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-xl font-semibold" data-i18n="contact_email_title">Email</h4>
-            <a href="mailto:contact@mateomi.com" class="text-white/70 hover:text-white">contact@mateomi.com</a>
-          </div>
+            <!-- Bloque adicional oculto -->
+            <div id="extra-fields" class="hidden space-y-5 mt-3">
+              <!-- Empresa -->
+              <div>
+                <label for="company" class="block text-sm font-medium mb-1"
+                  data-i18n="contact_company_label">Empresa</label>
+                <input id="company" type="text" name="company" data-i18n-placeholder="contact_company_placeholder"
+                  placeholder="Tu empresa (opcional)"
+                  class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label for="message" class="block text-sm font-medium mb-1"
+                  data-i18n="contact_message_label">Mensaje</label>
+                <textarea id="message" name="message" rows="4" maxlength="300"
+                  data-i18n-placeholder="contact_message_placeholder"
+                  placeholder="Cuéntanos brevemente qué necesitas automatizar o crear..."
+                  class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:ring-2 focus:ring-blue-500"></textarea>
+                <p class="text-xs text-white/60 text-right mt-1">
+                  <span data-i18n="contact_message_limit">Máximo 300 caracteres</span> — <span
+                    id="msg-count">0</span>/300
+                </p>
+              </div>
+            </div>
+
+            <!-- Botón expandir -->
+            <button type="button" id="toggle-extra"
+              class="text-blue-400 text-sm font-medium hover:text-blue-300 transition" data-i18n="contact_more_details">
+              + ¿Quieres contarnos más detalles?
+            </button>
+
+            <!-- Enviar -->
+            <button type="submit" data-i18n="contact_button"
+              class="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 py-3 text-lg font-semibold rounded-lg transition-all shadow-md hover:shadow-xl">
+              Enviar Mensaje
+            </button>
+          </form>
         </div>
 
-        <!-- Teléfono -->
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.6a1 1 0 01.95.68l1.24 3.73a1 1 0 01-.27 1.05L8.91 10.91a11.05 11.05 0 005.19 5.19l2.45-1.66a1 1 0 011.05-.27l3.73 1.24a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C10.61 21 3 13.39 3 4v1z" />
-            </svg>
-          </div>
+        <!-- Información lateral -->
+        <div class="fade-right flex flex-col justify-center space-y-6">
           <div>
-            <h4 class="text-xl font-semibold" data-i18n="contact_phone_title">Teléfono</h4>
-            <a href="tel:+15174027564" class="text-white/70 hover:text-white">+1 (517) 402-7564</a>
+            <h3 class="text-2xl font-bold mb-4" data-i18n="contact_info_title">Información de Contacto</h3>
+            <p class="text-white/70 mb-6 text-sm leading-relaxed" data-i18n="contact_info_text">
+              Prefieres hablar directamente? Escríbenos o mándanos un mensaje por WhatsApp.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <!-- Email -->
+            <a href="mailto:contact@mateomi.com"
+              class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
+              <div class="w-10 h-10 bg-blue-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-width="2"
+                    d="M16 12H8m8-4H8m2 8h6m2 4H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold" data-i18n="contact_email_title">Email</p>
+                <span class="text-white/70 text-sm">contact@mateomi.com</span>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a id="whatsapp-link" target="_blank" rel="noopener"
+              class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
+              <div class="w-10 h-10 bg-green-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.6a1 1 0 01.95.68l1.24 3.73a1 1 0 01-.27 1.05L8.91 10.91a11.05 11.05 0 005.19 5.19l2.45-1.66a1 1 0 011.05-.27l3.73 1.24a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C10.61 21 3 13.39 3 4v1z" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold" data-i18n="contact_phone_title">WhatsApp</p>
+                <span class="text-white/70 text-sm">+1 (517) 402-7564</span>
+              </div>
+            </a>
+
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Toast -->
-  <div id="toast"
-    class="hidden fixed top-16 right-6 z-[9999] bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
-  </div>
-</section>
+    <!-- Script -->
+    <script>
+      const toggleExtra = document.getElementById("toggle-extra");
+      const extraFields = document.getElementById("extra-fields");
+      let expandeds = false;
+      toggleExtra.addEventListener("click", () => {
+        expandeds = !expandeds;
+        extraFields.classList.toggle("hidden");
+        toggleExtra.textContent = expandeds
+          ? "– Ocultar detalles"
+          : "+ ¿Quieres contarnos más detalles?";
+      });
+
+      // Contador caracteres
+      const msgInput = document.getElementById("message");
+      const msgCount = document.getElementById("msg-count");
+      msgInput?.addEventListener("input", () => {
+        msgCount.textContent = msgInput.value.length;
+      });
+
+      // Validar solo números en teléfono
+      const phoneInput = document.getElementById("phone");
+      phoneInput.addEventListener("input", () => {
+        phoneInput.value = phoneInput.value.replace(/[^0-9+ ]/g, "");
+      });
+    </script>
+  </section>
+
 
 
   <!-- *******************************  END CONTACTO (SEO-optimized) ******************************* -->
 
 
-<footer class="bg-slate-900 text-slate-300 border-t border-slate-800">
-  <div class="container py-10 grid md:grid-cols-3 gap-8 text-sm">
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800">
+    <div class="container py-10 grid md:grid-cols-3 gap-8 text-sm">
 
-    <!-- Brand -->
-    <div>
-      <div class="flex items-center gap-2 font-semibold text-white text-base">
-        <img src="/favicon.svg" class="h-5 w-5" alt="Mateo logo">
-        <span>Mateo</span>
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 font-semibold text-white text-base">
+          <img src="/favicon.svg" class="h-5 w-5" alt="Mateo logo">
+          <span>Mateo</span>
+        </div>
+        <p class="mt-2 leading-relaxed text-sm text-white/80" data-i18n="footer_brand_desc1">
+          Creamos <strong>sitios inteligentes</strong> que impulsan tu negocio con tecnología y estrategia real.
+        </p>
+        <p class="mt-2 text-sm text-white/60" data-i18n="footer_brand_desc2">
+          Más visibilidad, más confianza y <strong>resultados medibles</strong>.
+        </p>
       </div>
-      <p class="mt-2 leading-relaxed text-sm text-white/80" data-i18n="footer_brand_desc1">
-        Creamos <strong>sitios inteligentes</strong> que impulsan tu negocio con tecnología y estrategia real.
-      </p>
-      <p class="mt-2 text-sm text-white/60" data-i18n="footer_brand_desc2">
-        Más visibilidad, más confianza y <strong>resultados medibles</strong>.
-      </p>
-    </div>
 
-    <!-- Navegación -->
-    <nav class="grid gap-2 md:justify-self-center">
-      <!-- <h3 class="font-semibold text-white mb-2" data-i18n="footer_services_title">Nuestros Servicios</h3>
+      <!-- Navegación -->
+      <nav class="grid gap-2 md:justify-self-center">
+        <!-- <h3 class="font-semibold text-white mb-2" data-i18n="footer_services_title">Nuestros Servicios</h3>
       <a href="/#servicios" class="hover:text-white transition" data-i18n="footer_service1">Landing Pages Inteligentes</a>
       <a href="/#servicios" class="hover:text-white transition" data-i18n="footer_service2">Automatizaciones y Bots IA</a>
       <a href="/#servicios" class="hover:text-white transition" data-i18n="footer_service3">Tiendas Virtuales y Apps</a>
       <a href="/#contact" class="hover:text-white transition" data-i18n="footer_service4">Consultoría Personalizada</a> -->
-    </nav>
+      </nav>
 
-    <!-- Info / Derechos -->
-    <div class="md:text-right flex flex-col justify-between">
-      <div class="space-y-2">
-        <h3 class="font-semibold text-white mb-1" data-i18n="footer_contact_title">Contáctanos</h3>
-        <a href="mailto:contact@mateomi.com" class="hover:text-white transition">contact@mateomi.com</a><br>
-        <a href="tel:+15174027564" class="hover:text-white transition">+1 (517) 402-7564</a>
-        <p class="opacity-70 mt-2" data-i18n="footer_support">Soporte técnico y atención personalizada.</p>
+      <!-- Info / Derechos -->
+      <div class="md:text-right flex flex-col justify-between">
+        <div class="space-y-2">
+          <h3 class="font-semibold text-white mb-1" data-i18n="footer_contact_title">Contáctanos</h3>
+          <a href="mailto:contact@mateomi.com" class="hover:text-white transition">contact@mateomi.com</a><br>
+          <a href="tel:+15174027564" class="hover:text-white transition">+1 (517) 402-7564</a>
+          <p class="opacity-70 mt-2" data-i18n="footer_support">Soporte técnico y atención personalizada.</p>
+        </div>
+
+        <p class="mt-6 text-xs opacity-60" data-i18n="footer_rights">
+          © 2025 Mateo. Todos los derechos reservados.
+        </p>
       </div>
+    </div>
+  </footer>
 
-      <p class="mt-6 text-xs opacity-60" data-i18n="footer_rights">
-        © 2025 Mateo. Todos los derechos reservados.
-      </p>
+
+
+  <!-- ===================== Floating Chat ===================== -->
+  <div id="floating-chat" class="fixed bottom-4 right-6 z-[9999]">
+    <!-- Bubble message -->
+    <div id="chat-bubble"
+      class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium"
+      data-i18n="chat_bubble_text">
+    </div>
+
+    <!-- Floating Button (WhatsApp style FIXED) -->
+    <button id="chat-toggle" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"
+      class="w-16 h-16 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#72E3A6]">
+
+      <!-- WhatsApp clean logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8" fill="white" aria-hidden="true">
+        <path
+          d="M256.1 0C114.6 0 0 114.6 0 256.1c0 45.1 11.8 89.1 34.1 127.8L0 512l131.7-34.3c37.2 20.3 79.2 31 122.4 31h.1c141.5 0 256.1-114.6 256.1-256.1S397.6 0 256.1 0zM256.1 472.6h-.1c-38.6 0-76.3-10.3-109.2-29.8l-7.8-4.6-78.1 20.3 20.8-76.1-5-7.9c-21.3-33.8-32.6-72.9-32.6-113.3 0-116.9 95.2-212 212.1-212 56.6 0 109.7 22 149.7 62s62 93.1 62 149.7c0 116.9-95.2 212-212.1 212zm120.4-157.7c-6.6-3.3-39.1-19.3-45.2-21.6-6.1-2.3-10.6-3.3-15.1 3.3-4.6 6.6-17.4 21.6-21.3 26.1-3.9 4.6-7.7 5-14.3 1.7-39.1-19.6-64.7-35-90.4-79.2-6.8-11.7 6.8-10.8 19.6-36.1 2.1-4.6 1-8.6-.6-11.9-1.7-3.3-15.1-36.1-20.7-49.5-5.4-13-10.9-11.3-15.1-11.5-3.9-.2-8.6-.2-13.1-.2s-12 1.7-18.3 8.6c-6.3 6.6-24 23.4-24 57 0 33.6 24.6 66 28.1 70.5 3.3 4.6 48.5 74.1 117.6 104.1 16.4 7.1 29.3 11.3 39.3 14.5 16.5 5.2 31.5 4.5 43.4 2.8 13.3-2 39.1-16 44.6-31.4 5.5-15.4 5.5-28.7 3.9-31.4-1.7-2.7-6-4.4-12.6-7.7z" />
+      </svg>
+
+      <span class="sr-only" data-i18n="chat_open_label">Abrir chat de WhatsApp</span>
+    </button>
+
+
+    <!-- Chat Window -->
+    <div id="chat-window"
+      class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
+      role="dialog" aria-modal="true" aria-labelledby="chat-title">
+      <header class="p-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-between text-white">
+        <h3 id="chat-title" class="font-bold text-lg" data-i18n="chat_header">Soporte • Mateo</h3>
+        <button id="chat-close" aria-label="Cerrar chat" title="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-width="2" d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+
+      <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
+
+      <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
+        <input id="chat-input" type="text" data-i18n-placeholder="chat_input_placeholder"
+          placeholder="Escribe tu mensaje..." class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none"
+          aria-label="Escribir mensaje" />
+        <button id="chat-send"
+          class="bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full p-2 transition transform hover:scale-105"
+          aria-label="Enviar mensaje" title="Enviar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 transform -rotate-45" fill="none"
+            stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75 20.25 12 3.75 20.25 7.5 12 3.75 3.75z" />
+          </svg>
+        </button>
+      </footer>
     </div>
   </div>
-</footer>
 
 
 
- <!-- ===================== Floating Chat ===================== -->
-<div id="floating-chat" class="fixed bottom-4 right-6 z-[9999]">
-  <!-- Bubble message -->
-  <div id="chat-bubble"
-    class="hidden absolute bottom-20 right-0 mb-3 p-3 mr-8 bg-white text-slate-800 rounded-3xl rounded-br-lg shadow-lg w-64 text-sm font-medium"
-    data-i18n="chat_bubble_text">
-  </div>
-
- <!-- Floating Button (WhatsApp style FIXED) -->
-<button id="chat-toggle" aria-label="Abrir chat de WhatsApp" title="Abrir chat de WhatsApp"
-  class="w-16 h-16 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#72E3A6]">
-  
-  <!-- WhatsApp clean logo -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-    class="w-8 h-8" fill="white" aria-hidden="true">
-    <path
-      d="M256.1 0C114.6 0 0 114.6 0 256.1c0 45.1 11.8 89.1 34.1 127.8L0 512l131.7-34.3c37.2 20.3 79.2 31 122.4 31h.1c141.5 0 256.1-114.6 256.1-256.1S397.6 0 256.1 0zM256.1 472.6h-.1c-38.6 0-76.3-10.3-109.2-29.8l-7.8-4.6-78.1 20.3 20.8-76.1-5-7.9c-21.3-33.8-32.6-72.9-32.6-113.3 0-116.9 95.2-212 212.1-212 56.6 0 109.7 22 149.7 62s62 93.1 62 149.7c0 116.9-95.2 212-212.1 212zm120.4-157.7c-6.6-3.3-39.1-19.3-45.2-21.6-6.1-2.3-10.6-3.3-15.1 3.3-4.6 6.6-17.4 21.6-21.3 26.1-3.9 4.6-7.7 5-14.3 1.7-39.1-19.6-64.7-35-90.4-79.2-6.8-11.7 6.8-10.8 19.6-36.1 2.1-4.6 1-8.6-.6-11.9-1.7-3.3-15.1-36.1-20.7-49.5-5.4-13-10.9-11.3-15.1-11.5-3.9-.2-8.6-.2-13.1-.2s-12 1.7-18.3 8.6c-6.3 6.6-24 23.4-24 57 0 33.6 24.6 66 28.1 70.5 3.3 4.6 48.5 74.1 117.6 104.1 16.4 7.1 29.3 11.3 39.3 14.5 16.5 5.2 31.5 4.5 43.4 2.8 13.3-2 39.1-16 44.6-31.4 5.5-15.4 5.5-28.7 3.9-31.4-1.7-2.7-6-4.4-12.6-7.7z" />
-  </svg>
-
-  <span class="sr-only" data-i18n="chat_open_label">Abrir chat de WhatsApp</span>
-</button>
-
-
-  <!-- Chat Window -->
-  <div id="chat-window"
-    class="hidden fixed bottom-28 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[600px] flex flex-col bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden"
-    role="dialog" aria-modal="true" aria-labelledby="chat-title">
-    <header class="p-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] flex items-center justify-between text-white">
-      <h3 id="chat-title" class="font-bold text-lg" data-i18n="chat_header">Soporte • Mateo</h3>
-      <button id="chat-close" aria-label="Cerrar chat" title="Cerrar">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          aria-hidden="true">
-          <path stroke-width="2" d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </button>
-    </header>
-
-    <main id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></main>
-
-    <footer class="p-3 border-t border-slate-200 bg-slate-50 flex items-center gap-2">
-      <input id="chat-input" type="text" data-i18n-placeholder="chat_input_placeholder"
-        placeholder="Escribe tu mensaje..."
-        class="flex-1 border rounded-full px-3 py-2 text-slate-700 outline-none"
-        aria-label="Escribir mensaje" />
-      <button id="chat-send"
-        class="bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full p-2 transition transform hover:scale-105"
-        aria-label="Enviar mensaje" title="Enviar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-          class="w-5 h-5 transform -rotate-45" fill="none" stroke="currentColor"
-          stroke-width="2" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 3.75 20.25 12 3.75 20.25 7.5 12 3.75 3.75z" />
-        </svg>
-      </button>
-    </footer>
-  </div>
-</div>
-
-
-
-<!-- Cambio de idioma (Multilenguaje SEO + dinámico) -->
 <script>
   async function loadLanguage(lang) {
     const response = await fetch(`/lang/${lang}.json`);
@@ -1388,11 +1532,47 @@
   // === Idioma inicial ===
   const savedLang = localStorage.getItem("lang") || "es";
   loadLanguage(savedLang);
+
+
+  // ==========================
+  // ✅ WhatsApp dinámico por idioma
+  // ==========================
+  function getCurrentLang() {
+    return localStorage.getItem("lang") || document.documentElement.lang || "es";
+  }
+
+  const whatsappMessages = {
+    es: "Hola! Estoy interesado en sus servicios de inteligencia artificial.",
+    en: "Hi! I'm interested in your AI services.",
+  };
+
+  function updateWhatsAppLink() {
+    const lang = getCurrentLang();
+    const message = encodeURIComponent(whatsappMessages[lang] || whatsappMessages.es);
+    const whatsappNumber = "15174027564"; // sin "+" ni espacios
+    const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    const whatsappLinkEl = document.getElementById("whatsapp-link");
+    if (whatsappLinkEl) {
+      whatsappLinkEl.setAttribute("href", waLink);
+    }
+  }
+
+  // Inicializar al cargar
+  updateWhatsAppLink();
+
+  // Actualizar si cambia el idioma
+  document.addEventListener("languageChanged", updateWhatsAppLink);
 </script>
 
 
 
+<div id="toast"
+  class="hidden fixed top-16 right-6 z-[9999] bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+</div>
 
+
+  <script type="module" src="/src/contact.js"></script>
 
 </body>
 

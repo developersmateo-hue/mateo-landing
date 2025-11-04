@@ -40,11 +40,26 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
-    showToast('✅ ¡Mensaje enviado con éxito!');
+    // Determinar idioma actual
+    const lang = localStorage.getItem("lang") || document.documentElement.lang || "es";
+
+    // Mensaje dinámico según idioma
+    const successMsg =
+      lang === "en"
+        ? "✅ Message sent! We'll contact you soon."
+        : "✅ ¡Mensaje enviado! Te contactaremos pronto.";
+
+    // Mostrar el toast
+    showToast(successMsg);
     form.reset();
     msgCount.textContent = '0/300';
   } catch (err) {
-    showToast('❌ Error al enviar. Intenta nuevamente.', 'bg-red-600');
+    showToast(
+      lang === "en"
+        ? "❌ Couldn’t send. Try WhatsApp or email us directly."
+        : "❌ No se pudo enviar. Escríbenos por WhatsApp o correo.",
+      'bg-red-600'
+    );
   }
 });
 
