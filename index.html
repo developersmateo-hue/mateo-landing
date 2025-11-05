@@ -477,230 +477,189 @@
 
 
 
+<!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
+<section id="about"
+  class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+  <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
 
-  <!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
-  <section id="about"
-    class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-    <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
+    <!-- Columna izquierda: Texto -->
+    <div class="space-y-6 fade-in-left">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
+        <span data-i18n="about_title_highlight"
+          class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+          impulsando tu negocio todos los días
+        </span>
+      </h2>
 
-      <!-- Columna izquierda: Texto -->
-      <div class="space-y-6 fade-in-left">
-        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
-          <span data-i18n="about_title_highlight"
-            class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-            impulsando tu negocio todos los días
-          </span>
-        </h2>
+      <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
+        En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
+        No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
+      </p>
 
-        <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
-          En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
-          No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
-        </p>
-
-        <p class="text-blue-200/80" data-i18n="about_text_2">
-          Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
-          constante.
-          Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
-        </p>
-
-        <!-- <div class="mt-6">
-        <a href="/#contact" data-i18n="about_cta"
-          class="inline-block bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform">
-          Conoce más sobre nosotros →
-        </a>
-      </div> -->
-      </div>
-
-      <!-- Columna derecha: Video con overlay -->
-      <div class="relative group fade-in-right">
-        <div
-          class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
-          <video id="aboutVideo" class="w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
-            <source id="aboutVideoSource"
-              src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
-              type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-
-          <!-- Overlay con botón Play / Pause -->
-          <button id="playButton" aria-label="Reproducir video"
-            class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition">
-            <span class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg transition-transform hover:scale-110">
-              ▶
-            </span>
-          </button>
-        </div>
-
-        <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
-          Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
-        </p>
-      </div>
+      <p class="text-blue-200/80" data-i18n="about_text_2">
+        Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
+        constante.
+        Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
+      </p>
     </div>
 
-    <!-- Fondo animado -->
-    <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
+    <!-- Columna derecha: Video con overlay -->
+    <div class="relative group fade-in-right">
+      <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
+        <video id="aboutVideo" class="w-full h-full object-cover" playsinline preload="metadata"
+          poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
+          <source id="aboutVideoSource"
+            src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
+            type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+
+        <!-- Botón Play (solo visible cuando está en pausa) -->
+        <button id="playButton" aria-label="Reproducir video"
+          class="absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity">
+          <span
+            class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg text-2xl md:text-3xl pulse-soft select-none">▶</span>
+        </button>
+
+        <!-- Pantalla completa -->
+        <button id="aboutFullscreen"
+          class="absolute right-3 bottom-3 md:right-4 md:bottom-4 bg-white/20 hover:bg-white/30 text-white rounded-full px-3 py-2 backdrop-blur-md"
+          aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+      </div>
+
+      <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
+        Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
+      </p>
     </div>
+  </div>
 
-    <!-- Estilos -->
-    <style>
-      @keyframes fadeLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-30px);
-        }
+  <!-- Fondo animado -->
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
+  </div>
 
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
+  <!-- Estilos -->
+  <style>
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .fade-in-left { animation: fadeLeft 0.8s ease-out both; }
+    .fade-in-right { animation: fadeRight 0.8s ease-out both; }
 
-      @keyframes fadeRight {
-        from {
-          opacity: 0;
-          transform: translateX(30px);
-        }
+    @keyframes slowRotate { 0% { transform: rotate(0) scale(1); } 100% { transform: rotate(360deg) scale(1.1); } }
+    .animate-slowRotate { animation: slowRotate 50s linear infinite; }
 
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
+    /* Parpadeo suave del icono Play */
+    @keyframes softPulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+    .pulse-soft { animation: softPulse 2s ease-in-out infinite; }
 
-      .fade-in-left {
-        animation: fadeLeft 0.8s ease-out both;
-      }
+    /* Estados del overlay Play controlados por JS */
+    #playButton.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #playButton.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
 
-      .fade-in-right {
-        animation: fadeRight 0.8s ease-out both;
-      }
-
-      @keyframes slowRotate {
-        0% {
-          transform: rotate(0deg) scale(1);
-        }
-
-        100% {
-          transform: rotate(360deg) scale(1.1);
-        }
-      }
-
-      .animate-slowRotate {
-        animation: slowRotate 50s linear infinite;
-      }
-
-      #playButton span {
-        animation: pulse 2s infinite ease-in-out;
-      }
-
-      @keyframes pulse {
-
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
-
-        50% {
-          transform: scale(1.1);
-          opacity: 1;
-        }
-      }
-
-      #playButton {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
-      }
-
-      .video-container:hover #playButton {
-        opacity: 1;
-        visibility: visible;
-      }
-    </style>
-
-    <!-- Script del botón Play/Pause + cambio dinámico del video según idioma -->
-    <script>
-      const playButton = document.getElementById("playButton");
+  <!-- Script: Play solo en pausa, pausa tocando el video, fullscreen y cambio por idioma -->
+  <script>
+    (function () {
       const aboutVideo = document.getElementById("aboutVideo");
-      const videoContainer = playButton.closest(".aspect-video");
-      let isPlaying = false;
+      const sourceEl = document.getElementById("aboutVideoSource");
+      const playButton = document.getElementById("playButton");
+      const fsBtn = document.getElementById("aboutFullscreen");
+      const container = playButton.closest(".video-container");
 
-      // URLs de los videos por idioma
+      // URLs por idioma
       const videoUrls = {
         es: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4",
-        en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4"
+        en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4",
       };
 
-      // ▶ Reproducir / Pausar
+      // Mostrar Play al inicio
+      setPlayOverlay(true);
+
+      // Click en overlay: reproducir
       playButton.addEventListener("click", () => {
-        if (isPlaying) {
-          aboutVideo.pause();
-          playButton.querySelector("span").textContent = "▶";
+        aboutVideo.play().catch(() => {}); // iOS puede bloquear; ignoramos error
+      });
+
+      // Tocar/click en el video: pausar (si está reproduciendo)
+      aboutVideo.addEventListener("click", () => {
+        if (!aboutVideo.paused) aboutVideo.pause();
+      });
+
+      // Estados: mostrar/ocultar overlay
+      aboutVideo.addEventListener("play", () => setPlayOverlay(false));
+      aboutVideo.addEventListener("pause", () => setPlayOverlay(true));
+      aboutVideo.addEventListener("ended", () => setPlayOverlay(true));
+
+      function setPlayOverlay(show) {
+        if (show) {
+          playButton.classList.add("is-visible");
+          playButton.classList.remove("is-hidden");
         } else {
-          aboutVideo.play();
-          playButton.querySelector("span").textContent = "⏸";
-        }
-        isPlaying = !isPlaying;
-      });
-
-      // Cuando termina el video, volver a "Play"
-      aboutVideo.addEventListener("ended", () => {
-        isPlaying = false;
-        playButton.querySelector("span").textContent = "▶";
-      });
-
-      // Mostrar / ocultar el botón con hover
-      videoContainer.addEventListener("mouseenter", () => {
-        playButton.style.opacity = "1";
-        playButton.style.visibility = "visible";
-      });
-      videoContainer.addEventListener("mouseleave", () => {
-        if (isPlaying) {
-          playButton.style.opacity = "0";
-          playButton.style.visibility = "hidden";
-        }
-      });
-
-      // 🔄 Función para cambiar video según idioma
-      function updateAboutVideo(lang) {
-        const newUrl = videoUrls[lang] || videoUrls["es"];
-        const currentUrl = aboutVideo.getAttribute("data-current-src");
-
-        if (currentUrl !== newUrl) {
-          // Pausar y reiniciar
-          aboutVideo.pause();
-          isPlaying = false;
-          playButton.querySelector("span").textContent = "▶";
-
-          // Actualizar la fuente directamente en el <video>
-          aboutVideo.setAttribute("src", `${newUrl}?v=${Date.now()}`);
-          aboutVideo.setAttribute("data-current-src", newUrl);
-
-          // Forzar recarga del video
-          aboutVideo.load();
-
-          // Mostrar el botón de play nuevamente
-          playButton.style.opacity = "1";
-          playButton.style.visibility = "visible";
+          playButton.classList.add("is-hidden");
+          playButton.classList.remove("is-visible");
         }
       }
 
-      // Idioma inicial al cargar
-      const initialLang = localStorage.getItem("lang") || "es";
-      updateAboutVideo(initialLang);
+      // Fullscreen (toggle)
+      fsBtn.addEventListener("click", async () => {
+        try {
+          if (!document.fullscreenElement) {
+            await (container.requestFullscreen?.() || aboutVideo.requestFullscreen?.());
+          } else {
+            await document.exitFullscreen?.();
+          }
+        } catch (_) {}
+      });
 
-      // Escuchar el evento global de cambio de idioma
+      // Cambiar video por idioma (sin auto-reproducir)
+      function updateAboutVideo(lang) {
+        const newSrc = videoUrls[lang] || videoUrls.es;
+        const currentSrc = aboutVideo.currentSrc || sourceEl?.src || "";
+
+        if (!currentSrc.includes(newSrc)) {
+          const wasPlaying = !aboutVideo.paused && !aboutVideo.ended;
+          aboutVideo.pause();
+
+          // Actualizamos <source> y también el atributo src directo (máxima compatibilidad)
+          if (sourceEl) sourceEl.src = newSrc + "?t=" + Date.now();
+          aboutVideo.src = newSrc + "?t=" + Date.now();
+          aboutVideo.load();
+
+          // Siempre quedar en pausa mostrando el Play
+          setPlayOverlay(true);
+
+          // Si quisieras reanudar automáticamente cuando cambias idioma mientras estaba reproduciendo:
+          // wasPlaying && aboutVideo.play().catch(() => setPlayOverlay(true));
+        }
+      }
+
+      // Idioma inicial
+      updateAboutVideo(localStorage.getItem("lang") || "es");
+
+      // Responder a cambios de idioma globales
       document.addEventListener("languageChanged", (e) => {
         updateAboutVideo(e.detail.lang);
       });
-    </script>
+    })();
+  </script>
+</section>
 
-
-  </section>
 
 
 
