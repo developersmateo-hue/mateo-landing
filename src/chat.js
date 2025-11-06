@@ -60,13 +60,13 @@ chatClose.addEventListener('click', () => {
 
 // === SIMULAR MENSAJE DE BIENVENIDA ===
 async function simulateWelcome() {
-  appendMessage('👋 ¡Hola! Soy el asistente IA de Mateo.', 'bot');
+  appendMessage('👋 ¡Hola! Gracias por escribirnos.', 'bot');
   await delay(1800);
   appendTyping();
   await delay(2000);
   removeTyping();
   appendMessage(
-    '¿Quieres una landing page optimizada o un agente de IA para tu negocio?',
+    'Cuéntame ¿En que puedo ayudarte hoy?',
     'bot'
   );
 }
