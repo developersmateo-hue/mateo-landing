@@ -477,246 +477,293 @@
 
 
 
-<!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
-<section id="about"
-  class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-  <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
+  <!-- ===================== SECCIÓN QUIÉNES SOMOS / VIDEO INFORMATIVO (INTERNACIONALIZADA) ===================== -->
+  <section id="about"
+    class="relative py-20 bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div class="container grid md:grid-cols-2 gap-14 items-center relative z-10">
 
-    <!-- Columna izquierda: Texto -->
-    <div class="space-y-6 fade-in-left">
-      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
-        <span data-i18n="about_title_highlight"
-          class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-          impulsando tu negocio todos los días
-        </span>
-      </h2>
+      <!-- Columna izquierda: Texto -->
+      <div class="space-y-6 fade-in-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          <span data-i18n="about_title_main">Equipo digital a tu favor,</span><br>
+          <span data-i18n="about_title_highlight"
+            class="bg-gradient-to-r from-emerald-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            impulsando tu negocio todos los días
+          </span>
+        </h2>
 
-      <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
-        En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
-        No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
-      </p>
+        <p class="text-blue-100/90 text-lg leading-relaxed" data-i18n="about_text_1">
+          En <strong>Mateo</strong>, combinamos <strong>diseño, desarrollo y automatización</strong> en un solo equipo.
+          No solo creamos páginas web: <em>construimos sistemas que trabajan por ti</em>.
+        </p>
 
-      <p class="text-blue-200/80" data-i18n="about_text_2">
-        Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
-        constante.
-        Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
-      </p>
-    </div>
-
-    <!-- Columna derecha: Video con overlay -->
-    <div class="relative group fade-in-right">
-      <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
-        <video id="aboutVideo" class="w-full h-full object-cover" playsinline preload="metadata"
-          poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
-          <source id="aboutVideoSource"
-            src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
-            type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-
-        <!-- Botón Play (solo visible cuando está en pausa) -->
-        <button id="playButton" aria-label="Reproducir video"
-          class="absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity">
-          <span
-            class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg text-2xl md:text-3xl pulse-soft select-none">▶</span>
-        </button>
-
-        <!-- Pantalla completa -->
-        <button id="aboutFullscreen"
-          class="absolute right-3 bottom-3 md:right-4 md:bottom-4 bg-white/20 hover:bg-white/30 text-white rounded-full px-3 py-2 backdrop-blur-md"
-          aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+        <p class="text-blue-200/80" data-i18n="about_text_2">
+          Somos una empresa que une tecnología e inteligencia artificial para escalar negocios digitales de forma
+          constante.
+          Nuestros clientes nos ven como su <strong>equipo de marketing, desarrollo y soporte</strong>, todo en uno.
+        </p>
       </div>
 
-      <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
-        Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
-      </p>
+      <!-- Columna derecha: Video con overlay -->
+      <div class="relative group fade-in-right">
+        <div
+          class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative video-container">
+          <video id="aboutVideo" class="w-full h-full object-cover" playsinline preload="metadata"
+            poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=60">
+            <source id="aboutVideoSource"
+              src="https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4"
+              type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+
+          <!-- Botón Play (solo visible cuando está en pausa) -->
+          <button id="playButton" aria-label="Reproducir video"
+            class="absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity">
+            <span
+              class="bg-white/90 text-slate-900 rounded-full p-5 shadow-lg text-2xl md:text-3xl pulse-soft select-none">▶</span>
+          </button>
+
+          <!-- Pantalla completa -->
+          <button id="aboutFullscreen"
+            class="absolute right-3 bottom-3 md:right-4 md:bottom-4 bg-white/20 hover:bg-white/30 text-white rounded-full px-3 py-2 backdrop-blur-md"
+            aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+        </div>
+
+        <p class="text-sm text-blue-200/70 mt-3 text-center" data-i18n="about_caption">
+          Video institucional: descubre quiénes somos y cómo ayudamos a las empresas a crecer.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <!-- Fondo animado -->
-  <div
-    class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
-  </div>
+    <!-- Fondo animado -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)] animate-slowRotate">
+    </div>
 
-  <!-- Estilos -->
-  <style>
-    @keyframes fadeLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes fadeRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .fade-in-left { animation: fadeLeft 0.8s ease-out both; }
-    .fade-in-right { animation: fadeRight 0.8s ease-out both; }
+    <!-- Estilos -->
+    <style>
+      @keyframes fadeLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
 
-    @keyframes slowRotate { 0% { transform: rotate(0) scale(1); } 100% { transform: rotate(360deg) scale(1.1); } }
-    .animate-slowRotate { animation: slowRotate 50s linear infinite; }
-
-    /* Parpadeo suave del icono Play */
-    @keyframes softPulse {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.08); opacity: 1; }
-    }
-    .pulse-soft { animation: softPulse 2s ease-in-out infinite; }
-
-    /* Estados del overlay Play controlados por JS */
-    #playButton.is-hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    #playButton.is-visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-
-    /* === Ajustes responsive del video === */
-.video-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
-}
-
-#aboutVideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  transition: all 0.3s ease;
-}
-
-/* 📱 En orientación vertical (portrait) */
-@media (orientation: portrait) {
-  .video-container {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
-  #aboutVideo {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center center; /* 🔥 centra el video verticalmente */
-    background-color: #000;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-/* 🔁 En horizontal (landscape) */
-@media (orientation: landscape) and (max-width: 900px) {
-  #aboutVideo {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    object-position: center center;
-  }
-}
-
-/* ⛶ Pantalla completa */
-#aboutVideo:-webkit-full-screen,
-#aboutVideo:fullscreen {
-  width: 100vw !important;
-  height: 100vh !important;
-  object-fit: cover;
-  object-position: center center;
-}
-
-  </style>
-
-  <!-- Script: Play solo en pausa, pausa tocando el video, fullscreen y cambio por idioma -->
-  <script>
-    (function () {
-      const aboutVideo = document.getElementById("aboutVideo");
-      const sourceEl = document.getElementById("aboutVideoSource");
-      const playButton = document.getElementById("playButton");
-      const fsBtn = document.getElementById("aboutFullscreen");
-      const container = playButton.closest(".video-container");
-
-      // URLs por idioma
-      const videoUrls = {
-        es: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4",
-        en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4",
-      };
-
-      // Mostrar Play al inicio
-      setPlayOverlay(true);
-
-      // Click en overlay: reproducir
-      playButton.addEventListener("click", () => {
-        aboutVideo.play().catch(() => {}); // iOS puede bloquear; ignoramos error
-      });
-
-      // Tocar/click en el video: pausar (si está reproduciendo)
-      aboutVideo.addEventListener("click", () => {
-        if (!aboutVideo.paused) aboutVideo.pause();
-      });
-
-      // Estados: mostrar/ocultar overlay
-      aboutVideo.addEventListener("play", () => setPlayOverlay(false));
-      aboutVideo.addEventListener("pause", () => setPlayOverlay(true));
-      aboutVideo.addEventListener("ended", () => setPlayOverlay(true));
-
-      function setPlayOverlay(show) {
-        if (show) {
-          playButton.classList.add("is-visible");
-          playButton.classList.remove("is-hidden");
-        } else {
-          playButton.classList.add("is-hidden");
-          playButton.classList.remove("is-visible");
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
       }
 
-      // Fullscreen (toggle)
-      fsBtn.addEventListener("click", async () => {
-        try {
-          if (!document.fullscreenElement) {
-            await (container.requestFullscreen?.() || aboutVideo.requestFullscreen?.());
+      @keyframes fadeRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-in-left {
+        animation: fadeLeft 0.8s ease-out both;
+      }
+
+      .fade-in-right {
+        animation: fadeRight 0.8s ease-out both;
+      }
+
+      @keyframes slowRotate {
+        0% {
+          transform: rotate(0) scale(1);
+        }
+
+        100% {
+          transform: rotate(360deg) scale(1.1);
+        }
+      }
+
+      .animate-slowRotate {
+        animation: slowRotate 50s linear infinite;
+      }
+
+      /* Parpadeo suave del icono Play */
+      @keyframes softPulse {
+
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
+
+        50% {
+          transform: scale(1.08);
+          opacity: 1;
+        }
+      }
+
+      .pulse-soft {
+        animation: softPulse 2s ease-in-out infinite;
+      }
+
+      /* Estados del overlay Play controlados por JS */
+      #playButton.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #playButton.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+
+      /* === Ajustes responsive del video === */
+      .video-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+      }
+
+      #aboutVideo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transition: all 0.3s ease;
+      }
+
+      /* 📱 En orientación vertical (portrait) */
+      @media (orientation: portrait) {
+        .video-container {
+          height: auto;
+          aspect-ratio: 16 / 9;
+        }
+
+        #aboutVideo {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          object-position: center center;
+          /* 🔥 centra el video verticalmente */
+          background-color: #000;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      /* 🔁 En horizontal (landscape) */
+      @media (orientation: landscape) and (max-width: 900px) {
+        #aboutVideo {
+          object-fit: cover;
+          width: 100vw;
+          height: 100vh;
+          object-position: center center;
+        }
+      }
+
+      /* ⛶ Pantalla completa */
+      #aboutVideo:-webkit-full-screen,
+      #aboutVideo:fullscreen {
+        width: 100vw !important;
+        height: 100vh !important;
+        object-fit: cover;
+        object-position: center center;
+      }
+    </style>
+
+    <!-- Script: Play solo en pausa, pausa tocando el video, fullscreen y cambio por idioma -->
+    <script>
+      (function () {
+        const aboutVideo = document.getElementById("aboutVideo");
+        const sourceEl = document.getElementById("aboutVideoSource");
+        const playButton = document.getElementById("playButton");
+        const fsBtn = document.getElementById("aboutFullscreen");
+        const container = playButton.closest(".video-container");
+
+        // URLs por idioma
+        const videoUrls = {
+          es: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/Somos%20Mateo.mp4",
+          en: "https://ftcjepklsenbewwjyksl.supabase.co/storage/v1/object/public/mateo-storage/We%20are%20Mateo.mp4",
+        };
+
+        // Mostrar Play al inicio
+        setPlayOverlay(true);
+
+        // Click en overlay: reproducir
+        playButton.addEventListener("click", () => {
+          aboutVideo.play().catch(() => { }); // iOS puede bloquear; ignoramos error
+        });
+
+        // Tocar/click en el video: pausar (si está reproduciendo)
+        aboutVideo.addEventListener("click", () => {
+          if (!aboutVideo.paused) aboutVideo.pause();
+        });
+
+        // Estados: mostrar/ocultar overlay
+        aboutVideo.addEventListener("play", () => setPlayOverlay(false));
+        aboutVideo.addEventListener("pause", () => setPlayOverlay(true));
+        aboutVideo.addEventListener("ended", () => setPlayOverlay(true));
+
+        function setPlayOverlay(show) {
+          if (show) {
+            playButton.classList.add("is-visible");
+            playButton.classList.remove("is-hidden");
           } else {
-            await document.exitFullscreen?.();
+            playButton.classList.add("is-hidden");
+            playButton.classList.remove("is-visible");
           }
-        } catch (_) {}
-      });
-
-      // Cambiar video por idioma (sin auto-reproducir)
-      function updateAboutVideo(lang) {
-        const newSrc = videoUrls[lang] || videoUrls.es;
-        const currentSrc = aboutVideo.currentSrc || sourceEl?.src || "";
-
-        if (!currentSrc.includes(newSrc)) {
-          const wasPlaying = !aboutVideo.paused && !aboutVideo.ended;
-          aboutVideo.pause();
-
-          // Actualizamos <source> y también el atributo src directo (máxima compatibilidad)
-          if (sourceEl) sourceEl.src = newSrc + "?t=" + Date.now();
-          aboutVideo.src = newSrc + "?t=" + Date.now();
-          aboutVideo.load();
-
-          // Siempre quedar en pausa mostrando el Play
-          setPlayOverlay(true);
-
-          // Si quisieras reanudar automáticamente cuando cambias idioma mientras estaba reproduciendo:
-          // wasPlaying && aboutVideo.play().catch(() => setPlayOverlay(true));
         }
-      }
 
-      // Idioma inicial
-      updateAboutVideo(localStorage.getItem("lang") || "es");
+        // Fullscreen (toggle)
+        fsBtn.addEventListener("click", async () => {
+          try {
+            if (!document.fullscreenElement) {
+              await (container.requestFullscreen?.() || aboutVideo.requestFullscreen?.());
+            } else {
+              await document.exitFullscreen?.();
+            }
+          } catch (_) { }
+        });
 
-      // Responder a cambios de idioma globales
-      document.addEventListener("languageChanged", (e) => {
-        updateAboutVideo(e.detail.lang);
-      });
-    })();
-  </script>
-</section>
+        // Cambiar video por idioma (sin auto-reproducir)
+        function updateAboutVideo(lang) {
+          const newSrc = videoUrls[lang] || videoUrls.es;
+          const currentSrc = aboutVideo.currentSrc || sourceEl?.src || "";
+
+          if (!currentSrc.includes(newSrc)) {
+            const wasPlaying = !aboutVideo.paused && !aboutVideo.ended;
+            aboutVideo.pause();
+
+            // Actualizamos <source> y también el atributo src directo (máxima compatibilidad)
+            if (sourceEl) sourceEl.src = newSrc + "?t=" + Date.now();
+            aboutVideo.src = newSrc + "?t=" + Date.now();
+            aboutVideo.load();
+
+            // Siempre quedar en pausa mostrando el Play
+            setPlayOverlay(true);
+
+            // Si quisieras reanudar automáticamente cuando cambias idioma mientras estaba reproduciendo:
+            // wasPlaying && aboutVideo.play().catch(() => setPlayOverlay(true));
+          }
+        }
+
+        // Idioma inicial
+        updateAboutVideo(localStorage.getItem("lang") || "es");
+
+        // Responder a cambios de idioma globales
+        document.addEventListener("languageChanged", (e) => {
+          updateAboutVideo(e.detail.lang);
+        });
+      })();
+    </script>
+  </section>
 
 
 
@@ -938,188 +985,265 @@
   }
   </script>
 
-  <!-- Resultados reales (marquee infinito, pause on hover, sin JS) -->
-  <!-- ******************************* Clientes / Resultados Reales (SEO + Trust) ******************************* -->
-  <section id="clientes" class="bg-slate-50" aria-labelledby="clientes-title">
-    <style>
-      @keyframes scroll-x {
-        0% {
-          transform: translateX(0);
-        }
+<!-- ===================== SECCIÓN DE HISTORIAS DE ÉXITO ===================== -->
+<section id="clientes" class="relative py-16 bg-gradient-to-b from-blue-50 via-white to-slate-50 overflow-hidden">
+  <style>
+    @keyframes scroll-x {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-        100% {
-          transform: translateX(-50%);
-        }
-      }
+    .animate-scroll {
+      animation: scroll-x 10s linear infinite;
+    }
 
-      /* 🔹 Más rápida: antes duraba ~35s, ahora 18s */
+    @media (min-width: 768px) {
       .animate-scroll {
-        animation: scroll-x 10s linear infinite;
+        animation-duration: 14s;
       }
+    }
 
-      @media (min-width: 768px) {
-
-        /* En desktop un poco más lenta, pero aún rápida */
-        .animate-scroll {
-          animation-duration: 14s;
-        }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-scroll {
+        animation: none !important;
       }
+    }
+  </style>
 
-      @media (prefers-reduced-motion: reduce) {
+  <div class="container">
+    <!-- Título -->
+    <h2 id="clientes-title" data-i18n="clientes_title"
+        class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-center">
+      Historias de éxito
+    </h2>
+    <p class="text-center max-w-2xl mx-auto mt-3 text-slate-600" data-i18n="clientes_subtitle">
+      Clientes que transformaron su presencia digital con <strong>Mateo.</strong>
+    </p>
 
-        .animate-scroll,
-        .animate-scroll-slow {
-          animation: none !important;
-        }
-      }
-    </style>
+    <!-- Carrusel continuo -->
+    <div
+      class="mt-10 w-full overflow-hidden group
+             [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
 
+      <div
+        class="flex gap-6 animate-scroll group-hover:[animation-play-state:paused]
+               [animation:scroll-x_35s_linear_infinite] md:[animation-duration:45s]">
 
-    <!-- ===================== SECCIÓN DE HISTORIAS DE ÉXITO ===================== -->
-    <section id="clientes" class="relative py-16 bg-gradient-to-b from-blue-50 via-white to-slate-50 overflow-hidden">
-      <div class="container">
-        <!-- Título -->
-        <h2 id="clientes-title" data-i18n="clientes_title"
-          class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-center">
-          Historias de éxito
-        </h2>
-        <p class="text-center max-w-2xl mx-auto mt-3 text-slate-600" data-i18n="clientes_subtitle">
-          Clientes que transformaron su presencia digital con <strong>Mateo.</strong>
-        </p>
+        <!-- ================== BLOQUE 1 ================== -->
+        <div class="flex items-stretch gap-6">
 
-        <!-- Carrusel continuo -->
-        <div
-          class="mt-10 w-full overflow-hidden group
-           [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <!-- Card 1 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
 
-          <div class="flex gap-6
-             animate-scroll
-             group-hover:[animation-play-state:paused]
-             [animation:scroll-x_35s_linear_infinite]
-             md:[animation-duration:45s]">
+            <!-- ICONO DECORATIVO -->
+            <svg class="absolute top-4 right-4 w-8 h-8 text-blue-400/30" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V22h8.28v-8.28H6.56V11.1c0-1.7 1.38-3.08 3.08-3.08V6H7.17Zm9.67 0A5.17 5.17 0 0 0 11.67 11.17V22h8.28v-8.28h-3.72V11.1c0-1.7 1.38-3.08 3.08-3.08V6h-2.77Z" />
+            </svg>
 
-            <!-- BLOQUE 1 -->
-            <div class="flex items-stretch gap-6">
-              <!-- Card 1 -->
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <svg class="absolute top-4 right-4 w-8 h-8 text-blue-400/30" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M7.17 6A5.17 5.17 0 0 0 2 11.17V22h8.28v-8.28H6.56V11.1c0-1.7 1.38-3.08 3.08-3.08V6H7.17Zm9.67 0A5.17 5.17 0 0 0 11.67 11.17V22h8.28v-8.28h-3.72V11.1c0-1.7 1.38-3.08 3.08-3.08V6h-2.77Z" />
-                </svg>
-                <div class="mb-4" aria-label="Calificación: 5 de 5 estrellas">
-                  <div class="flex text-yellow-500" aria-hidden="true">
-                    <template id="stars-template">
-                      <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path
-                          d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                      </svg>
-                    </template>
-                    <script>
-                      // Generar 5 estrellas automáticamente
-                      const stars = document.currentScript.previousElementSibling;
-                      for (let i = 0; i < 5; i++) {
-                        stars.appendChild(document.getElementById("stars-template").content.cloneNode(true));
-                      }
-                    </script>
-                  </div>
-                </div>
-                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote1">
-                  “Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google.
-                  El equipo siempre disponible.”
-                </blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person1">Andrea — Retail
-                </figcaption>
-              </figure>
-
-              <!-- Card 2 -->
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <div class="mb-4 flex text-yellow-500" aria-hidden="true">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg>
-                </div>
-                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote2">
-                  “Buscábamos una <strong>página web moderna y optimizada</strong>. Gracias a su IA, recibimos más
-                  consultas sin aumentar el gasto.”
-                </blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person2">Luis —
-                  Servicios</figcaption>
-              </figure>
-
-              <!-- Card 3 -->
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <div class="mb-4 flex text-yellow-500" aria-hidden="true">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg><svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                    <path
-                      d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
-                  </svg>
-                </div>
-                <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote3">
-                  “Nuestra <strong>landing con IA</strong> convirtió el doble. Nos encanta tener soporte técnico siempre
-                  disponible.”
-                </blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person3">María —
-                  Inmobiliaria</figcaption>
-              </figure>
+            <!-- ⭐ CALIFICACIÓN ACCESIBLE -->
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <!-- 5 estrellas accesibles -->
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
             </div>
 
-            <!-- BLOQUE 2 (duplicado para loop infinito) -->
-            <div class="flex items-stretch gap-6" aria-hidden="true">
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <blockquote class="italic text-slate-700 leading-relaxed">“Contratamos para <strong>crear una landing
-                    page con IA</strong> y en semanas ya aparecía en Google.”</blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700">Andrea — Retail</figcaption>
-              </figure>
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <blockquote class="italic text-slate-700 leading-relaxed">“Buscábamos una <strong>página web moderna y
-                    optimizada</strong> y logramos tráfico orgánico real.”</blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700">Luis — Servicios</figcaption>
-              </figure>
-              <figure
-                class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
-                <blockquote class="italic text-slate-700 leading-relaxed">“Nuestra <strong>landing con IA</strong>
-                  convirtió el doble que la anterior.”</blockquote>
-                <figcaption class="mt-4 text-sm font-medium text-slate-700">María — Inmobiliaria</figcaption>
-              </figure>
+            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote1">
+              “Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google.
+              El equipo siempre disponible.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person1">
+              Andrea — Retail
+            </figcaption>
+          </figure>
+
+          <!-- Card 2 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+
+            <!-- ⭐ CALIFICACIÓN ACCESIBLE -->
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <!-- 5 estrellas -->
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
             </div>
-          </div>
+
+            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote2">
+              “Buscábamos una <strong>página web moderna y optimizada</strong>. Gracias a su IA,
+              recibimos más consultas sin aumentar el gasto.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person2">
+              Luis — Servicios
+            </figcaption>
+          </figure>
+
+          <!-- Card 3 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+
+            <!-- ⭐ CALIFICACIÓN ACCESIBLE -->
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <!-- 5 estrellas -->
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+            </div>
+
+            <blockquote class="italic text-slate-700 leading-relaxed" data-i18n="clientes_quote3">
+              “Nuestra <strong>landing con IA</strong> convirtió el doble. Nos encanta tener soporte técnico siempre
+              disponible.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700" data-i18n="clientes_person3">
+              María — Inmobiliaria
+            </figcaption>
+          </figure>
+
         </div>
+        <!-- ============= FIN BLOQUE 1 ============= -->
+
+
+        <!-- ============= BLOQUE 2 (duplicado para loop infinito) ============= -->
+        <div class="flex items-stretch gap-6" aria-hidden="true">
+
+          <!-- Card duplicada 1 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col">
+
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+            </div>
+
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Contratamos para <strong>crear una landing page con IA</strong> y en semanas ya aparecía en Google.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">
+              Andrea — Retail
+            </figcaption>
+          </figure>
+
+          <!-- Card duplicada 2 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col">
+
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <!-- 5 estrellas -->
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+            </div>
+
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Buscábamos una <strong>página web moderna y optimizada</strong> y logramos tráfico orgánico real.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">
+              Luis — Servicios
+            </figcaption>
+          </figure>
+
+          <!-- Card duplicada 3 -->
+          <figure
+            class="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-soft w-80 flex-shrink-0 flex flex-col">
+
+            <div class="mb-4 flex items-center gap-1" role="img" aria-label="Calificación: 5 de 5 estrellas">
+              <!-- 5 estrellas -->
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.954L10 0l2.95 5.956 6.561.954-4.755 4.635 1.122 6.545z" />
+              </svg>
+            </div>
+
+            <blockquote class="italic text-slate-700 leading-relaxed">
+              “Nuestra <strong>landing con IA</strong> convirtió el doble que la anterior.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-medium text-slate-700">
+              María — Inmobiliaria
+            </figcaption>
+          </figure>
+
+        </div>
+        <!-- ============= FIN BLOQUE 2 ============= -->
+
       </div>
-    </section>
+    </div>
+  </div>
 
-
-    <!-- Schema enriquecido de reseñas -->
-    <script type="application/ld+json">
+  <!-- Schema de reseñas -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -1161,7 +1285,9 @@
     ]
   }
   </script>
-  </section>
+
+</section>
+
 
 
 
@@ -1433,160 +1559,160 @@
 
 
 
-<script>
-  async function loadLanguage(lang) {
-    const response = await fetch(`/lang/${lang}.json`);
-    const translations = await response.json();
-    window.currentTranslations = translations; // Guardar globalmente (para el slider)
+  <script>
+    async function loadLanguage(lang) {
+      const response = await fetch(`/lang/${lang}.json`);
+      const translations = await response.json();
+      window.currentTranslations = translations; // Guardar globalmente (para el slider)
 
-    // 🔹 Actualiza todos los textos fijos
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[key]) el.textContent = translations[key];
-    });
-
-    // 🔹 Actualiza los placeholders de inputs y textareas
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-      const key = el.getAttribute("data-i18n-placeholder");
-      if (translations[key]) el.setAttribute("placeholder", translations[key]);
-    });
-
-    // 🔹 Actualiza los captions del slider dinámicamente
-    document.querySelectorAll("[data-i18n-caption]").forEach(el => {
-      const key = el.getAttribute("data-i18n-caption");
-      if (translations[key]) {
-        el.setAttribute("data-caption", translations[key]);
-      }
-    });
-
-    // 🔹 Actualiza el texto del caption visible en pantalla
-    const captionEl = document.querySelector("[data-hero-caption]");
-    const activeSlide = document.querySelector("[data-hero-slide][style*='opacity: 1']");
-    if (captionEl && activeSlide) {
-      const key = activeSlide.getAttribute("data-i18n-caption");
-      captionEl.textContent = translations[key] || translations["hero_caption_default"];
-    }
-
-    // Guardar idioma
-    localStorage.setItem("lang", lang);
-    updateLangUI(lang);
-
-    // 🔥 Emitir evento global (para video u otros scripts)
-    const event = new CustomEvent("languageChanged", { detail: { lang } });
-    document.dispatchEvent(event);
-  }
-
-  function updateLangUI(lang) {
-    // --- Desktop ---
-    const flagEl = document.getElementById("langFlag");
-    const labelEl = document.getElementById("langLabel");
-
-    // --- Mobile ---
-    const flagMobile = document.getElementById("langFlagMobile");
-    const labelMobile = document.getElementById("langLabelMobile");
-
-    if (lang === "es") {
-      if (flagEl) flagEl.textContent = "🇪🇸";
-      if (labelEl) labelEl.textContent = "Español";
-      if (flagMobile) flagMobile.textContent = "🇪🇸";
-      if (labelMobile) labelMobile.textContent = "Español";
-    } else {
-      if (flagEl) flagEl.textContent = "🇺🇸";
-      if (labelEl) labelEl.textContent = "English";
-      if (flagMobile) flagMobile.textContent = "🇺🇸";
-      if (labelMobile) labelMobile.textContent = "English";
-    }
-  }
-
-  // === Selector Desktop ===
-  const langToggle = document.getElementById("langToggle");
-  const langMenu = document.getElementById("langMenu");
-
-  if (langToggle && langMenu) {
-    langToggle.addEventListener("click", () => {
-      langMenu.classList.toggle("hidden");
-    });
-
-    langMenu.querySelectorAll("[data-lang]").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const lang = e.target.closest("button").dataset.lang;
-        loadLanguage(lang);
-        langMenu.classList.add("hidden");
+      // 🔹 Actualiza todos los textos fijos
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[key]) el.textContent = translations[key];
       });
-    });
 
-    document.addEventListener("click", e => {
-      if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-        langMenu.classList.add("hidden");
-      }
-    });
-  }
-
-  // === Selector Móvil ===
-  const langToggleMobile = document.getElementById("langToggleMobile");
-  const langMenuMobile = document.getElementById("langMenuMobile");
-
-  if (langToggleMobile && langMenuMobile) {
-    langToggleMobile.addEventListener("click", () => {
-      langMenuMobile.classList.toggle("hidden");
-    });
-
-    langMenuMobile.querySelectorAll("[data-lang]").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const lang = e.target.closest("button").dataset.lang;
-        loadLanguage(lang);
-        langMenuMobile.classList.add("hidden");
+      // 🔹 Actualiza los placeholders de inputs y textareas
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (translations[key]) el.setAttribute("placeholder", translations[key]);
       });
-    });
 
-    document.addEventListener("click", e => {
-      if (!langToggleMobile.contains(e.target) && !langMenuMobile.contains(e.target)) {
-        langMenuMobile.classList.add("hidden");
+      // 🔹 Actualiza los captions del slider dinámicamente
+      document.querySelectorAll("[data-i18n-caption]").forEach(el => {
+        const key = el.getAttribute("data-i18n-caption");
+        if (translations[key]) {
+          el.setAttribute("data-caption", translations[key]);
+        }
+      });
+
+      // 🔹 Actualiza el texto del caption visible en pantalla
+      const captionEl = document.querySelector("[data-hero-caption]");
+      const activeSlide = document.querySelector("[data-hero-slide][style*='opacity: 1']");
+      if (captionEl && activeSlide) {
+        const key = activeSlide.getAttribute("data-i18n-caption");
+        captionEl.textContent = translations[key] || translations["hero_caption_default"];
       }
-    });
-  }
 
-  // === Idioma inicial ===
-  const savedLang = localStorage.getItem("lang") || "es";
-  loadLanguage(savedLang);
+      // Guardar idioma
+      localStorage.setItem("lang", lang);
+      updateLangUI(lang);
 
-
-  // ==========================
-  // ✅ WhatsApp dinámico por idioma
-  // ==========================
-  function getCurrentLang() {
-    return localStorage.getItem("lang") || document.documentElement.lang || "es";
-  }
-
-  const whatsappMessages = {
-    es: "Hola! Estoy interesado en sus servicios de inteligencia artificial.",
-    en: "Hi! I'm interested in your AI services.",
-  };
-
-  function updateWhatsAppLink() {
-    const lang = getCurrentLang();
-    const message = encodeURIComponent(whatsappMessages[lang] || whatsappMessages.es);
-    const whatsappNumber = "15174027564"; // sin "+" ni espacios
-    const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-    const whatsappLinkEl = document.getElementById("whatsapp-link");
-    if (whatsappLinkEl) {
-      whatsappLinkEl.setAttribute("href", waLink);
+      // 🔥 Emitir evento global (para video u otros scripts)
+      const event = new CustomEvent("languageChanged", { detail: { lang } });
+      document.dispatchEvent(event);
     }
-  }
 
-  // Inicializar al cargar
-  updateWhatsAppLink();
+    function updateLangUI(lang) {
+      // --- Desktop ---
+      const flagEl = document.getElementById("langFlag");
+      const labelEl = document.getElementById("langLabel");
 
-  // Actualizar si cambia el idioma
-  document.addEventListener("languageChanged", updateWhatsAppLink);
-</script>
+      // --- Mobile ---
+      const flagMobile = document.getElementById("langFlagMobile");
+      const labelMobile = document.getElementById("langLabelMobile");
+
+      if (lang === "es") {
+        if (flagEl) flagEl.textContent = "🇪🇸";
+        if (labelEl) labelEl.textContent = "Español";
+        if (flagMobile) flagMobile.textContent = "🇪🇸";
+        if (labelMobile) labelMobile.textContent = "Español";
+      } else {
+        if (flagEl) flagEl.textContent = "🇺🇸";
+        if (labelEl) labelEl.textContent = "English";
+        if (flagMobile) flagMobile.textContent = "🇺🇸";
+        if (labelMobile) labelMobile.textContent = "English";
+      }
+    }
+
+    // === Selector Desktop ===
+    const langToggle = document.getElementById("langToggle");
+    const langMenu = document.getElementById("langMenu");
+
+    if (langToggle && langMenu) {
+      langToggle.addEventListener("click", () => {
+        langMenu.classList.toggle("hidden");
+      });
+
+      langMenu.querySelectorAll("[data-lang]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          const lang = e.target.closest("button").dataset.lang;
+          loadLanguage(lang);
+          langMenu.classList.add("hidden");
+        });
+      });
+
+      document.addEventListener("click", e => {
+        if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.add("hidden");
+        }
+      });
+    }
+
+    // === Selector Móvil ===
+    const langToggleMobile = document.getElementById("langToggleMobile");
+    const langMenuMobile = document.getElementById("langMenuMobile");
+
+    if (langToggleMobile && langMenuMobile) {
+      langToggleMobile.addEventListener("click", () => {
+        langMenuMobile.classList.toggle("hidden");
+      });
+
+      langMenuMobile.querySelectorAll("[data-lang]").forEach(btn => {
+        btn.addEventListener("click", e => {
+          const lang = e.target.closest("button").dataset.lang;
+          loadLanguage(lang);
+          langMenuMobile.classList.add("hidden");
+        });
+      });
+
+      document.addEventListener("click", e => {
+        if (!langToggleMobile.contains(e.target) && !langMenuMobile.contains(e.target)) {
+          langMenuMobile.classList.add("hidden");
+        }
+      });
+    }
+
+    // === Idioma inicial ===
+    const savedLang = localStorage.getItem("lang") || "es";
+    loadLanguage(savedLang);
+
+
+    // ==========================
+    // ✅ WhatsApp dinámico por idioma
+    // ==========================
+    function getCurrentLang() {
+      return localStorage.getItem("lang") || document.documentElement.lang || "es";
+    }
+
+    const whatsappMessages = {
+      es: "Hola! Estoy interesado en sus servicios de inteligencia artificial.",
+      en: "Hi! I'm interested in your AI services.",
+    };
+
+    function updateWhatsAppLink() {
+      const lang = getCurrentLang();
+      const message = encodeURIComponent(whatsappMessages[lang] || whatsappMessages.es);
+      const whatsappNumber = "15174027564"; // sin "+" ni espacios
+      const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+      const whatsappLinkEl = document.getElementById("whatsapp-link");
+      if (whatsappLinkEl) {
+        whatsappLinkEl.setAttribute("href", waLink);
+      }
+    }
+
+    // Inicializar al cargar
+    updateWhatsAppLink();
+
+    // Actualizar si cambia el idioma
+    document.addEventListener("languageChanged", updateWhatsAppLink);
+  </script>
 
 
 
-<div id="toast"
-  class="hidden fixed top-16 right-6 z-[9999] bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
-</div>
+  <div id="toast"
+    class="hidden fixed top-16 right-6 z-[9999] bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+  </div>
 
 
   <script type="module" src="/src/contact.js"></script>
